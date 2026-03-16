@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth overflow-x-hidden" style="max-width: 100%; overflow-x: hidden;">
+    <!-- TAILWIND, FONTS & ICONS (Required for Footer) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cinzel:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: { jaipur: { pink: '#d66d75', deep: '#8B0000', gold: '#d4af37' } },
+                fontFamily: {
+                    outfit: ['"Outfit"', 'sans-serif'], sans: ['"Inter"', 'sans-serif'],
+                    heading: ['"Playfair Display"', 'serif'], luxury: ['"Cinzel"', 'serif'],
+                },
+                animation: {
+                    'float': 'float 6s ease-in-out infinite', 'camel-walk': 'camelWalk 35s linear infinite', 'fade-up': 'fadeUp 0.8s ease-out forwards',
+                },
+                keyframes: {
+                    float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-40px)' } },
+                    camelWalk: { '0%': { transform: 'translateX(-100%)' }, '100%': { transform: 'translateX(100vw)' } },
+                    fadeUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' }, }
+                }
+            }
+        }
+    }
+</script>
+
+<style>
+    .marwadi-footer-bg { background-color: #FFF0F5; background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23d4af37' stroke-width='0.6' fill='none' opacity='0.5'%3E%3Cpath d='M40,0 L80,40 L40,80 L0,40 Z' /%3E%3Cpath d='M20,20 L60,60' /%3E%3Cpath d='M20,60 L60,20' /%3E%3C/g%3E%3Cg stroke='%23d66d75' stroke-width='0.5' fill='none' opacity='0.4'%3E%3Ccircle cx='40' cy='40' r='12' /%3E%3Ccircle cx='40' cy='40' r='16' stroke-dasharray='3,3' /%3E%3Ccircle cx='40' cy='40' r='2' fill='%23d66d75' /%3E%3C/g%3E%3C/svg%3E"); }
+    .custom-scrollbar::-webkit-scrollbar { width: 5px; } .custom-scrollbar::-webkit-scrollbar-track { background: #FFF0F5; border-radius: 4px; } .custom-scrollbar::-webkit-scrollbar-thumb { background: #d66d75; border-radius: 4px; }
+    .desert-dunes { background-color: transparent; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23e6c280' fill-opacity='0.6' d='M0,256L48,245.3C96,235,192,213,288,218.7C384,224,480,256,576,256C672,256,768,224,864,213.3C960,203,1056,213,1152,229.3C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3Cpath fill='%23d4af37' fill-opacity='0.4' d='M0,288L80,272C160,256,320,224,480,213.3C640,203,800,213,960,229.3C1120,245,1280,267,1360,277.3L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: bottom center; background-size: cover; }
+    .rail-track { background: repeating-linear-gradient(to right, transparent, transparent 15px, rgba(139, 0, 0, 0.4) 15px, rgba(139, 0, 0, 0.4) 20px); border-top: 1.5px solid rgba(139, 0, 0, 0.5); border-bottom: 1.5px solid rgba(139, 0, 0, 0.5); }
+    .thin-royal-frame { position: relative; border: 0.8px solid rgba(212, 175, 55, 0.5); border-radius: 2rem; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(4px); }
+    .corner-flower { position: absolute; color: #d4af37; font-size: 10px; background: #FFF0F5; padding: 2px; border-radius: 50%; z-index: 5; }
+</style>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cinzel:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: { jaipur: { pink: '#d66d75', deep: '#8B0000', gold: '#d4af37' } },
+                fontFamily: {
+                    outfit: ['"Outfit"', 'sans-serif'], sans: ['"Inter"', 'sans-serif'],
+                    heading: ['"Playfair Display"', 'serif'], luxury: ['"Cinzel"', 'serif'],
+                },
+                animation: {
+                    'float': 'float 6s ease-in-out infinite', 'camel-walk': 'camelWalk 35s linear infinite', 'fade-up': 'fadeUp 0.8s ease-out forwards',
+                },
+                keyframes: {
+                    float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-40px)' } },
+                    camelWalk: { '0%': { transform: 'translateX(-100%)' }, '100%': { transform: 'translateX(100vw)' } },
+                    fadeUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' }, }
+                }
+            }
+        }
+    }
+</script>
+
+<style>
+    .marwadi-footer-bg { background-color: #FFF0F5; background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23d4af37' stroke-width='0.6' fill='none' opacity='0.5'%3E%3Cpath d='M40,0 L80,40 L40,80 L0,40 Z' /%3E%3Cpath d='M20,20 L60,60' /%3E%3Cpath d='M20,60 L60,20' /%3E%3C/g%3E%3Cg stroke='%23d66d75' stroke-width='0.5' fill='none' opacity='0.4'%3E%3Ccircle cx='40' cy='40' r='12' /%3E%3Ccircle cx='40' cy='40' r='16' stroke-dasharray='3,3' /%3E%3Ccircle cx='40' cy='40' r='2' fill='%23d66d75' /%3E%3C/g%3E%3C/svg%3E"); }
+    .custom-scrollbar::-webkit-scrollbar { width: 5px; } .custom-scrollbar::-webkit-scrollbar-track { background: #FFF0F5; border-radius: 4px; } .custom-scrollbar::-webkit-scrollbar-thumb { background: #d66d75; border-radius: 4px; }
+    .desert-dunes { background-color: transparent; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23e6c280' fill-opacity='0.6' d='M0,256L48,245.3C96,235,192,213,288,218.7C384,224,480,256,576,256C672,256,768,224,864,213.3C960,203,1056,213,1152,229.3C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3Cpath fill='%23d4af37' fill-opacity='0.4' d='M0,288L80,272C160,256,320,224,480,213.3C640,203,800,213,960,229.3C1120,245,1280,267,1360,277.3L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: bottom center; background-size: cover; }
+    .rail-track { background: repeating-linear-gradient(to right, transparent, transparent 15px, rgba(139, 0, 0, 0.4) 15px, rgba(139, 0, 0, 0.4) 20px); border-top: 1.5px solid rgba(139, 0, 0, 0.5); border-bottom: 1.5px solid rgba(139, 0, 0, 0.5); }
+    .thin-royal-frame { position: relative; border: 0.8px solid rgba(212, 175, 55, 0.5); border-radius: 2rem; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(4px); }
+    .corner-flower { position: absolute; color: #d4af37; font-size: 10px; background: #FFF0F5; padding: 2px; border-radius: 50%; z-index: 5; }
+    @keyframes blob-shape { 0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; transform: rotate(0deg); } 33% { border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%; transform: rotate(5deg); } 66% { border-radius: 40% 60% 40% 60% / 50% 60% 40% 50%; transform: rotate(-5deg); } 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; transform: rotate(0deg); } }
+    .animate-funny-blob { animation: blob-shape 4s ease-in-out infinite; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.2); }
+</style>
+
+<!-- TAILWIND CSS, FONTS & ICONS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cinzel:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- TAILWIND CONFIGURATION -->
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: { jaipur: { pink: '#d66d75', deep: '#8B0000', gold: '#d4af37' } },
+                fontFamily: {
+                    outfit: ['"Outfit"', 'sans-serif'], sans: ['"Inter"', 'sans-serif'],
+                    heading: ['"Playfair Display"', 'serif'], luxury: ['"Cinzel"', 'serif'],
+                },
+                animation: {
+                    'float': 'float 6s ease-in-out infinite', 'camel-walk': 'camelWalk 35s linear infinite', 'fade-up': 'fadeUp 0.8s ease-out forwards',
+                },
+                keyframes: {
+                    float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-40px)' } },
+                    camelWalk: { '0%': { transform: 'translateX(-100%)' }, '100%': { transform: 'translateX(100vw)' } },
+                    fadeUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' }, }
+                }
+            }
+        }
+    }
+</script>
+
+<!-- CUSTOM CSS FOR FOOTER -->
+<style>
+    .marwadi-footer-bg { background-color: #FFF0F5; background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23d4af37' stroke-width='0.6' fill='none' opacity='0.5'%3E%3Cpath d='M40,0 L80,40 L40,80 L0,40 Z' /%3E%3Cpath d='M20,20 L60,60' /%3E%3Cpath d='M20,60 L60,20' /%3E%3C/g%3E%3Cg stroke='%23d66d75' stroke-width='0.5' fill='none' opacity='0.4'%3E%3Ccircle cx='40' cy='40' r='12' /%3E%3Ccircle cx='40' cy='40' r='16' stroke-dasharray='3,3' /%3E%3Ccircle cx='40' cy='40' r='2' fill='%23d66d75' /%3E%3C/g%3E%3C/svg%3E"); }
+    .custom-scrollbar::-webkit-scrollbar { width: 5px; } .custom-scrollbar::-webkit-scrollbar-track { background: #FFF0F5; border-radius: 4px; } .custom-scrollbar::-webkit-scrollbar-thumb { background: #d66d75; border-radius: 4px; }
+    .desert-dunes { background-color: transparent; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23e6c280' fill-opacity='0.6' d='M0,256L48,245.3C96,235,192,213,288,218.7C384,224,480,256,576,256C672,256,768,224,864,213.3C960,203,1056,213,1152,229.3C1248,245,1344,267,1392,277.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3Cpath fill='%23d4af37' fill-opacity='0.4' d='M0,288L80,272C160,256,320,224,480,213.3C640,203,800,213,960,229.3C1120,245,1280,267,1360,277.3L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z'%3E%3C/path%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: bottom center; background-size: cover; }
+    .rail-track { background: repeating-linear-gradient(to right, transparent, transparent 15px, rgba(139, 0, 0, 0.4) 15px, rgba(139, 0, 0, 0.4) 20px); border-top: 1.5px solid rgba(139, 0, 0, 0.5); border-bottom: 1.5px solid rgba(139, 0, 0, 0.5); }
+    .thin-royal-frame { position: relative; border: 0.8px solid rgba(212, 175, 55, 0.5); border-radius: 2rem; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(4px); }
+    .corner-flower { position: absolute; color: #d4af37; font-size: 10px; background: #FFF0F5; padding: 2px; border-radius: 50%; z-index: 5; }
+    @keyframes blob-shape { 0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; transform: rotate(0deg); } 33% { border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%; transform: rotate(5deg); } 66% { border-radius: 40% 60% 40% 60% / 50% 60% 40% 50%; transform: rotate(-5deg); } 100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; transform: rotate(0deg); } }
+    .animate-funny-blob { animation: blob-shape 4s ease-in-out infinite; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.2); }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Startup Jaipur | 2027 Mein Apna Sapna Pura Karein</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Cinzel:wght@400;600;700;800;900&family=Josefin+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&family=Great+Vibes&family=Kalam:wght@300;400;700&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700;800;900&family=Satisfy&family=Homemade+Apple&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        jaipur: {
+                            bg: '#FFF0F5', 
+                            pink: '#d66d75', 
+                            light: '#e29587', 
+                            deep: '#8B0000', 
+                            sand: '#fff9f0', 
+                            gold: '#d4af37', 
+                            goldLight: '#f3e5ab', 
+                            blue: '#1a2a3a', 
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['"Playfair Display"', 'serif'],
+                        outfit: ['"Outfit"', 'sans-serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                        body: ['"Poppins"', 'sans-serif'],
+                        professional: ['"Montserrat"', 'sans-serif'], 
+                        script: ['"Great Vibes"', 'cursive'],
+                        luxury: ['"Cinzel"', 'serif'],
+                        hand: ['"Kalam"', 'cursive'], 
+                        signature: ['"Satisfy"', 'cursive'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-up': 'fadeUp 0.8s ease-out forwards',
+                        'spin-slow': 'spin 10s linear infinite',
+                        'camel-walk': 'camelWalk 35s linear infinite',
+                        'toran-sway': 'none',
+                        'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                    },
+                    keyframes: {
+                        float: { 
+                            '0%, 100%': { transform: 'translateY(0)' }, 
+                            '50%': { transform: 'translateY(-20px)' } 
+                        },
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        camelWalk: {
+                            '0%': { transform: 'translateX(-100%)' },
+                            '100%': { transform: 'translateX(100vw)' }
+                        },
+                        toranSway: {
+                            '0%': { transform: 'translateX(-2px) rotate(-1deg)' },
+                            '100%': { transform: 'translateX(2px) rotate(1deg)' }
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 10px #d4af37' },
+                            '100%': { boxShadow: '0 0 30px #d66d75, 0 0 40px #d4af37' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Consolidated Styles -->
+    <style>
+        /* Royal Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #FFF0F5; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(to bottom, #d4af37, #d66d75); border-radius: 10px; }
+        
+        /* Nav & Buttons */
+        .nav-custom {
+            background-color: transparent; 
+            border-top: none; 
+            box-shadow: none; 
+        }
+
+        .btn-royal { position: relative; overflow: hidden; transition: all 0.4s ease; }
+        .btn-royal:hover { transform: translateY(-3px); box-shadow: 0 15px 30px -5px rgba(214, 109, 117, 0.5); }
+        .btn-tech { transition: all 0.3s ease; }
+        .btn-tech:hover { transform: translateY(-3px); box-shadow: 0 15px 30px -5px rgba(214, 109, 117, 0.5); }
+
+        /* Marquee */
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee { display: flex; width: max-content; animation: marquee 30s linear infinite; will-change: transform; }
+        .animate-marquee-strip { display: flex; width: max-content; animation: marquee 45s linear infinite; will-change: transform; }
+
+        /* Patterns */
+        .tech-grid {
+            background-color: #fdfbfb;
+            background-image: linear-gradient(rgba(139, 0, 0, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 0, 0, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .popup-floral-pattern {
+            background-color: #FFF0F5;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%23d66d75' stroke-width='1' fill='none' opacity='0.25'%3E%3Ccircle cx='30' cy='30' r='8' /%3E%3Ccircle cx='30' cy='30' r='3' fill='%23d4af37' opacity='0.6'/%3E%3Cpath d='M 30 22 Q 34 12 30 4 Q 26 12 30 22 Z' fill='%23d66d75' opacity='0.3'/%3E%3Cpath d='M 30 38 Q 34 48 30 56 Q 26 48 30 38 Z' fill='%23d66d75' opacity='0.3'/%3E%3Cpath d='M 22 30 Q 12 26 4 30 Q 12 34 22 30 Z' fill='%23d66d75' opacity='0.3'/%3E%3Cpath d='M 38 30 Q 48 26 56 30 Q 48 34 38 30 Z' fill='%23d66d75' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .rajasthani-pattern {
+            background-color: #FFF0F5;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Elements & Frames */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(128, 0, 32, 0.1);
+        }
+        
+        .thin-royal-frame {
+            position: relative;
+            border: 0.8px solid rgba(212, 175, 55, 0.5);
+            border-radius: 2rem;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(4px);
+        }
+        
+        .text-gradient-lalach {
+            background: linear-gradient(to right, #8B0000, #d66d75, #ff8c00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @keyframes blob-shape {
+            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; transform: rotate(0deg); }
+            33% { border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%; transform: rotate(5deg); }
+            66% { border-radius: 40% 60% 40% 60% / 50% 60% 40% 50%; transform: rotate(-5deg); }
+            100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; transform: rotate(0deg); }
+        }
+        .animate-funny-blob { animation: blob-shape 4s ease-in-out infinite; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6); }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #FFF0F5; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #d66d75; border-radius: 4px; }
+
+        html, body {
+            overflow-x: hidden !important;
+            max-width: 100% !important;
+            width: 100%;
+            position: relative;
+            overscroll-behavior-x: none;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body class="font-body rajasthani-pattern text-jaipur-deep antialiased selection:bg-jaipur-pink selection:text-white relative w-full overflow-x-hidden max-w-full">
+
+    <!-- MOBILE MENU BACKDROP & DRAWER -->
+    <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[490] opacity-0 pointer-events-none transition-opacity duration-500" onclick="toggleMobileMenu()"></div>
+    
+    <div id="mobile-menu" class="fixed top-0 right-0 h-[100dvh] w-[85vw] max-w-[380px] bg-white z-[500] shadow-[-10px_0_30px_rgba(0,0,0,0.15)] transform translate-x-full transition-transform duration-500 flex flex-col overflow-hidden">
+        <!-- Drawer Background Pattern -->
+        <div class="absolute inset-0 popup-floral-pattern opacity-10 pointer-events-none"></div>
+
+        <!-- Drawer Header -->
+        <div class="p-5 md:p-6 border-b border-gray-100 flex justify-between items-center bg-white/95 backdrop-blur-md relative z-20">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-jaipur-gold to-jaipur-pink flex items-center justify-center text-white text-xs shadow-md">
+                    <i class="fa-solid fa-rocket -rotate-45"></i>
+                </div>
+                <span class="font-heading font-black text-xl text-jaipur-deep">Startup<span class="text-jaipur-pink">Jaipur</span></span>
+            </div>
+            <button onclick="toggleMobileMenu()" class="w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 text-gray-500 hover:bg-jaipur-deep hover:text-white transition-colors focus:outline-none">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Drawer Scrollable Content -->
+        <div class="flex-1 overflow-y-auto custom-scrollbar p-5 relative z-10 flex flex-col gap-6">
+            
+            <!-- Quick Links -->
+            <div class="flex flex-col space-y-2">
+                <p class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-1 pl-2">Navigation</p>
+                
+                <button onclick="scrollToSection('about-us')" class="flex items-center gap-4 text-left p-3 rounded-2xl hover:bg-jaipur-pink/5 border border-transparent hover:border-jaipur-pink/10 transition-all group">
+                    <div class="w-10 h-10 rounded-full bg-jaipur-pink/10 flex items-center justify-center text-jaipur-pink group-hover:bg-jaipur-pink group-hover:text-white group-hover:scale-110 transition-all shadow-sm"><i class="fa-solid fa-building-flag"></i></div>
+                    <div>
+                        <h4 class="font-outfit font-extrabold text-gray-800 group-hover:text-jaipur-deep transition-colors text-sm">About Us</h4>
+                        <p class="text-[10px] text-gray-500 font-medium">Know our vision & mission</p>
+                    </div>
+                </button>
+                
+                <button onclick="scrollToSection('a-to-z-services')" class="flex items-center gap-4 text-left p-3 rounded-2xl hover:bg-amber-500/5 border border-transparent hover:border-amber-500/10 transition-all group">
+                    <div class="w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500 group-hover:bg-amber-500 group-hover:text-white group-hover:scale-110 transition-all shadow-sm"><i class="fa-solid fa-layer-group"></i></div>
+                    <div>
+                        <h4 class="font-outfit font-extrabold text-gray-800 group-hover:text-amber-600 transition-colors text-sm">A to Z Services</h4>
+                        <p class="text-[10px] text-gray-500 font-medium">Single Window Clearance</p>
+                    </div>
+                </button>
+
+                <button onclick="scrollToSection('how-it-works')" class="flex items-center gap-4 text-left p-3 rounded-2xl hover:bg-green-500/5 border border-transparent hover:border-green-500/10 transition-all group">
+                    <div class="w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-600 group-hover:bg-green-500 group-hover:text-white group-hover:scale-110 transition-all shadow-sm"><i class="fa-solid fa-route"></i></div>
+                    <div>
+                        <h4 class="font-outfit font-extrabold text-gray-800 group-hover:text-green-700 transition-colors text-sm">Incubation Process</h4>
+                        <p class="text-[10px] text-gray-500 font-medium">4 Steps to success</p>
+                    </div>
+                </button>
+            </div>
+
+            <!-- Premium Contact Card -->
+            <div class="bg-gradient-to-br from-jaipur-deep via-[#a91d29] to-jaipur-pink p-5 rounded-[1.5rem] text-white shadow-lg shadow-jaipur-pink/30 mt-2 relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 text-5xl text-white/10 rotate-12 pointer-events-none"><i class="fa-solid fa-headset"></i></div>
+                <p class="text-[10px] font-bold text-white/70 uppercase tracking-widest mb-4">Support Desk</p>
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0"><i class="fa-solid fa-phone text-xs"></i></div>
+                    <span class="font-outfit font-bold text-sm tracking-wide">+91 7340337074</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0"><i class="fa-solid fa-envelope text-xs"></i></div>
+                    <span class="font-outfit font-bold text-xs tracking-wide">info@startupjaipur.in</span>
+                </div>
+            </div>
+
+            <!-- WhatsApp Action Button -->
+            <a href="https://wa.me/917340337074" target="_blank" class="flex items-center justify-center gap-2 w-full py-4 bg-[#25D366] text-white rounded-xl font-bold uppercase tracking-wider text-sm shadow-[0_8px_20px_rgba(37,211,102,0.3)] hover:bg-green-600 hover:-translate-y-1 transition-all">
+                <i class="fa-brands fa-whatsapp text-xl"></i> Chat on WhatsApp
+            </a>
+
+            <!-- Social Media & Footer -->
+            <div class="mt-auto pt-6 border-t border-gray-100 flex flex-col items-center">
+                <div class="flex justify-center gap-4 mb-4">
+                    <a href="https://instagram.com/startupjaipur" target="_blank" class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#e1306c] hover:bg-gradient-to-tr hover:from-[#f09433] hover:to-[#bc1888] hover:text-white transition-all shadow-sm text-lg border border-gray-100 hover:border-transparent"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#0077b5] hover:bg-[#0077b5] hover:text-white transition-all shadow-sm text-lg border border-gray-100 hover:border-transparent"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-[#1DA1F2] hover:bg-[#1DA1F2] hover:text-white transition-all shadow-sm text-lg border border-gray-100 hover:border-transparent"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="text-center">
+                    <p class="text-[9px] text-gray-500 font-bold uppercase tracking-[0.2em] mb-1">Dream 2027 • The Pink City</p>
+                    <p class="text-[8px] text-gray-400 font-semibold tracking-widest">Made with ❤️ in Jaipur</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MOBILE MENU DRAWER -->
+
+    <!-- Full Screen Dashboard Login Modal -->
+    <div id="authModal" class="hidden fixed inset-0 z-[500] bg-black/80 backdrop-blur-sm flex items-center justify-center animate-fade-up">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl relative">
+            <button onclick="toggleLoginModalFull()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-gray-100 hover:bg-jaipur-deep hover:text-white transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-jaipur-pink/10 rounded-full flex items-center justify-center mx-auto mb-4 text-jaipur-deep text-2xl">
+                    <i class="fa-solid fa-compass"></i>
+                </div>
+                <h2 class="font-heading text-2xl font-bold text-gray-900">Founder Dashboard</h2>
+                <p class="text-xs text-gray-500 mt-2">Login to access your startup resources</p>
+            </div>
+            <div id="login-form-full" class="space-y-4">
+                <input type="email" id="loginEmailFull" class="w-full px-4 py-3 border-2 border-gray-100 rounded-xl outline-none focus:border-jaipur-pink text-sm" placeholder="Email Address">
+                <input type="password" id="loginPassFull" class="w-full px-4 py-3 border-2 border-gray-100 rounded-xl outline-none focus:border-jaipur-pink text-sm" placeholder="Password">
+                <button onclick="handleLoginFull()" class="w-full bg-jaipur-deep text-white font-bold py-3.5 rounded-xl hover:bg-black transition-all uppercase tracking-widest text-xs">Login</button>
+                <p id="loginErrorFull" class="text-red-500 text-xs text-center hidden font-bold">Invalid Credentials</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN WRAPPER START -->
+    <div class="relative w-full max-w-full overflow-x-hidden flex flex-col min-h-screen">
+
+        <!-- Top info patti (ABSOLUTE: Scrolls up with page) -->
+        <div class="absolute top-0 left-0 w-full max-w-full h-8 bg-jaipur-gold text-jaipur-deep overflow-hidden z-[150] flex items-center box-border">
+            <div class="animate-marquee whitespace-nowrap flex items-center font-bold text-[10px] md:text-xs tracking-widest uppercase font-luxury">
+                <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>End-to-End Startup Support</span>
+                <span class="mx-8"><i class="fa-solid fa-rocket mr-2"></i>500+ Startups Built & Guided</span>
+                <span class="mx-8"><i class="fa-solid fa-indian-rupee-sign mr-2"></i>Get Funding up to ₹10 Lakhs</span>
+                <span class="mx-8"><i class="fa-solid fa-phone mr-2"></i>Call: +91 7340337074</span>
+                <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Rajasthan's Biggest Startup Hub</span>
+                
+                <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>End-to-End Startup Support</span>
+                <span class="mx-8"><i class="fa-solid fa-rocket mr-2"></i>500+ Startups Built & Guided</span>
+                <span class="mx-8"><i class="fa-solid fa-indian-rupee-sign mr-2"></i>Get Funding up to ₹10 Lakhs</span>
+                <span class="mx-8"><i class="fa-solid fa-phone mr-2"></i>Call: +91 7340337074</span>
+                <span class="mx-8"><i class="fa-solid fa-star mr-2"></i>Rajasthan's Biggest Startup Hub</span>
+            </div>
+        </div>
+
+        <!-- Navigation (ABSOLUTE: Scrolls up with page) -->
+        <nav class="absolute top-8 left-0 w-full max-w-full z-[140] transition-all duration-500 nav-custom">
+            <div class="max-w-7xl mx-auto px-4 md:px-8 relative">
+                <div class="flex justify-between items-center h-16 md:h-20 gap-1">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="https://wa.me/917340337074" target="_blank" class="relative inline-flex h-9 md:h-10 overflow-hidden rounded-full p-[2px] group focus:outline-none hover:scale-105 transition-all duration-300 shadow-[0_0_20px_-5px_rgba(251,146,60,0.5)]">
+                            <span class="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_50%,#fb923c_70%,#d4af37_85%,#ffffff_100%)]"></span>
+                            <span class="relative inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-[#fb923c] to-jaipur-gold border border-[#fb923c]/50 px-4 md:px-5 py-1 text-sm font-medium backdrop-blur-sm">
+                                <span class="absolute top-1.5 right-2 md:top-2 md:right-2.5 flex h-2 w-2">
+                                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                                  <span class="relative inline-flex rounded-full h-2 w-2 bg-white shadow-[0_0_10px_#ffffff]"></span>
+                                </span>
+                                <div class="flex items-center gap-1.5 mr-1">
+                                    <i class="fa-brands fa-whatsapp text-base md:text-lg text-white drop-shadow-md"></i>
+                                    <div class="flex flex-col items-start leading-none">
+                                        <span class="text-[6px] md:text-[7px] text-white/90 uppercase tracking-widest font-bold">Official Group</span>
+                                        <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-wide text-white font-luxury drop-shadow-sm">Join Now</span>
+                                    </div>
+                                </div>
+                            </span>
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center gap-2 md:gap-3 z-[200] flex-shrink-0 relative">
+                        <div class="relative">
+                            <button onclick="toggleLoginModal()" id="login-btn-trigger" class="relative inline-flex h-9 md:h-10 overflow-hidden rounded-full p-[2px] focus:outline-none group hover:scale-105 transition-all duration-300 shadow-[0_0_20px_-5px_rgba(139,0,0,0.5)]">
+                                <span class="absolute inset-[-1000%] animate-[spin_3s_linear_infinite] bg-[conic-gradient(from_0deg,transparent_50%,#d66d75_70%,#8B0000_85%,#ffffff_100%)]"></span>
+                                <span class="relative inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-jaipur-deep to-jaipur-pink border border-jaipur-pink/50 px-4 md:px-5 text-sm font-medium text-white backdrop-blur-sm gap-2">
+                                    <i id="login-icon" class="fa-solid fa-key text-jaipur-gold text-[10px] md:text-xs"></i>
+                                    <span id="login-text" class="text-[9px] md:text-xs font-bold uppercase tracking-widest text-white drop-shadow-md">Login</span>
+                                </span>
+                            </button>
+                            <div id="authModalDrop" class="hidden absolute top-full right-0 mt-3 w-[280px] md:w-[350px] bg-white rounded-3xl p-6 shadow-2xl border-t-4 border-jaipur-pink z-[210] animate-fade-up">
+                                <h2 class="font-heading text-xl font-bold text-gray-800 text-center mb-6 uppercase tracking-widest">Login Portal</h2>
+                                <div id="login-form-drop" class="space-y-3">
+                                    <input type="email" id="loginEmailDrop" class="w-full px-4 py-3 border-2 border-gray-100 rounded-xl outline-none focus:border-jaipur-pink text-xs font-professional" placeholder="Email Address">
+                                    <input type="password" id="loginPassDrop" class="w-full px-4 py-3 border-2 border-gray-100 rounded-xl outline-none focus:border-jaipur-pink text-xs font-professional" placeholder="Password">
+                                    <button onclick="handleLoginDrop()" class="w-full bg-jaipur-blue text-white font-bold py-3.5 rounded-xl hover:bg-black transition-all uppercase tracking-widest text-[10px]">Enter Portal</button>
+                                    <p id="loginErrorDrop" class="text-red-500 text-[10px] text-center hidden font-bold mt-2">Invalid Credentials</p>
+                                </div>
+                                <div class="absolute -top-2 right-6 w-4 h-4 bg-white rotate-45 border-l border-t border-jaipur-pink/20"></div>
+                            </div>
+                        </div>
+                        
+                        <button id="mobile-menu-btn" class="relative group w-10 h-10 md:w-12 md:h-12 flex justify-center items-center rounded-full bg-white border border-gray-200 hover:bg-gray-50 transition-all ml-1 shadow-md">
+                            <div class="absolute inset-0 rounded-full border-[2px] border-transparent border-t-pink-500 border-r-blue-400 border-b-green-400 border-l-yellow-400 animate-[spin_4s_linear_infinite] opacity-80 group-hover:opacity-100"></div>
+                            <div class="relative z-10 flex flex-col items-center justify-center gap-[3.5px] md:gap-[4.5px] w-4 md:w-5">
+                                <span id="line1" class="w-full h-[2px] bg-green-500 rounded-full transition-all duration-300 shadow-sm"></span>
+                                <div id="line2" class="flex items-center justify-between w-full transition-all duration-300">
+                                    <span class="w-[2px] h-[2px] bg-yellow-500 rounded-full shadow-sm"></span>
+                                    <span class="w-[11px] md:w-[15px] h-[2px] bg-blue-500 rounded-full shadow-sm"></span>
+                                </div>
+                                <span id="line3" class="w-full h-[2px] bg-pink-500 rounded-full transition-all duration-300 shadow-sm"></span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ROYAL HERO SECTION -->
+        <section class="relative min-h-[900px] flex flex-col justify-center pt-16 md:pt-24 pb-12 w-full box-border overflow-hidden z-20">
+            <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-br from-[#b3404a] via-[#d66d75] to-[#fb923c]"></div>
+                <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png'); background-size: 400px;"></div>
+                <div class="absolute bottom-[-2px] left-0 right-0">
+                    <svg viewBox="0 0 1440 100" fill="none" class="w-full h-auto text-[#FFF0F5] fill-current block"><path d="M0,32L60,42.7C120,53,240,75,360,80C480,85,600,75,720,64C840,53,960,43,1080,48C1200,53,1320,75,1380,85.3L1440,96L1440,100L1380,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z"></path></svg>
+                </div>
+            </div>
+
+            <div class="relative w-full max-w-7xl mx-auto px-4 text-center z-30 mt-8 md:mt-16 overflow-visible">
+                <div class="flex flex-col items-center justify-center mb-8 animate-fade-up pt-0 md:pt-10">
+                    <div class="relative z-[200] animate-float mb-2"><i class="fa-solid fa-rocket text-white text-5xl md:text-7xl -rotate-45 drop-shadow-2xl"></i></div>
+                    <h1 class="font-heading font-bold text-3xl sm:text-4xl md:text-7xl text-white tracking-wide leading-none drop-shadow-md" style="font-family: 'Playfair Display', serif;">
+                        Startup<span class="text-jaipur-gold">Jaipur</span>
+                    </h1>
+                    <p class="font-luxury font-bold text-jaipur-gold text-[10px] md:text-sm uppercase tracking-[0.4em] drop-shadow-sm mt-4 md:mt-6">The Pink City Startup Hub</p>
+                </div>
+                
+                <h2 class="mb-2 leading-tight text-white drop-shadow-sm animate-fade-up" style="animation-delay: 0.2s;">
+                    <span class="block font-heading font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl" style="font-family: 'Playfair Display', serif;">Build Your Dream</span>
+                    <span class="block font-heading font-bold text-2xl sm:text-4xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-jaipur-gold via-white to-jaipur-gold mt-1 pb-4" style="font-family: 'Playfair Display', serif;">in Jaipur</span>
+                    <div class="flex flex-col items-center gap-1 mt-2">
+                        <div class="h-[2px] w-48 bg-gradient-to-r from-transparent via-jaipur-gold to-transparent opacity-80"></div>
+                        <div class="h-[2px] w-32 bg-gradient-to-r from-transparent via-white to-transparent opacity-60"></div>
+                    </div>
+                </h2>
+                <p class="text-sm md:text-xl text-white/95 max-w-4xl mx-auto mb-10 leading-relaxed font-professional font-medium tracking-wide animate-fade-up" style="animation-delay: 0.4s;">Connect with investors, find co-founders, and grow your business in the heart of the Pink City. We provide the ecosystem, mentorship, and funding you need to succeed.</p>
+                <div class="flex flex-row gap-3 justify-center animate-fade-up w-full px-2" style="animation-delay: 0.6s;">
+                    <button onclick="scrollToSection('about-us')" class="flex-1 md:flex-none px-6 py-3 bg-white text-jaipur-deep rounded-full font-bold text-xs md:text-base hover:bg-jaipur-gold transition-all shadow-xl flex items-center justify-center gap-2"><span>Start Journey</span> <i class="fa-solid fa-arrow-right-long"></i></button>
+                    <button onclick="toggleLoginModalFull()" class="flex-1 md:flex-none px-6 py-3 border border-white text-white rounded-full font-bold text-xs md:text-base hover:bg-white/10 backdrop-blur-sm transition-all flex items-center justify-center gap-2"><i class="fa-solid fa-compass"></i> <span>Dashboard</span></button>
+                </div>
+
+                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto animate-fade-up px-2 relative z-10" style="animation-delay: 0.8s;">
+                    <div class="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 transition group"><div class="text-3xl md:text-5xl font-heading font-bold text-jaipur-gold mb-1">500+</div><div class="text-[10px] md:text-xs uppercase tracking-widest text-white/80">Startups</div></div>
+                    <div class="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 transition group"><div class="text-3xl md:text-5xl font-heading font-bold text-jaipur-gold mb-1">₹15Cr+</div><div class="text-[10px] md:text-xs uppercase tracking-widest text-white/80">Funding</div></div>
+                    <div class="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 transition group"><div class="text-3xl md:text-5xl font-heading font-bold text-jaipur-gold mb-1">50+</div><div class="text-[10px] md:text-xs uppercase tracking-widest text-white/80">Mentors</div></div>
+                    <div class="p-6 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 transition group"><div class="text-3xl md:text-5xl font-heading font-bold text-jaipur-gold mb-1">24/7</div><div class="text-[10px] md:text-xs uppercase tracking-widest text-white/80">Support</div></div>
+                </div>
+
+                <!-- TRUST STRIPS -->
+                <div class="mt-12 md:mt-16 pt-4 flex flex-col w-[90%] md:max-w-4xl mx-auto animate-fade-up relative z-10 overflow-visible" style="animation-delay: 1s;">
+                    <div class="relative w-full mb-14 overflow-visible">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/30 px-5 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+                            <i class="fa-solid fa-award text-white text-[10px] md:text-[12px] drop-shadow-md"></i>
+                            <span class="font-luxury font-black uppercase tracking-widest text-[9px] md:text-[11px] text-white drop-shadow-md">Govt Grants</span>
+                        </div>
+                        <div class="overflow-hidden rounded-2xl shadow-xl bg-white/10 backdrop-blur-md h-12 flex items-center relative z-20">
+                            <div class="animate-marquee-strip whitespace-nowrap flex items-center font-luxury font-bold uppercase tracking-widest text-[9px] md:text-xs text-white">
+                                <span class="mr-12">Secure up to ₹10 Lakhs in equity-free grants through iStart Rajasthan • Apply for Seed Funding • Viability Gap Funding • Special Student Incentives.</span>
+                                <span class="mr-12">Secure up to ₹10 Lakhs in equity-free grants through iStart Rajasthan • Apply for Seed Funding • Viability Gap Funding • Special Student Incentives.</span>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 rounded-2xl border border-white/30 pointer-events-none z-30" style="clip-path: polygon(0% 0%, calc(50% - 75px) 0%, calc(50% - 75px) 20px, calc(50% + 75px) 20px, calc(50% + 75px) 0%, 100% 0%, 100% 100%, 0% 100%);"></div>
+                    </div>
+
+                    <div class="relative w-full mb-14 overflow-visible">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/30 px-5 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+                            <i class="fa-solid fa-handshake-angle text-white text-[10px] md:text-[12px] drop-shadow-md"></i>
+                            <span class="font-luxury font-black uppercase tracking-widest text-[9px] md:text-[11px] text-white drop-shadow-md">Free Incubation</span>
+                        </div>
+                        <div class="overflow-hidden rounded-2xl shadow-xl bg-white/10 backdrop-blur-md h-12 flex items-center relative z-20">
+                            <div class="animate-marquee-strip whitespace-nowrap flex items-center font-luxury font-bold uppercase tracking-widest text-[9px] md:text-xs text-white">
+                                <span class="mr-12">Get 360-degree startup support • Secure $5000+ Cloud Credits • Weekly 1-on-1 Mentorship • Complete Legal & CA Guidance.</span>
+                                <span class="mr-12">Get 360-degree startup support • Secure $5000+ Cloud Credits • Weekly 1-on-1 Mentorship • Complete Legal & CA Guidance.</span>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 rounded-2xl border border-white/30 pointer-events-none z-30" style="clip-path: polygon(0% 0%, calc(50% - 85px) 0%, calc(50% - 85px) 20px, calc(50% + 85px) 20px, calc(50% + 85px) 0%, 100% 0%, 100% 100%, 0% 100%);"></div>
+                    </div>
+
+                    <!-- Strip 3: Legal Support -->
+                    <div class="relative w-full mb-6 overflow-visible">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/30 px-5 py-1.5 rounded-full shadow-lg whitespace-nowrap">
+                            <i class="fa-solid fa-file-contract text-white text-[10px] md:text-[12px] drop-shadow-md"></i>
+                            <span class="font-luxury font-black uppercase tracking-widest text-[9px] md:text-[11px] text-white drop-shadow-md">Legal Support</span>
+                        </div>
+                        <div class="overflow-hidden rounded-2xl shadow-xl bg-white/10 backdrop-blur-md h-12 flex items-center relative z-20">
+                            <div class="animate-marquee-strip whitespace-nowrap flex items-center font-luxury font-bold uppercase tracking-widest text-[9px] md:text-xs text-white">
+                                <span class="mr-12">Free CA assistance for Company Incorporation (Pvt Ltd/LLP) • GST Registration Support • Intellectual Property Guidance • Startup India Recognition.</span>
+                                <span class="mr-12">Free CA assistance for Company Incorporation (Pvt Ltd/LLP) • GST Registration Support • Intellectual Property Guidance • Startup India Recognition.</span>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 rounded-2xl border border-white/30 pointer-events-none z-30" style="clip-path: polygon(0% 0%, calc(50% - 80px) 0%, calc(50% - 80px) 20px, calc(50% + 80px) 20px, calc(50% + 80px) 0%, 100% 0%, 100% 100%, 0% 100%);"></div>
+                    </div>
+                </div>
+
+                <div class="mt-16 flex flex-col items-center justify-center animate-fade-up pb-12 relative z-10 w-full overflow-hidden" style="animation-delay: 1.2s;">
+                    <div class="flex -space-x-3 rtl:space-x-reverse mb-3">
+                        <img class="w-10 h-10 border-2 border-white rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" alt="Founder">
+                        <img class="w-10 h-10 border-2 border-white rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64" alt="Founder">
+                        <img class="w-10 h-10 border-2 border-white rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=64&h=64" alt="Founder">
+                        <img class="w-10 h-10 border-2 border-white rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&h=64" alt="Founder">
+                        <div class="flex items-center justify-center w-10 h-10 text-[10px] font-bold text-jaipur-deep bg-jaipur-gold border-2 border-white rounded-full shadow-md">+2k</div>
+                    </div>
+                    <p class="text-white/90 text-xs md:text-sm font-medium tracking-wide">Join <span class="text-jaipur-gold font-bold">2,000+</span> Founders in Jaipur</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEAMLESS COMBINED WRAPPER 1: ABOUT US + MOTIVATION -->
+        <div class="relative w-full bg-[#FFF0F5] overflow-hidden -mt-2 z-10">
+            <div class="absolute top-0 left-0 right-0 bottom-20 md:bottom-36 popup-floral-pattern opacity-[0.12] pointer-events-none mix-blend-multiply"></div>
+            <div class="absolute top-[15%] left-[-10%] w-[50%] h-[40%] bg-jaipur-pink/20 rounded-full blur-[120px] animate-float pointer-events-none"></div>
+            <div class="absolute bottom-[10%] right-[-10%] w-[60%] h-[50%] bg-jaipur-gold/15 rounded-full blur-[120px] animate-float pointer-events-none" style="animation-delay: 2s;"></div>
+
+            <!-- ABOUT US SECTION -->
+            <section id="about-us" class="pt-20 md:pt-24 pb-8 relative z-10">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="text-center mb-10 animate-fade-up">
+                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jaipur-pink/10 text-jaipur-deep border border-jaipur-pink/20 text-[10px] md:text-xs font-outfit font-bold uppercase tracking-widest mb-4">
+                            <i class="fa-solid fa-users text-jaipur-gold"></i> About Us
+                        </div>
+                        <h2 class="font-outfit text-4xl md:text-5xl font-black text-jaipur-deep tracking-tight">
+                            About <span class="text-transparent bg-clip-text bg-gradient-to-r from-jaipur-deep to-jaipur-pink">Startup Jaipur</span>
+                        </h2>
+                        <p class="mt-4 text-sm md:text-base font-sans text-gray-600 max-w-2xl mx-auto font-medium">A comprehensive incubation program designed to transform the startup dreams of youth into solid reality.</p>
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                        <div class="w-full lg:w-1/2 relative group">
+                            <div class="absolute inset-0 border-[3px] border-jaipur-gold rounded-t-[3rem] md:rounded-t-[10rem] rounded-b-3xl transform translate-x-3 translate-y-3 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
+                            <div class="relative rounded-t-[3rem] md:rounded-t-[10rem] rounded-b-3xl overflow-hidden shadow-2xl border-4 border-white h-[350px] md:h-[600px] bg-white">
+                                <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=800&auto=format&fit=crop" alt="Architecture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-jaipur-deep/60 via-transparent to-transparent opacity-60"></div>
+                                <div class="absolute bottom-4 md:bottom-8 left-0 right-0 text-center">
+                                    <div class="inline-block bg-white/90 backdrop-blur-md px-6 py-2 md:px-10 md:py-3 rounded-full shadow-lg border border-jaipur-pink/20">
+                                        <span class="font-outfit font-black text-xl md:text-3xl tracking-tight text-jaipur-deep">
+                                            Startup<span class="text-transparent bg-clip-text bg-gradient-to-r from-jaipur-deep to-jaipur-pink">Jaipur</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute -top-4 -right-4 md:-top-6 md:-right-6 w-12 h-12 md:w-16 md:h-16 bg-jaipur-sand rounded-full flex items-center justify-center text-2xl md:text-3xl text-jaipur-gold shadow-lg animate-spin-slow border border-jaipur-gold/20">
+                                <i class="fa-solid fa-sun"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full lg:w-1/2 flex flex-col justify-center">
+                            <div class="font-sans text-sm md:text-base text-gray-600 leading-relaxed space-y-5">
+                                <p><strong class="text-jaipur-deep font-bold font-outfit text-lg">Startup Jaipur is a comprehensive startup program and incubator</strong> built for anyone with the ambition to build their own startup. Our main goal is to create a complete ecosystem where a small idea can be nurtured into a highly successful startup.</p>
+                                <p>Building a startup today isn't easy. A new founder faces challenges with legal paperwork, company registration, tech development, and most importantly—<strong>Funding</strong>. We are here to solve exactly these problems.</p>
+                                
+                                <div id="more-about-text" class="hidden space-y-5 transition-all duration-500">
+                                    <p>We provide <strong>360-Degree End-to-End Support</strong>. If you only have an idea, our team will guide you on how to execute it. If your product is ready, we will fully assist you in raising funds from Government Grants (like iStart Rajasthan) and private investors.</p>
+                                    <p><strong>The Core Mission:</strong> Humara lakshya Jaipur ko agla bada Tech aur Innovation Hub banana hai. Aksar founders ko lagta hai ki bada startup banane ke liye Bangalore ya Gurgaon jana zaroori hai. Startup Jaipur is soch ko badal raha hai. Hum wo saari world-class facilities, mentorship, aur funding opportunities yahin Pink City mein laa rahe hain.</p>
+                                    <p><strong>What Makes Us Different?</strong> Zyada tar programs sirf basic advice dete hain. Lekin Startup Jaipur ek 'Hands-On' accelerator hai. Iska matlab hai ki hum aapke startup mein aapke partner ki tarah kaam karte hain. Agar aapko website ya app banwani hai, hamari in-house tech team banayegi. Agar company register (Pvt Ltd) karni hai, hamare CAs karenge. Aapka poora focus sirf apne product aur growth par hona chahiye, baaki sab hum sambhalenge.</p>
+
+                                    <p><strong>Who is this program for?</strong><br>
+                                    <span class="block mt-1">🎓 <strong>Students & Grads:</strong> Who have innovative tech ideas and want to build the future.</span>
+                                    <span class="block mt-1">👩‍💼 <strong>Women Entrepreneurs:</strong> Looking to launch their own D2C brands, boutiques, or tech startups.</span>
+                                    <span class="block mt-1">🏪 <strong>Traditional Entrepreneurs:</strong> Who want to scale their local/family setups into digital tech startups using E-commerce and ONDC.</span>
+                                    <span class="block mt-1">💡 <strong>Early-stage Innovators:</strong> Jinke paas abhi sirf ek rough idea hai aur unhe market validation ki zaroorat hai.</span></p>
+
+                                    <p><strong>The Ecosystem Power:</strong> Jab aap Startup Jaipur join karte hain, toh aapko access milta hai hamare exclusive network ka. Regular networking events, mock investor pitch sessions, aur 'Demo Days' ke through aapko seedha Angel Investors aur Venture Capitalists (VCs) ke samne apna idea rakhne ka mauka milta hai.</p>
+
+                                    <p>By combining the traditional Marwari startup mindset of Rajasthan with today's modern technology, we are building Jaipur into the next major Tech Hub. We refuse to let any great idea die simply due to a lack of capital or proper guidance.</p>
+
+                                    <div class="bg-white/60 backdrop-blur-sm border-[1.5px] border-jaipur-pink/20 p-4 rounded-xl mt-4 shadow-sm">
+                                        <p class="text-sm italic text-jaipur-deep font-medium">"Our dream is to ensure that a normal student or entrepreneur from Jaipur gets the exact same resources, global network, and capital access as someone from a top metro city or elite institute. You bring the passion; we will provide the platform."</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 flex items-start">
+                                <button onclick="toggleAbout()" id="read-more-btn" class="inline-flex items-center gap-2 px-6 py-2.5 bg-white border border-jaipur-deep/30 text-jaipur-deep rounded-full font-outfit font-bold uppercase tracking-widest text-[10px] md:text-xs hover:border-jaipur-deep hover:bg-jaipur-deep hover:text-white transition-all shadow-sm">
+                                    <span id="read-more-text">Read More</span> <i id="read-more-icon" class="fa-solid fa-arrow-down"></i>
+                                </button>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-8 border-t border-jaipur-pink/10">
+                                <div class="flex items-start gap-3 p-4 bg-white/80 backdrop-blur-sm border border-jaipur-pink/20 rounded-2xl shadow-sm hover:border-jaipur-gold transition-colors">
+                                    <div class="w-10 h-10 rounded-full bg-jaipur-gold/10 flex items-center justify-center text-jaipur-gold shrink-0"><i class="fa-solid fa-lightbulb text-sm"></i></div>
+                                    <div>
+                                        <h4 class="font-outfit font-bold text-sm text-jaipur-deep mb-0.5">Expert Mentorship</h4>
+                                        <p class="text-[11px] text-gray-500 font-sans leading-snug">Get direct 1-on-1 guidance from industry experts.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3 p-4 bg-white/80 backdrop-blur-sm border border-jaipur-pink/20 rounded-2xl shadow-sm hover:border-jaipur-pink transition-colors">
+                                    <div class="w-10 h-10 rounded-full bg-jaipur-pink/10 flex items-center justify-center text-jaipur-pink shrink-0"><i class="fa-solid fa-handshake text-sm"></i></div>
+                                    <div>
+                                        <h4 class="font-outfit font-bold text-sm text-jaipur-deep mb-0.5">Founder Community</h4>
+                                        <p class="text-[11px] text-gray-500 font-sans leading-snug">Become part of a network with 2,000+ founders.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AGGRESSIVE MOTIVATION SECTION -->
+            <section id="motivation-section" class="relative py-8 md:py-16 flex flex-col justify-center w-full box-border font-sans z-10">
+                <div class="relative w-full max-w-6xl mx-auto px-4 text-center z-30 mt-4 mb-4 md:mb-8 overflow-visible">
+                
+                <div class="flex flex-col items-center justify-center gap-5 mb-8">
+                    <!-- Dream 2026 Badge (Flat on Background) -->
+                    <div class="relative inline-flex items-center justify-center animate-fade-up z-20">
+                        <div class="relative flex items-center justify-center px-8 md:px-10 py-2.5 md:py-3.5 bg-white/80 rounded-full border border-jaipur-gold/50">
+                            <span class="font-outfit font-black text-xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-jaipur-deep to-jaipur-gold tracking-[0.25em] md:tracking-[0.3em] uppercase">
+                                Dream 2026
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-red-100 border border-red-200 text-red-700 text-sm font-bold uppercase tracking-widest animate-fade-up shadow-sm">
+                        <i class="fa-solid fa-stopwatch animate-spin" style="animation-duration: 3s;"></i>
+                        Abhi Nahi Toh Kabhi Nahi!
+                    </div>
+                </div>
+                    
+                <h1 class="font-outfit font-black text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-gray-900 tracking-tight leading-[1.1] animate-fade-up drop-shadow-sm" style="animation-delay: 0.1s;">
+                        Sirf Ek <span class="text-jaipur-pink"><i class="fa-solid fa-mobile-screen"></i> Smartphone</span> Se <br />
+                        <span class="text-gradient-lalach">Shuru Karein Apna Startup</span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-2xl text-gray-700 max-w-4xl mx-auto mt-8 mb-10 leading-relaxed font-sans font-semibold animate-fade-up" style="animation-delay: 0.2s;">
+                        Aaj hi apna sapna pura karein! <span class="text-jaipur-deep font-bold border-b-2 border-jaipur-gold">Bina kisi technical knowledge ke</span>, bahut kam investment mein apna business shuru karein aur mahine ka badiya revenue kamayein. 
+                    </p>
+
+                    <div class="flex flex-wrap justify-center gap-4 mb-10 animate-fade-up" style="animation-delay: 0.3s;">
+                        <span class="px-4 py-2 bg-green-50 text-green-700 rounded-lg font-bold text-sm border border-green-200 shadow-sm"><i class="fa-solid fa-check-circle mr-1"></i> Low Investment</span>
+                        <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg font-bold text-sm border border-blue-200 shadow-sm"><i class="fa-solid fa-arrow-trend-up mr-1"></i> High Revenue Return</span>
+                        <span class="px-4 py-2 bg-purple-50 text-purple-700 rounded-lg font-bold text-sm border border-purple-200 shadow-sm"><i class="fa-solid fa-crown mr-1"></i> Be Your Own Boss</span>
+                        <span class="px-4 py-2 bg-orange-50 text-orange-700 rounded-lg font-bold text-sm border border-orange-200 shadow-sm"><i class="fa-solid fa-house-laptop mr-1"></i> Work From Anywhere</span>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-5 justify-center animate-fade-up w-full px-4" style="animation-delay: 0.4s;">
+                        <button onclick="scrollToSection('a-to-z-services')" class="btn-tech px-10 py-4 bg-gradient-to-r from-jaipur-deep to-jaipur-pink text-white rounded-xl font-extrabold text-lg shadow-xl shadow-jaipur-pink/30 flex items-center justify-center gap-3 hover:scale-105 transition-transform">
+                            <span>A-Z Support Dekhein</span> <i class="fa-solid fa-arrow-down"></i>
+                        </button>
+                        <a href="https://wa.me/917340337074" target="_blank" class="btn-tech px-10 py-4 bg-[#25D366] text-white rounded-xl font-extrabold text-lg shadow-xl shadow-green-500/30 flex items-center justify-center gap-3 hover:scale-105 transition-transform animate-glow">
+                            <i class="fa-brands fa-whatsapp text-2xl"></i> <span>Team Se Baat Karein</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- UNIFIED MIDDLE SECTIONS WRAPPER 2: A-Z SERVICES & CAPABILITIES -->
+        <div class="relative w-full bg-[#FFF0F5] z-20">
+            <div class="absolute inset-0 opacity-[0.05] pointer-events-none bg-[linear-gradient(to_right,#d66d75_1px,transparent_1px),linear-gradient(to_bottom,#d66d75_1px,transparent_1px)] bg-[size:24px_24px] z-0"></div>
+
+            <!-- A to Z Services (Single Window) -->
+            <section id="a-to-z-services" class="pb-12 md:pb-16 pt-4 md:pt-8 bg-transparent relative overflow-hidden w-full z-10">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="text-center mb-16 animate-fade-up">
+                        <span class="text-jaipur-deep bg-jaipur-gold/20 px-4 py-1.5 rounded-full font-bold tracking-widest uppercase text-sm mb-4 inline-block font-sans shadow-sm">Single Window Clearance</span>
+                        <h2 class="font-outfit font-black text-4xl md:text-5xl lg:text-[48px] mb-6 text-gray-900 w-full drop-shadow-sm leading-tight">The Complete Ecosystem to Build Your Startup</h2>
+                        <p class="text-gray-700 font-medium text-lg max-w-3xl mx-auto font-sans">Aapko kahin aur jaane ki jarurat nahi hai. Startup Jaipur ki team aapko zero se lekar success tak guide karegi. Pura process hum sambhalenge!</p>
+                    </div>
+
+                    <!-- VIP TICKET PASS DESIGN -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start font-sans mt-12">
+                        
+                        <!-- Ticket 1: Idea & Name -->
+                        <div class="relative group w-full flex flex-col md:flex-row bg-white rounded-[2rem] border border-gray-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(245,158,11,0.3)] hover:-translate-y-2 transition-all duration-500 overflow-hidden z-10">
+                            <div class="w-full md:w-24 lg:w-28 shrink-0 bg-gradient-to-br from-yellow-400 to-amber-500 flex flex-row md:flex-col items-center justify-between p-5 md:py-8 relative z-20">
+                                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/25 backdrop-blur-md flex items-center justify-center text-white text-xl md:text-2xl shadow-[inset_0_2px_5px_rgba(255,255,255,0.5)] group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500 border border-white/30">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                </div>
+                                <div class="md:hidden font-outfit font-black text-white/70 tracking-[0.3em] text-lg uppercase">Step 01</div>
+                                <div class="hidden md:flex flex-1 items-center justify-center w-full">
+                                    <span class="transform -rotate-90 whitespace-nowrap font-outfit font-black text-white/60 tracking-[0.4em] text-xl uppercase group-hover:text-white transition-colors duration-500 drop-shadow-sm">Step 01</span>
+                                </div>
+                                <div class="hidden md:block absolute -right-3 top-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="hidden md:block absolute -right-3 bottom-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="md:hidden absolute -bottom-3 left-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="md:hidden absolute -bottom-3 right-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                            </div>
+                            <div class="hidden md:block w-0 border-l-[3px] border-dashed border-gray-200/80 my-6 relative z-30 -ml-[1.5px] group-hover:border-amber-400/50 transition-colors"></div>
+                            <div class="md:hidden h-0 border-t-[3px] border-dashed border-gray-200/80 mx-6 relative z-30 -mt-[1.5px] group-hover:border-amber-400/50 transition-colors"></div>
+                            <div class="flex-1 p-6 md:p-8 flex flex-col justify-center relative z-10 bg-white">
+                                <div class="absolute -bottom-4 right-4 text-8xl text-gray-50 group-hover:text-amber-50 group-hover:scale-110 transition-all duration-500 rotate-[-15deg] group-hover:rotate-0 z-0 pointer-events-none"><i class="fa-solid fa-lightbulb"></i></div>
+                                <div class="relative z-10">
+                                    <h3 class="font-outfit font-extrabold text-2xl text-gray-900 mb-3 group-hover:text-amber-600 transition-colors duration-300">Business Idea & Name</h3>
+                                    <p class="text-sm font-sans text-gray-600 leading-relaxed font-medium">Right business idea choose karna aur uska perfect name analysis karna humari zimmedari.</p>
+                                </div>
+                                <div class="mt-5 pt-4 border-t border-gray-100 relative z-10">
+                                    <button onclick="toggleService('service1')" id="btn-service1" class="text-amber-600 font-bold text-[11px] md:text-xs uppercase tracking-widest flex items-center gap-1.5 hover:text-amber-700 transition-colors bg-amber-50/50 px-4 py-2 rounded-lg border border-amber-100/50 group-hover:bg-amber-100/50 w-max">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                </div>
+                                <div id="desc-service1" class="hidden mt-4 p-5 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-100 text-sm font-medium text-gray-700 leading-relaxed relative z-10 shadow-inner">
+                                    Ek successful startup ki shuruaat ek solid idea aur catchy naam se hoti hai. Startup Jaipur ki team aapke interest aur market demand ke hisaab se profitable business ideas filter karke degi. Hum proper market research aur competitor analysis karenge. Uske baad, ek unique, yaad rakhne layak brand name suggest karenge jiska .com domain aur social media handles easily mil jayein. Hum trademark availability bhi check karenge taaki future mein koi legal issue na aaye.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ticket 2: Social Media Setup -->
+                        <div class="relative group w-full flex flex-col md:flex-row bg-white rounded-[2rem] border border-gray-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(59,130,246,0.3)] hover:-translate-y-2 transition-all duration-500 overflow-hidden z-10">
+                            <div class="w-full md:w-24 lg:w-28 shrink-0 bg-gradient-to-br from-cyan-400 to-blue-500 flex flex-row md:flex-col items-center justify-between p-5 md:py-8 relative z-20">
+                                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/25 backdrop-blur-md flex items-center justify-center text-white text-xl md:text-2xl shadow-[inset_0_2px_5px_rgba(255,255,255,0.5)] group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-500 border border-white/30">
+                                    <i class="fa-solid fa-hashtag"></i>
+                                </div>
+                                <div class="md:hidden font-outfit font-black text-white/70 tracking-[0.3em] text-lg uppercase">Step 02</div>
+                                <div class="hidden md:flex flex-1 items-center justify-center w-full">
+                                    <span class="transform -rotate-90 whitespace-nowrap font-outfit font-black text-white/60 tracking-[0.4em] text-xl uppercase group-hover:text-white transition-colors duration-500 drop-shadow-sm">Step 02</span>
+                                </div>
+                                <div class="hidden md:block absolute -right-3 top-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="hidden md:block absolute -right-3 bottom-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="md:hidden absolute -bottom-3 left-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="md:hidden absolute -bottom-3 right-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                            </div>
+                            <div class="hidden md:block w-0 border-l-[3px] border-dashed border-gray-200/80 my-6 relative z-30 -ml-[1.5px] group-hover:border-blue-400/50 transition-colors"></div>
+                            <div class="md:hidden h-0 border-t-[3px] border-dashed border-gray-200/80 mx-6 relative z-30 -mt-[1.5px] group-hover:border-blue-400/50 transition-colors"></div>
+                            <div class="flex-1 p-6 md:p-8 flex flex-col justify-center relative z-10 bg-white">
+                                <div class="absolute -bottom-4 right-4 text-8xl text-gray-50 group-hover:text-blue-50 group-hover:scale-110 transition-all duration-500 rotate-[-15deg] group-hover:rotate-0 z-0 pointer-events-none"><i class="fa-solid fa-hashtag"></i></div>
+                                <div class="relative z-10">
+                                    <h3 class="font-outfit font-extrabold text-2xl text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">Social Media Setup</h3>
+                                    <p class="text-sm font-sans text-gray-600 leading-relaxed font-medium">Professional account creation, optimization aur management. Brand presence hum banayenge.</p>
+                                </div>
+                                <div class="mt-5 pt-4 border-t border-gray-100 relative z-10">
+                                    <button onclick="toggleService('service2')" id="btn-service2" class="text-blue-600 font-bold text-[11px] md:text-xs uppercase tracking-widest flex items-center gap-1.5 hover:text-blue-700 transition-colors bg-blue-50/50 px-4 py-2 rounded-lg border border-blue-100/50 group-hover:bg-blue-100/50 w-max">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                </div>
+                                <div id="desc-service2" class="hidden mt-4 p-5 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-100 text-sm font-medium text-gray-700 leading-relaxed relative z-10 shadow-inner">
+                                    Aaj ke digital zamane mein aapka social media hi aapki dukan aur office hai. Humari team aapke business ke liye sabhi zaroori platforms jaise Instagram, Facebook, LinkedIn, aur X (Twitter) par professional accounts create karegi. Bio optimize karna, high-quality profile picture aur cover photo design karna, aur initial posts ka grid setup karna—ye sab hum karke denge.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ticket 3: Digital Marketing -->
+                        <div class="relative group w-full flex flex-col md:flex-row bg-white rounded-[2rem] border border-gray-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(225,29,72,0.3)] hover:-translate-y-2 transition-all duration-500 overflow-hidden z-10">
+                            <div class="w-full md:w-24 lg:w-28 shrink-0 bg-gradient-to-br from-pink-400 to-rose-500 flex flex-row md:flex-col items-center justify-between p-5 md:py-8 relative z-20">
+                                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/25 backdrop-blur-md flex items-center justify-center text-white text-xl md:text-2xl shadow-[inset_0_2px_5px_rgba(255,255,255,0.5)] group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500 border border-white/30">
+                                    <i class="fa-solid fa-bullhorn"></i>
+                                </div>
+                                <div class="md:hidden font-outfit font-black text-white/70 tracking-[0.3em] text-lg uppercase">Step 03</div>
+                                <div class="hidden md:flex flex-1 items-center justify-center w-full">
+                                    <span class="transform -rotate-90 whitespace-nowrap font-outfit font-black text-white/60 tracking-[0.4em] text-xl uppercase group-hover:text-white transition-colors duration-500 drop-shadow-sm">Step 03</span>
+                                </div>
+                                <div class="hidden md:block absolute -right-3 top-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="hidden md:block absolute -right-3 bottom-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="md:hidden absolute -bottom-3 left-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="md:hidden absolute -bottom-3 right-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                            </div>
+                            <div class="hidden md:block w-0 border-l-[3px] border-dashed border-gray-200/80 my-6 relative z-30 -ml-[1.5px] group-hover:border-rose-400/50 transition-colors"></div>
+                            <div class="md:hidden h-0 border-t-[3px] border-dashed border-gray-200/80 mx-6 relative z-30 -mt-[1.5px] group-hover:border-rose-400/50 transition-colors"></div>
+                            <div class="flex-1 p-6 md:p-8 flex flex-col justify-center relative z-10 bg-white">
+                                <div class="absolute -bottom-4 right-4 text-8xl text-gray-50 group-hover:text-rose-50 group-hover:scale-110 transition-all duration-500 rotate-[-15deg] group-hover:rotate-0 z-0 pointer-events-none"><i class="fa-solid fa-bullhorn"></i></div>
+                                <div class="relative z-10">
+                                    <h3 class="font-outfit font-extrabold text-2xl text-gray-900 mb-3 group-hover:text-rose-600 transition-colors duration-300">Digital Marketing</h3>
+                                    <p class="text-sm font-sans text-gray-600 leading-relaxed font-medium">Marketing, Google/Meta Ads aur lead generation. Aapko bas clients handle karne hain.</p>
+                                </div>
+                                <div class="mt-5 pt-4 border-t border-gray-100 relative z-10">
+                                    <button onclick="toggleService('service3')" id="btn-service3" class="text-rose-600 font-bold text-[11px] md:text-xs uppercase tracking-widest flex items-center gap-1.5 hover:text-rose-700 transition-colors bg-rose-50/50 px-4 py-2 rounded-lg border border-rose-100/50 group-hover:bg-rose-100/50 w-max">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                </div>
+                                <div id="desc-service3" class="hidden mt-4 p-5 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-100 text-sm font-medium text-gray-700 leading-relaxed relative z-10 shadow-inner">
+                                    Client lana sabse bada challenge hota hai, par hamari expert digital marketing team isey aasan bana degi. Hum aapke business ke liye high-converting Facebook Ads, Instagram Ads aur Google Ads setup karenge. Ad creatives (images/videos) design karne se lekar compelling ad copy likhne tak ka saara kaam hum karenge. Hamara goal hoga ki kam se kam budget mein aapko best quality leads milen.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ticket 4: GST & Legal Paperwork -->
+                        <div class="relative group w-full flex flex-col md:flex-row bg-white rounded-[2rem] border border-gray-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(34,197,94,0.3)] hover:-translate-y-2 transition-all duration-500 overflow-hidden z-10">
+                            <div class="w-full md:w-24 lg:w-28 shrink-0 bg-gradient-to-br from-emerald-400 to-green-500 flex flex-row md:flex-col items-center justify-between p-5 md:py-8 relative z-20">
+                                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/25 backdrop-blur-md flex items-center justify-center text-white text-xl md:text-2xl shadow-[inset_0_2px_5px_rgba(255,255,255,0.5)] group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-500 border border-white/30">
+                                    <i class="fa-solid fa-file-contract"></i>
+                                </div>
+                                <div class="md:hidden font-outfit font-black text-white/70 tracking-[0.3em] text-lg uppercase">Step 04</div>
+                                <div class="hidden md:flex flex-1 items-center justify-center w-full">
+                                    <span class="transform -rotate-90 whitespace-nowrap font-outfit font-black text-white/60 tracking-[0.4em] text-xl uppercase group-hover:text-white transition-colors duration-500 drop-shadow-sm">Step 04</span>
+                                </div>
+                                <div class="hidden md:block absolute -right-3 top-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="hidden md:block absolute -right-3 bottom-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="md:hidden absolute -bottom-3 left-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="md:hidden absolute -bottom-3 right-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                            </div>
+                            <div class="hidden md:block w-0 border-l-[3px] border-dashed border-gray-200/80 my-6 relative z-30 -ml-[1.5px] group-hover:border-green-400/50 transition-colors"></div>
+                            <div class="md:hidden h-0 border-t-[3px] border-dashed border-gray-200/80 mx-6 relative z-30 -mt-[1.5px] group-hover:border-green-400/50 transition-colors"></div>
+                            <div class="flex-1 p-6 md:p-8 flex flex-col justify-center relative z-10 bg-white">
+                                <div class="absolute -bottom-4 right-4 text-8xl text-gray-50 group-hover:text-green-50 group-hover:scale-110 transition-all duration-500 rotate-[-15deg] group-hover:rotate-0 z-0 pointer-events-none"><i class="fa-solid fa-file-contract"></i></div>
+                                <div class="relative z-10">
+                                    <h3 class="font-outfit font-extrabold text-2xl text-gray-900 mb-3 group-hover:text-green-600 transition-colors duration-300">GST & Legal Paperwork</h3>
+                                    <p class="text-sm font-sans text-gray-600 leading-relaxed font-medium">Company registration se lekar GST tak, saari legal headaches humari expert CA team dekhegi.</p>
+                                </div>
+                                <div class="mt-5 pt-4 border-t border-gray-100 relative z-10">
+                                    <button onclick="toggleService('service4')" id="btn-service4" class="text-green-600 font-bold text-[11px] md:text-xs uppercase tracking-widest flex items-center gap-1.5 hover:text-green-700 transition-colors bg-green-50/50 px-4 py-2 rounded-lg border border-green-100/50 group-hover:bg-green-100/50 w-max">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                </div>
+                                <div id="desc-service4" class="hidden mt-4 p-5 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-100 text-sm font-medium text-gray-700 leading-relaxed relative z-10 shadow-inner">
+                                    Legal aur compliance ke uljhano mein padkar kai founders apna focus kho dete hain. Startup Jaipur ki dedicated CA aur legal team aapka pura documentation handle karegi. Chahe Private Limited company banani ho, LLP register karni ho, ya MSME (Udyam) aur GST registration lena ho—sab kuch humari taraf se hoga.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ticket 5: Seed Funding Support -->
+                        <div class="relative group w-full flex flex-col md:flex-row bg-white rounded-[2rem] border border-gray-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(239,68,68,0.3)] hover:-translate-y-2 transition-all duration-500 overflow-hidden z-10">
+                            <div class="w-full md:w-24 lg:w-28 shrink-0 bg-gradient-to-br from-orange-400 to-red-500 flex flex-row md:flex-col items-center justify-between p-5 md:py-8 relative z-20">
+                                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/25 backdrop-blur-md flex items-center justify-center text-white text-xl md:text-2xl shadow-[inset_0_2px_5px_rgba(255,255,255,0.5)] group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500 border border-white/30">
+                                    <i class="fa-solid fa-sack-dollar"></i>
+                                </div>
+                                <div class="md:hidden font-outfit font-black text-white/70 tracking-[0.3em] text-lg uppercase">Step 05</div>
+                                <div class="hidden md:flex flex-1 items-center justify-center w-full">
+                                    <span class="transform -rotate-90 whitespace-nowrap font-outfit font-black text-white/60 tracking-[0.4em] text-xl uppercase group-hover:text-white transition-colors duration-500 drop-shadow-sm">Step 05</span>
+                                </div>
+                                <div class="hidden md:block absolute -right-3 top-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="hidden md:block absolute -right-3 bottom-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="md:hidden absolute -bottom-3 left-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="md:hidden absolute -bottom-3 right-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                            </div>
+                            <div class="hidden md:block w-0 border-l-[3px] border-dashed border-gray-200/80 my-6 relative z-30 -ml-[1.5px] group-hover:border-red-400/50 transition-colors"></div>
+                            <div class="md:hidden h-0 border-t-[3px] border-dashed border-gray-200/80 mx-6 relative z-30 -mt-[1.5px] group-hover:border-red-400/50 transition-colors"></div>
+                            <div class="flex-1 p-6 md:p-8 flex flex-col justify-center relative z-10 bg-white">
+                                <div class="absolute -bottom-4 right-4 text-8xl text-gray-50 group-hover:text-red-50 group-hover:scale-110 transition-all duration-500 rotate-[-15deg] group-hover:rotate-0 z-0 pointer-events-none"><i class="fa-solid fa-sack-dollar"></i></div>
+                                <div class="relative z-10">
+                                    <h3 class="font-outfit font-extrabold text-2xl text-gray-900 mb-3 group-hover:text-red-600 transition-colors duration-300">Seed Funding Support</h3>
+                                    <p class="text-sm font-sans text-gray-600 leading-relaxed font-medium">Investors se connect karwana aur fundraising mein puri madad. Government grants bhi dilwayenge.</p>
+                                </div>
+                                <div class="mt-5 pt-4 border-t border-gray-100 relative z-10">
+                                    <button onclick="toggleService('service5')" id="btn-service5" class="text-red-600 font-bold text-[11px] md:text-xs uppercase tracking-widest flex items-center gap-1.5 hover:text-red-700 transition-colors bg-red-50/50 px-4 py-2 rounded-lg border border-red-100/50 group-hover:bg-red-100/50 w-max">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                </div>
+                                <div id="desc-service5" class="hidden mt-4 p-5 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-100 text-sm font-medium text-gray-700 leading-relaxed relative z-10 shadow-inner">
+                                    Jab aapka idea aur business model ready ho jayega, tab usey bada scale dene ke liye paiso ki zaroorat padegi. Hamari team aapko Rajasthan Government ke iStart program ke tahat ₹1.2 Lakh se lekar ₹10 Lakhs tak ka equity-free grant dilwane mein step-by-step help karegi. Hum aapka professional Pitch Deck aur financial projection model banayenge.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ticket 6: Mentorship & Guidance -->
+                        <div class="relative group w-full flex flex-col md:flex-row bg-white rounded-[2rem] border border-gray-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_50px_-15px_rgba(168,85,247,0.3)] hover:-translate-y-2 transition-all duration-500 overflow-hidden z-10">
+                            <div class="w-full md:w-24 lg:w-28 shrink-0 bg-gradient-to-br from-violet-400 to-purple-500 flex flex-row md:flex-col items-center justify-between p-5 md:py-8 relative z-20">
+                                <div class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/25 backdrop-blur-md flex items-center justify-center text-white text-xl md:text-2xl shadow-[inset_0_2px_5px_rgba(255,255,255,0.5)] group-hover:scale-110 group-hover:-rotate-12 transition-transform duration-500 border border-white/30">
+                                    <i class="fa-solid fa-chalkboard-user"></i>
+                                </div>
+                                <div class="md:hidden font-outfit font-black text-white/70 tracking-[0.3em] text-lg uppercase">Step 06</div>
+                                <div class="hidden md:flex flex-1 items-center justify-center w-full">
+                                    <span class="transform -rotate-90 whitespace-nowrap font-outfit font-black text-white/60 tracking-[0.4em] text-xl uppercase group-hover:text-white transition-colors duration-500 drop-shadow-sm">Step 06</span>
+                                </div>
+                                <div class="hidden md:block absolute -right-3 top-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="hidden md:block absolute -right-3 bottom-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="md:hidden absolute -bottom-3 left-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                                <div class="md:hidden absolute -bottom-3 right-[-15px] w-6 h-6 rounded-full bg-[#FFF0F5] z-30"></div>
+                            </div>
+                            <div class="hidden md:block w-0 border-l-[3px] border-dashed border-gray-200/80 my-6 relative z-30 -ml-[1.5px] group-hover:border-purple-400/50 transition-colors"></div>
+                            <div class="md:hidden h-0 border-t-[3px] border-dashed border-gray-200/80 mx-6 relative z-30 -mt-[1.5px] group-hover:border-purple-400/50 transition-colors"></div>
+                            <div class="flex-1 p-6 md:p-8 flex flex-col justify-center relative z-10 bg-white">
+                                <div class="absolute -bottom-4 right-4 text-8xl text-gray-50 group-hover:text-purple-50 group-hover:scale-110 transition-all duration-500 rotate-[-15deg] group-hover:rotate-0 z-0 pointer-events-none"><i class="fa-solid fa-chalkboard-user"></i></div>
+                                <div class="relative z-10">
+                                    <h3 class="font-outfit font-extrabold text-2xl text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">Mentorship & Guidance</h3>
+                                    <p class="text-sm font-sans text-gray-600 leading-relaxed font-medium">Success kaise achieve karni hai? Hamare experts aapko step-by-step consultancy aur guide karenge.</p>
+                                </div>
+                                <div class="mt-5 pt-4 border-t border-gray-100 relative z-10">
+                                    <button onclick="toggleService('service6')" id="btn-service6" class="text-purple-600 font-bold text-[11px] md:text-xs uppercase tracking-widest flex items-center gap-1.5 hover:text-purple-700 transition-colors bg-purple-50/50 px-4 py-2 rounded-lg border border-purple-100/50 group-hover:bg-purple-100/50 w-max">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                </div>
+                                <div id="desc-service6" class="hidden mt-4 p-5 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-100 text-sm font-medium text-gray-700 leading-relaxed relative z-10 shadow-inner">
+                                    Business mein roz naye challenges aate hain, aur akele unka samna karna mushkil hota hai. Startup Jaipur aapko industry ke top experts aur successful founders se directly connect karwayega. Aapko weekly 1-on-1 mentorship sessions milenge jahan aap apni problems discuss kar sakte hain.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CTA Full Width Box -->
+                        <div class="col-span-1 lg:col-span-2 bg-gradient-to-r from-pink-600 to-jaipur-pink rounded-[2rem] p-8 border border-pink-400 flex flex-col md:flex-row justify-between items-center text-center md:text-left shadow-[0_15px_40px_-10px_rgba(214,109,117,0.5)] transform hover:scale-[1.02] transition-transform mt-4 relative overflow-hidden z-10">
+                            <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
+                            <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-black/10 rounded-full blur-2xl"></div>
+                            
+                            <div class="mb-6 md:mb-0 relative z-10">
+                                <h3 class="text-3xl font-black mb-2 text-white font-outfit drop-shadow-sm">Toh Der Kis Baat Ki?</h3>
+                                <p class="text-white/90 font-medium text-lg">Jab saara support ek hi jagah mil raha hai, toh aaj hi apne business ka foundation rakhein!</p>
+                            </div>
+                            <a href="https://wa.me/917340337074" target="_blank" class="relative z-10 px-8 py-4 bg-white text-jaipur-deep font-black rounded-full hover:bg-gray-100 hover:-translate-y-1 transition-all whitespace-nowrap shadow-xl font-sans group">
+                                <i class="fa-brands fa-whatsapp text-green-500 text-xl mr-2 group-hover:scale-125 transition-transform"></i> WhatsApp Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ROYAL SERVICES GRID -->
+        <section class="pb-24 pt-12 md:pt-16 bg-transparent relative z-10 overflow-hidden border-t border-jaipur-pink/10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-10 animate-fade-up">
+                    <h2 class="font-outfit text-4xl md:text-5xl font-black text-jaipur-deep tracking-tight">
+                        Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-jaipur-deep to-jaipur-pink">Services</span>
+                    </h2>
+                    <p class="mt-4 text-sm md:text-base font-sans text-gray-600 max-w-2xl mx-auto font-medium leading-relaxed">
+                            Aapke idea ko ek successful startup banane ke liye hum har kadam par aapke sath hain.
+                        </p>
+                    </div>
+
+                    <!-- FLOATING DIAMOND CREST DESIGN -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-x-8 md:gap-y-12 pt-8">
+                        
+                        <!-- Service 1: Idea & Strategy -->
+                        <div class="relative group mt-6 md:mt-2">
+                            <div class="absolute -top-6 md:-top-8 left-6 md:left-8 w-14 h-14 md:w-16 md:h-16 bg-white/95 shadow-[0_10px_20px_rgba(0,0,0,0.15)] rotate-45 rounded-[12px] md:rounded-[1rem] group-hover:rotate-[135deg] transition-transform duration-700 z-20 border border-white"></div>
+                            <div class="absolute -top-6 md:-top-8 left-6 md:left-8 w-14 h-14 md:w-16 md:h-16 flex items-center justify-center text-[#d66d75] text-xl md:text-2xl z-30 group-hover:scale-110 transition-transform duration-500 pointer-events-none">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </div>
+                            <div class="relative bg-gradient-to-br from-[#fb923c]/90 to-[#d66d75]/90 backdrop-blur-lg rounded-[2rem] rounded-tl-2xl p-8 pt-14 border border-white/20 shadow-md group-hover:shadow-[0_20px_40px_-15px_rgba(214,109,117,0.5)] group-hover:from-[#fb923c] group-hover:to-[#d66d75] transition-all duration-500 z-10 overflow-hidden h-full flex flex-col">
+                                <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-full -z-10 group-hover:scale-125 transition-transform duration-500 pointer-events-none"></div>
+                                <h4 class="font-outfit font-extrabold text-xl text-white mb-3 tracking-tight">Idea & Strategy</h4>
+                                <p class="text-sm font-sans text-white/90 leading-relaxed font-medium">Aapke raw idea ko market-ready banana. Hum market research, startup model planning aur roadmap strategy mein aapki madad karte hain.</p>
+                                <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-white/60 group-hover:w-full transition-all duration-500"></div>
+                            </div>
+                        </div>
+
+                        <!-- Service 2: Legal & Registration -->
+                        <div class="relative group mt-6 md:mt-2">
+                            <div class="absolute -top-6 md:-top-8 left-6 md:left-8 w-14 h-14 md:w-16 md:h-16 bg-white/95 shadow-[0_10px_20px_rgba(0,0,0,0.15)] rotate-45 rounded-[12px] md:rounded-[1rem] group-hover:rotate-[135deg] transition-transform duration-700 z-20 border border-white"></div>
+                            <div class="absolute -top-6 md:-top-8 left-6 md:left-8 w-14 h-14 md:w-16 md:h-16 flex items-center justify-center text-[#b3404a] text-xl md:text-2xl z-30 group-hover:scale-110 transition-transform duration-500 pointer-events-none">
+                                <i class="fa-solid fa-file-signature"></i>
+                            </div>
+                            <div class="relative bg-gradient-to-br from-[#d66d75]/90 to-[#b3404a]/90 backdrop-blur-lg rounded-[2rem] rounded-tl-2xl p-8 pt-14 border border-white/20 shadow-md group-hover:shadow-[0_20px_40px_-15px_rgba(179,64,74,0.5)] group-hover:from-[#d66d75] group-hover:to-[#b3404a] transition-all duration-500 z-10 overflow-hidden h-full flex flex-col">
+                                <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-full -z-10 group-hover:scale-125 transition-transform duration-500 pointer-events-none"></div>
+                                <h4 class="font-outfit font-extrabold text-xl text-white mb-3 tracking-tight">Legal & Registration</h4>
+                                <p class="text-sm font-sans text-white/90 leading-relaxed font-medium">Company Registration (Pvt Ltd, LLP), GST, Trademark aur legal agreements ka saara paperwork hum handle karte hain.</p>
+                                <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-white/60 group-hover:w-full transition-all duration-500"></div>
+                            </div>
+                        </div>
+
+                        <!-- Service 3: Tech Development -->
+                        <div class="relative group mt-6 md:mt-2">
+                            <div class="absolute -top-6 md:-top-8 left-6 md:left-8 w-14 h-14 md:w-16 md:h-16 bg-white/95 shadow-[0_10px_20px_rgba(0,0,0,0.15)] rotate-45 rounded-[12px] md:rounded-[1rem] group-hover:rotate-[135deg] transition-transform duration-700 z-20 border border-white"></div>
+                            <div class="absolute -top-6 md:-top-8 left-6 md:left-8 w-14 h-14 md:w-16 md:h-16 flex items-center justify-center text-[#8B0000] text-xl md:text-2xl z-30 group-hover:scale-110 transition-transform duration-500 pointer-events-none">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                            <div class="relative bg-gradient-to-br from-[#b3404a]/90 to-[#8B0000]/90 backdrop-blur-lg rounded-[2rem] rounded-tl-2xl p-8 pt-14 border border-white/20 shadow-md group-hover:shadow-[0_20px_40px_-15px_rgba(139,0,0,0.5)] group-hover:from-[#b3404a] group-hover:to-[#8B0000] transition-all duration-500 z-10 overflow-hidden h-full flex flex-col">
+                                <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-full -z-10 group-hover:scale-125 transition-transform duration-500 pointer-events-none"></div>
+                                <h4 class="font-outfit font-extrabold text-xl text-white mb-3 tracking-tight">Tech Development</h4>
+                                <p class="text-sm font-sans text-white/90 leading-relaxed font-medium">Aapke startup ke liye professional Website, Mobile App (iOS/Android) aur software MVP develop karne ki in-house IT services.</p>
+                                <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-white/60 group-hover:w-full transition-all duration-500"></div>
+                            </div>
+                        </div>
+
+                        <!-- Service 4: Branding & Marketing -->
+                        <div class="relative group mt-6 md:mt-2">
+                            <div class="absolute -top-6 md:-top-8 left-6 md:left-8 w-14 h-14 md:w-16 md:h-16 bg-white/95 shadow-[0_10px_20px_rgba(0,0,0,0.15)] rotate-45 rounded-[12px] md:rounded-[1rem] group-hover:rotate-[135deg] transition-transform duration-700 z-20 border border-white"></div>
+                            <div class="absolute -top-6 md:-top-8 left-6 md:left-8 w-14 h-14 md:w-16 md:h-16 flex items-center justify-center text-[#ea580c] text-xl md:text-2xl z-30 group-hover:scale-110 transition-transform duration-500 pointer-events-none">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </div>
+                            <div class="relative bg-gradient-to-br from-[#f97316]/90 to-[#d66d75]/90 backdrop-blur-lg rounded-[2rem] rounded-tl-2xl p-8 pt-14 border border-white/20 shadow-md group-hover:shadow-[0_20px_40px_-15px_rgba(249,115,22,0.5)] group-hover:from-[#f97316] group-hover:to-[#d66d75] transition-all duration-500 z-10 overflow-hidden h-full flex flex-col">
+                                <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-full -z-10 group-hover:scale-125 transition-transform duration-500 pointer-events-none"></div>
+                                <h4 class="font-outfit font-extrabold text-xl text-white mb-3 tracking-tight">Branding & Marketing</h4>
+                                <p class="text-sm font-sans text-white/90 leading-relaxed font-medium">Creative Logo design, Social Media marketing, aur digital brand building campaigns jo aapke customers tak pahuche.</p>
+                                <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-white/60 group-hover:w-full transition-all duration-500"></div>
+                            </div>
+                        </div>
+
+                        <!-- Service 5: Funding & Grants -->
+                        <div class="relative group mt-6 md:mt-2">
+                            <div class="absolute -top-6 md:-top-8 left-6 md:left-8 w-14 h-14 md:w-16 md:h-16 bg-white/95 shadow-[0_10px_20px_rgba(0,0,0,0.15)] rotate-45 rounded-[12px] md:rounded-[1rem] group-hover:rotate-[135deg] transition-transform duration-700 z-20 border border-white"></div>
+                            <div class="absolute -top-6 md:-top-8 left-6 md:left-8 w-14 h-14 md:w-16 md:h-16 flex items-center justify-center text-[#d4af37] text-xl md:text-2xl z-30 group-hover:scale-110 transition-transform duration-500 pointer-events-none">
+                                <i class="fa-solid fa-sack-dollar"></i>
+                            </div>
+                            <div class="relative bg-gradient-to-br from-[#d4af37]/90 to-[#fb923c]/90 backdrop-blur-lg rounded-[2rem] rounded-tl-2xl p-8 pt-14 border border-white/20 shadow-md group-hover:shadow-[0_20px_40px_-15px_rgba(212,175,55,0.5)] group-hover:from-[#d4af37] group-hover:to-[#fb923c] transition-all duration-500 z-10 overflow-hidden h-full flex flex-col">
+                                <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-full -z-10 group-hover:scale-125 transition-transform duration-500 pointer-events-none"></div>
+                                <h4 class="font-outfit font-extrabold text-xl text-white mb-3 tracking-tight">Funding & Grants</h4>
+                                <p class="text-sm font-sans text-white/90 leading-relaxed font-medium">Investor Pitch deck banane se lekar Govt. grants aur Seed funding uthane mein direct expert assistance.</p>
+                                <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-white/60 group-hover:w-full transition-all duration-500"></div>
+                            </div>
+                        </div>
+
+                        <!-- Service 6: Scale & Growth -->
+                        <div class="relative group mt-6 md:mt-2">
+                            <div class="absolute -top-6 md:-top-8 left-6 md:left-8 w-14 h-14 md:w-16 md:h-16 bg-white/95 shadow-[0_10px_20px_rgba(0,0,0,0.15)] rotate-45 rounded-[12px] md:rounded-[1rem] group-hover:rotate-[135deg] transition-transform duration-700 z-20 border border-white"></div>
+                            <div class="absolute -top-6 md:-top-8 left-6 md:left-8 w-14 h-14 md:w-16 md:h-16 flex items-center justify-center text-[#b3404a] text-xl md:text-2xl z-30 group-hover:scale-110 transition-transform duration-500 pointer-events-none">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                            </div>
+                            <div class="relative bg-gradient-to-br from-[#fb923c]/90 to-[#b3404a]/90 backdrop-blur-lg rounded-[2rem] rounded-tl-2xl p-8 pt-14 border border-white/20 shadow-md group-hover:shadow-[0_20px_40px_-15px_rgba(251,146,60,0.5)] group-hover:from-[#fb923c] group-hover:to-[#b3404a] transition-all duration-500 z-10 overflow-hidden h-full flex flex-col">
+                                <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-bl-full -z-10 group-hover:scale-125 transition-transform duration-500 pointer-events-none"></div>
+                                <h4 class="font-outfit font-extrabold text-xl text-white mb-3 tracking-tight">Scale & Growth</h4>
+                                <p class="text-sm font-sans text-white/90 leading-relaxed font-medium">Startup ko bada karne ke liye sales strategy, networking aur experienced mentors dwara regular guidance.</p>
+                                <div class="absolute bottom-0 left-0 w-0 h-1.5 bg-white/60 group-hover:w-full transition-all duration-500"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- How It Works / Process -->
+        <section id="how-it-works" class="py-12 md:py-20 bg-[#FFF0F5] relative z-10 overflow-hidden border-t border-jaipur-pink/20 shadow-[0_-10px_30px_rgba(0,0,0,0.02)]">
+            <div class="absolute inset-0 popup-floral-pattern opacity-[0.15] mix-blend-multiply pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16 animate-fade-up">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jaipur-gold/10 text-jaipur-deep border border-jaipur-gold/20 text-[10px] md:text-xs font-outfit font-bold uppercase tracking-widest mb-4 shadow-sm">
+                        <i class="fa-solid fa-route text-jaipur-gold"></i> Journey to Success
+                    </div>
+                    <h2 class="font-outfit text-4xl md:text-6xl font-black text-jaipur-deep tracking-tight">
+                        How It <span class="text-transparent bg-clip-text bg-gradient-to-r from-jaipur-deep to-jaipur-pink">Works</span>
+                    </h2>
+                    <p class="mt-4 text-sm md:text-lg font-sans text-gray-600 max-w-2xl mx-auto font-medium">A transparent, 4-step pathway designed to take your raw idea to a funded, scalable startup.</p>
+                </div>
+
+                <!-- UNIQUE PREMIUM FRAME: Asymmetrical Ribbon Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-6 relative mt-16 pb-8">
+                    
+                    <!-- Connecting Dashed Line passing behind the Ribbons -->
+                    <div class="hidden lg:block absolute top-[-0.5rem] left-[10%] right-[10%] h-[3px] border-t-[3px] border-dashed border-gray-300 z-0 opacity-70"></div>
+
+                    <!-- Step 1: Registration -->
+                    <div class="relative z-10 bg-white p-8 pt-10 rounded-tl-2xl rounded-br-2xl rounded-tr-[3rem] rounded-bl-[3rem] shadow-[0_10px_30px_-5px_rgba(0,0,0,0.08)] hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(234,179,8,0.25)] transition-all duration-500 group overflow-hidden mt-6 md:mt-0">
+                        <div class="absolute top-0 left-6 md:left-8 bg-gradient-to-b from-yellow-400 to-yellow-600 text-white font-black text-xl md:text-2xl w-12 md:w-14 h-[3.5rem] md:h-[4.5rem] rounded-b-2xl shadow-[0_10px_20px_rgba(234,179,8,0.4)] flex items-start justify-center pt-3 md:pt-5 group-hover:pt-4 md:group-hover:pt-6 group-hover:h-[4rem] md:group-hover:h-[5rem] transition-all duration-300 z-20">
+                            1
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 text-[100px] text-gray-50 group-hover:text-yellow-50 transition-colors duration-500 rotate-[-15deg] group-hover:rotate-0 z-0 pointer-events-none">
+                            <i class="fa-solid fa-file-pen"></i>
+                        </div>
+                        <h4 class="font-outfit font-extrabold text-2xl text-gray-900 mb-3 relative z-10 mt-6 group-hover:text-yellow-600 transition-colors">Registration</h4>
+                        <p class="text-sm font-sans text-gray-600 leading-relaxed relative z-10 font-medium">Apply online with your startup pitch deck. We evaluate your vision, market potential, and commitment.</p>
+                    </div>
+
+                    <!-- Step 2: Screening -->
+                    <div class="relative z-10 bg-white p-8 pt-10 rounded-tl-2xl rounded-br-2xl rounded-tr-[3rem] rounded-bl-[3rem] shadow-[0_10px_30px_-5px_rgba(0,0,0,0.08)] hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(59,130,246,0.25)] transition-all duration-500 group overflow-hidden mt-6 md:mt-0">
+                        <div class="absolute top-0 left-6 md:left-8 bg-gradient-to-b from-cyan-400 to-blue-600 text-white font-black text-xl md:text-2xl w-12 md:w-14 h-[3.5rem] md:h-[4.5rem] rounded-b-2xl shadow-[0_10px_20px_rgba(59,130,246,0.4)] flex items-start justify-center pt-3 md:pt-5 group-hover:pt-4 md:group-hover:pt-6 group-hover:h-[4rem] md:group-hover:h-[5rem] transition-all duration-300 z-20">
+                            2
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 text-[100px] text-gray-50 group-hover:text-blue-50 transition-colors duration-500 rotate-[-15deg] group-hover:rotate-0 z-0 pointer-events-none">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <h4 class="font-outfit font-extrabold text-2xl text-gray-900 mb-3 relative z-10 mt-6 group-hover:text-blue-600 transition-colors">Screening</h4>
+                        <p class="text-sm font-sans text-gray-600 leading-relaxed relative z-10 font-medium">Shortlisted candidates undergo an interview with our expert panel to discuss viability and roadmap.</p>
+                    </div>
+
+                    <!-- Step 3: Incubation -->
+                    <div class="relative z-10 bg-white p-8 pt-10 rounded-tl-2xl rounded-br-2xl rounded-tr-[3rem] rounded-bl-[3rem] shadow-[0_10px_30px_-5px_rgba(0,0,0,0.08)] hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(236,72,153,0.25)] transition-all duration-500 group overflow-hidden mt-6 md:mt-0">
+                        <div class="absolute top-0 left-6 md:left-8 bg-gradient-to-b from-pink-400 to-rose-600 text-white font-black text-xl md:text-2xl w-12 md:w-14 h-[3.5rem] md:h-[4.5rem] rounded-b-2xl shadow-[0_10px_20px_rgba(236,72,153,0.4)] flex items-start justify-center pt-3 md:pt-5 group-hover:pt-4 md:group-hover:pt-6 group-hover:h-[4rem] md:group-hover:h-[5rem] transition-all duration-300 z-20">
+                            3
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 text-[100px] text-gray-50 group-hover:text-pink-50 transition-colors duration-500 rotate-[-15deg] group-hover:rotate-0 z-0 pointer-events-none">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <h4 class="font-outfit font-extrabold text-2xl text-gray-900 mb-3 relative z-10 mt-6 group-hover:text-rose-600 transition-colors">Incubation</h4>
+                        <p class="text-sm font-sans text-gray-600 leading-relaxed relative z-10 font-medium">Get access to our expert network, strategic roadmap, legal support, CA services, and 1-on-1 mentorship.</p>
+                    </div>
+
+                    <!-- Step 4: Funding -->
+                    <div class="relative z-10 bg-white p-8 pt-10 rounded-tl-2xl rounded-br-2xl rounded-tr-[3rem] rounded-bl-[3rem] shadow-[0_10px_30px_-5px_rgba(0,0,0,0.08)] hover:-translate-y-2 hover:shadow-[0_20px_40px_-10px_rgba(34,197,94,0.25)] transition-all duration-500 group overflow-hidden mt-6 md:mt-0">
+                        <div class="absolute top-0 left-6 md:left-8 bg-gradient-to-b from-emerald-400 to-green-600 text-white font-black text-xl md:text-2xl w-12 md:w-14 h-[3.5rem] md:h-[4.5rem] rounded-b-2xl shadow-[0_10px_20px_rgba(34,197,94,0.4)] flex items-start justify-center pt-3 md:pt-5 group-hover:pt-4 md:group-hover:pt-6 group-hover:h-[4rem] md:group-hover:h-[5rem] transition-all duration-300 z-20">
+                            4
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 text-[100px] text-gray-50 group-hover:text-green-50 transition-colors duration-500 rotate-[-15deg] group-hover:rotate-0 z-0 pointer-events-none">
+                            <i class="fa-solid fa-sack-dollar"></i>
+                        </div>
+                        <h4 class="font-outfit font-extrabold text-2xl text-gray-900 mb-3 relative z-10 mt-6 group-hover:text-green-600 transition-colors">Funding</h4>
+                        <p class="text-sm font-sans text-gray-600 leading-relaxed relative z-10 font-medium">Pitch on Demo Day to Govt. bodies, Angel Investors, and VCs to secure seed capital up to ₹10L.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+  
+
+    <!-- WhatsApp Floating Button -->
+    <a id="whatsapp-float" href="https://wa.me/917340337074" target="_blank" class="fixed bottom-6 right-6 z-[160] group hover:scale-110 transition-transform duration-300">
+        <div class="relative flex items-center justify-center w-16 h-16 bg-[#25D366] animate-funny-blob text-white shadow-lg">
+            <i class="fa-brands fa-whatsapp text-4xl"></i>
+            <div class="absolute top-3 right-3 w-3 h-3 bg-red-600 rounded-full border border-white z-20 animate-ping"></div>
+        </div>
+    </a>
+
+    <!-- Merged Scripts -->
+    <script>
+        // Elements
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const backdrop = document.getElementById('mobile-menu-backdrop');
+        const l1 = document.getElementById('line1');
+        const l2 = document.getElementById('line2');
+        const l3 = document.getElementById('line3');
+        const authModalDrop = document.getElementById('authModalDrop');
+        const authModalFull = document.getElementById('authModal');
+
+        function toggleMobileMenu() {
+            if (!mobileMenu || !backdrop) return;
+            
+            const isClosed = mobileMenu.classList.contains('translate-x-full');
+            
+            if (isClosed) {
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenu.classList.add('translate-x-0');
+                
+                backdrop.classList.remove('hidden');
+                setTimeout(() => {
+                    backdrop.classList.remove('opacity-0', 'pointer-events-none');
+                }, 10);
+                
+                document.body.style.overflow = 'hidden';
+                
+                if(l1) { l1.classList.add('rotate-45', 'translate-y-[6px]'); l1.classList.replace('bg-green-400', 'bg-white'); }
+                if(l2) l2.classList.add('opacity-0', 'scale-0');
+                if(l3) { l3.classList.add('-rotate-45', '-translate-y-[6px]'); l3.classList.replace('bg-pink-500', 'bg-white'); }
+            } else {
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('translate-x-full');
+                
+                backdrop.classList.add('opacity-0', 'pointer-events-none');
+                setTimeout(() => {
+                    backdrop.classList.add('hidden');
+                }, 500);
+                
+                document.body.style.overflow = 'auto';
+                
+                if(l1) { l1.classList.remove('rotate-45', 'translate-y-[6px]'); l1.classList.replace('bg-white', 'bg-green-400'); }
+                if(l2) l2.classList.remove('opacity-0', 'scale-0');
+                if(l3) { l3.classList.remove('-rotate-45', '-translate-y-[6px]'); l3.classList.replace('bg-white', 'bg-pink-500'); }
+            }
+        }
+        
+        if(menuBtn) menuBtn.addEventListener('click', toggleMobileMenu);
+
+        function scrollToSection(id) { 
+            if (mobileMenu && !mobileMenu.classList.contains('translate-x-full')) {
+                toggleMobileMenu();
+            }
+            const el = document.getElementById(id);
+            if(el) el.scrollIntoView({ behavior: 'smooth' }); 
+        }
+
+        function toggleLoginModal() {
+            if(authModalDrop) authModalDrop.classList.toggle('hidden');
+            const isOpen = authModalDrop && !authModalDrop.classList.contains('hidden');
+            const loginIcon = document.getElementById('login-icon');
+            const loginText = document.getElementById('login-text');
+            if (isOpen) {
+                if(loginIcon) loginIcon.className = "fa-solid fa-xmark text-yellow-300 text-[10px] md:text-xs";
+                if(loginText) loginText.innerText = "Back";
+            } else {
+                if(loginIcon) loginIcon.className = "fa-solid fa-key text-yellow-300 text-[10px] md:text-xs";
+                if(loginText) loginText.innerText = "Login";
+            }
+        }
+
+        function toggleLoginModalFull() {
+            if(authModalFull) authModalFull.classList.toggle('hidden');
+            document.body.style.overflow = (authModalFull && !authModalFull.classList.contains('hidden')) ? 'hidden' : 'auto';
+        }
+
+        window.onclick = function(event) {
+            const loginBtn = document.getElementById('login-btn-trigger');
+            if (loginBtn && !loginBtn.contains(event.target) && authModalDrop && !authModalDrop.contains(event.target)) {
+                if (!authModalDrop.classList.contains('hidden')) { toggleLoginModal(); }
+            }
+            if (event.target == authModalFull) { toggleLoginModalFull(); }
+        }
+
+        window.handleLoginDrop = function() {
+            const email = document.getElementById('loginEmailDrop').value.trim();
+            const pass = document.getElementById('loginPassDrop').value.trim();
+            if(email === "startupjaipur@gmail.com" && pass === "1paravadmin@pass") {
+                document.getElementById('login-form-drop').innerHTML = "<p class='text-center font-bold text-jaipur-deep'>Admin Login Successful!</p>";
+            } else {
+                document.getElementById('loginErrorDrop').classList.remove('hidden');
+            }
+        };
+
+        window.handleLoginFull = function() {
+            const email = document.getElementById('loginEmailFull').value.trim();
+            const pass = document.getElementById('loginPassFull').value.trim();
+            if(email === "startupjaipur@gmail.com" && pass === "1paravadmin@pass") {
+                document.getElementById('login-form-full').innerHTML = "<p class='text-center font-bold text-jaipur-deep'>Admin Login Successful!</p>";
+            } else {
+                document.getElementById('loginErrorFull').classList.remove('hidden');
+            }
+        };
+
+        function toggleService(serviceId) {
+            const desc = document.getElementById('desc-' + serviceId);
+            const btn = document.getElementById('btn-' + serviceId);
+            if (desc.classList.contains('hidden')) {
+                desc.classList.remove('hidden');
+                btn.innerHTML = 'See Less <i class="fa-solid fa-chevron-up"></i>';
+            } else {
+                desc.classList.add('hidden');
+                btn.innerHTML = 'See More <i class="fa-solid fa-chevron-down"></i>';
+            }
+        }
+        
+        function toggleAbout() {
+            const moreText = document.getElementById('more-about-text');
+            const btnText = document.getElementById('read-more-text');
+            const icon = document.getElementById('read-more-icon');
+            if (moreText.classList.contains('hidden')) {
+                moreText.classList.remove('hidden');
+                btnText.innerText = "Read Less";
+                if(icon) icon.className = "fa-solid fa-arrow-up";
+            } else {
+                moreText.classList.add('hidden');
+                btnText.innerText = "Read More";
+                if(icon) icon.className = "fa-solid fa-arrow-down";
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const aboutSection = document.getElementById('about-us');
+            const moreText = document.getElementById('more-about-text');
+            const btnText = document.getElementById('read-more-text');
+            const icon = document.getElementById('read-more-icon');
+
+            if (aboutSection && moreText && btnText) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting && !moreText.classList.contains('hidden')) {
+                            moreText.classList.add('hidden');
+                            btnText.innerText = "Read More";
+                            if(icon) icon.className = "fa-solid fa-arrow-down";
+                        }
+                    });
+                }, { threshold: 0 }); 
+                observer.observe(aboutSection);
+            }
+        });
+    </script>
+<!-- MAIN FOOTER START -->
+<div class="w-full h-[2px] bg-jaipur-deep/50 relative z-50 shadow-[0_0_10px_rgba(139,0,0,0.3)] blur-[1px]"></div>
+<footer class="marwadi-footer-bg pt-16 pb-28 text-jaipur-deep relative z-30 w-full overflow-hidden">
+    <div class="absolute top-0 left-0 w-full z-40 pointer-events-none">
+        <div id="footer-toran" class="flex w-max -ml-[2vw] flex-nowrap items-start origin-top">
+             <div class="relative w-20 sm:w-32 shrink-0">
+                <svg viewBox="0 0 100 45" class="w-full h-auto drop-shadow-md overflow-visible"><g transform="translate(0, 0)"><line x1="0" y1="0" x2="0" y2="25" stroke="#d4af37" stroke-width="1.5" /><polygon points="0,5 4,10 0,15 -4,10" fill="#166534" stroke="#d4af37" stroke-width="0.5" /><path d="M-5,18 Q0,28 5,18 L0,15 Z" fill="#b91c1c" stroke="#d4af37" stroke-width="0.5" /><circle cx="0" cy="30" r="2.5" fill="#d4af37" /></g><path d="M0,0 C15,5 30,30 50,30 C70,30 85,5 100,0" fill="none" stroke="#d4af37" stroke-width="1.5" /><g transform="translate(50, 2) scale(0.7)"><circle cx="0" cy="0" r="2" fill="#d66d75" stroke="#d4af37" stroke-width="0.5" /><line x1="0" y1="2" x2="0" y2="8" stroke="#d4af37" stroke-width="1.5" /><path d="M-8,14 Q0,6 8,14 Z" fill="#d4af37" stroke="#8B0000" stroke-width="1" /><circle cx="-4" cy="12" r="1" fill="#166534" /><circle cx="0" cy="11.5" r="1" fill="#b91c1c" /><circle cx="4" cy="12" r="1" fill="#166534" /><rect x="-8.5" y="14" width="17" height="2" fill="#b91c1c" /><line x1="-6" y1="16" x2="-6" y2="20" stroke="#d4af37" stroke-width="0.5" /><circle cx="-6" cy="21" r="1" fill="#fff" stroke="#d4af37" stroke-width="0.5" /><line x1="-2" y1="16" x2="-2" y2="22" stroke="#d4af37" stroke-width="0.5" /><circle cx="-2" cy="23" r="1.2" fill="#fff" stroke="#d4af37" stroke-width="0.5" /><line x1="2" y1="16" x2="2" y2="22" stroke="#d4af37" stroke-width="0.5" /><circle cx="2" cy="23" r="1.2" fill="#fff" stroke="#d4af37" stroke-width="0.5" /><line x1="6" y1="16" x2="6" y2="20" stroke="#d4af37" stroke-width="0.5" /><circle cx="6" cy="21" r="1" fill="#fff" stroke="#d4af37" stroke-width="0.5" /></g><g transform="translate(50, 30)"><circle r="3" fill="#8B0000" stroke="#d4af37" stroke-width="0.5"/><path d="M0,-3 L2,-7 L0,-9 L-2,-7 Z" fill="#e29587" /><line x1="0" y1="3" x2="0" y2="8" stroke="#d4af37" stroke-width="1" /><circle cx="0" cy="9" r="1.5" fill="#166534" /></g></svg>
+             </div>
+        </div>
+    </div>
+
+    <div class="flex flex-col items-center text-center gap-10 relative z-20 w-full px-0 overflow-hidden pt-12">
+        <div class="w-full flex flex-col items-center">
+            <div class="mb-2 px-4 relative">
+                <h1 class="font-heading font-bold text-5xl md:text-7xl text-jaipur-deep tracking-wide leading-none drop-shadow-sm">Startup<span class="text-jaipur-pink">Jaipur</span></h1>
+            </div>
+            <div class="flex items-center justify-center gap-3 mt-4 mb-6 w-full max-w-md px-4">
+                <div class="flex-1 h-[1.5px] bg-gradient-to-r from-transparent to-jaipur-gold/70"></div>
+                <p class="font-outfit font-black text-jaipur-deep text-[9px] md:text-[11px] uppercase tracking-[0.4em] bg-jaipur-gold/10 px-5 py-2 rounded-full border border-jaipur-gold/40 shadow-sm shrink-0">The Pink City Startup Hub</p>
+                <div class="flex-1 h-[1.5px] bg-gradient-to-l from-transparent to-jaipur-gold/70"></div>
+            </div>
+            <p class="text-xs md:text-sm text-jaipur-deep/80 font-outfit max-w-xl px-6 text-center leading-relaxed font-medium tracking-wide">Building the future of innovation in the heart of Rajasthan. Join our ecosystem to scale your dreams.</p>
+        </div>
+
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-14 sm:gap-8 w-full relative z-10 pb-4">
+            <div class="relative group">
+                <div class="absolute -top-14 left-1/2 -translate-x-1/2 pointer-events-none z-20">
+                    <div class="animate-bounce flex flex-col items-center">
+                        <div class="bg-jaipur-deep text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest rounded-xl shadow-xl border border-jaipur-pink/30 w-[160px] md:w-[170px] h-[34px] md:h-[38px] flex items-center justify-center"><span id="typewriter-insta"></span></div>
+                        <div class="w-3 h-3 bg-jaipur-deep rotate-45 -mt-1.5 border-r border-b border-jaipur-pink/30"></div>
+                    </div>
+                </div>
+                <a href="https://instagram.com/startupjaipur" target="_blank" class="relative flex items-center justify-center gap-3 w-[240px] py-3.5 md:py-4 bg-gradient-to-r from-[#f09433] via-[#e6683c] to-[#bc1888] text-white rounded-full font-outfit font-bold text-[11px] md:text-xs uppercase tracking-widest shadow-[0_8px_20px_-6px_rgba(225,48,108,0.6)] hover:shadow-[0_15px_30px_-6px_rgba(225,48,108,0.8)] hover:-translate-y-1 transition-all duration-300">
+                    <span class="absolute inset-0 rounded-full border-[2px] border-white/50 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite] opacity-60"></span>
+                    <i class="fa-brands fa-instagram text-xl md:text-2xl group-hover:rotate-12 transition-transform"></i><span>Instagram</span>
+                </a>
+            </div>
+            <div class="relative group">
+                <div class="absolute -top-14 left-1/2 -translate-x-1/2 pointer-events-none z-20">
+                    <div class="animate-bounce flex flex-col items-center" style="animation-delay: 0.2s;">
+                        <div class="bg-[#128C7E] text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest rounded-xl shadow-xl border border-[#25D366]/30 w-[160px] md:w-[170px] h-[34px] md:h-[38px] flex items-center justify-center"><span id="typewriter-wa"></span></div>
+                        <div class="w-3 h-3 bg-[#128C7E] rotate-45 -mt-1.5 border-r border-b border-[#25D366]/30"></div>
+                    </div>
+                </div>
+                <a href="https://chat.whatsapp.com/HUcgORzVy6KE5CoTiNmZUb" target="_blank" class="relative flex items-center justify-center gap-3 w-[240px] py-3.5 md:py-4 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white rounded-full font-outfit font-bold text-[11px] md:text-xs uppercase tracking-widest shadow-[0_8px_20px_-6px_rgba(37,211,102,0.6)] hover:shadow-[0_15px_30px_-6px_rgba(37,211,102,0.8)] hover:-translate-y-1 transition-all duration-300">
+                    <span class="absolute inset-0 rounded-full border-[2px] border-white/50 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite] opacity-60" style="animation-delay: 0.2s;"></span>
+                    <i class="fa-brands fa-whatsapp text-xl md:text-2xl group-hover:rotate-12 transition-transform"></i><span>WhatsApp Group</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="footer-contact" class="w-full flex flex-col items-center px-4 mt-4">
+           <div class="thin-royal-frame w-full max-w-2xl px-6 py-4 relative group">
+               <div class="flex flex-row items-center justify-center gap-6 md:gap-12 font-sans relative z-10">
+                   <div class="flex items-center gap-2"><i class="fa-solid fa-phone text-jaipur-pink text-xs"></i><p class="font-outfit font-bold text-xs md:text-sm tracking-widest">+91 7340337074</p></div>
+                   <div class="w-[0.5px] h-4 bg-jaipur-gold/30"></div>
+                   <div class="flex items-center gap-2"><i class="fa-solid fa-envelope text-jaipur-gold text-xs"></i><p class="font-outfit font-bold text-[10px] md:text-sm tracking-widest">info@startupjaipur.in</p></div>
+               </div>
+           </div>
+        </div>
+        <div id="footer-address" class="w-full flex flex-col items-center px-4 mt-4 mb-12 opacity-75 hover:opacity-100 transition-opacity duration-500">
+           <div class="thin-royal-frame w-full max-w-4xl px-8 py-4 relative">
+               <div class="corner-flower -top-2 -left-2"><i class="fa-solid fa-bahai"></i></div><div class="corner-flower -top-2 -right-2"><i class="fa-solid fa-bahai"></i></div>
+               <div class="flex flex-col items-center justify-center relative z-10">
+                   <span class="font-luxury font-medium text-jaipur-deep text-[9px] md:text-[11px] tracking-[0.3em] uppercase mb-1">Startup Jaipur Office</span>
+                   <p class="font-heading italic text-[8px] md:text-[10px] text-jaipur-deep/80 font-light text-center max-w-sm leading-relaxed tracking-widest">Mahal RD, Sitapura Industrial Area, Jaipur, Rajasthan</p>
+               </div>
+           </div>
+        </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-6 flex flex-col items-center gap-10 relative z-20 pb-12 pt-10 text-center mt-4 w-full">
+        <div class="relative w-full max-w-3xl bg-gradient-to-b from-white/80 to-white/40 backdrop-blur-xl border border-white rounded-3xl p-8 md:p-10 shadow-[0_10px_40px_-10px_rgba(139,0,0,0.1)] group hover:shadow-[0_10px_40px_-10px_rgba(212,175,55,0.2)] transition-shadow duration-500">
+            <div class="absolute top-4 left-4 md:top-6 md:left-6 w-10 h-10 md:w-14 md:h-14 border-t-[2px] border-l-[2px] border-jaipur-gold/50 rounded-tl-2xl transition-all duration-500 group-hover:border-jaipur-pink group-hover:w-12 group-hover:h-12 md:group-hover:w-16 md:group-hover:h-16"></div>
+            <div class="absolute top-6 left-6 md:top-8 md:left-8 w-2 h-2 bg-jaipur-pink/60 rotate-45 group-hover:bg-jaipur-gold group-hover:rotate-[225deg] transition-all duration-500 shadow-[0_0_8px_rgba(214,109,117,0.6)]"></div>
+
+            <div class="absolute top-4 right-4 md:top-6 md:right-6 w-10 h-10 md:w-14 md:h-14 border-t-[2px] border-r-[2px] border-jaipur-gold/50 rounded-tr-2xl transition-all duration-500 group-hover:border-jaipur-pink group-hover:w-12 group-hover:h-12 md:group-hover:w-16 md:group-hover:h-16"></div>
+            <div class="absolute top-6 right-6 md:top-8 md:right-8 w-2 h-2 bg-jaipur-pink/60 rotate-45 group-hover:bg-jaipur-gold group-hover:rotate-[225deg] transition-all duration-500 shadow-[0_0_8px_rgba(214,109,117,0.6)]"></div>
+
+            <div class="absolute bottom-4 left-4 md:bottom-6 md:left-6 w-10 h-10 md:w-14 md:h-14 border-b-[2px] border-l-[2px] border-jaipur-gold/50 rounded-bl-2xl transition-all duration-500 group-hover:border-jaipur-pink group-hover:w-12 group-hover:h-12 md:group-hover:w-16 md:group-hover:h-16"></div>
+            <div class="absolute bottom-6 left-6 md:bottom-8 md:left-8 w-2 h-2 bg-jaipur-pink/60 rotate-45 group-hover:bg-jaipur-gold group-hover:rotate-[225deg] transition-all duration-500 shadow-[0_0_8px_rgba(214,109,117,0.6)]"></div>
+
+            <div class="absolute bottom-4 right-4 md:bottom-6 md:right-6 w-10 h-10 md:w-14 md:h-14 border-b-[2px] border-r-[2px] border-jaipur-gold/50 rounded-br-2xl transition-all duration-500 group-hover:border-jaipur-pink group-hover:w-12 group-hover:h-12 md:group-hover:w-16 md:group-hover:h-16"></div>
+            <div class="absolute bottom-6 right-6 md:bottom-8 md:right-8 w-2 h-2 bg-jaipur-pink/60 rotate-45 group-hover:bg-jaipur-gold group-hover:rotate-[225deg] transition-all duration-500 shadow-[0_0_8px_rgba(214,109,117,0.6)]"></div>
+
+            <div class="flex flex-col items-center relative z-10">
+                <h4 class="font-luxury font-bold text-jaipur-deep text-sm md:text-base uppercase tracking-[0.4em] mb-3 text-center">About Program</h4>
+                <div class="w-16 h-[2px] bg-gradient-to-r from-transparent via-jaipur-gold to-transparent mb-4"></div>
+                <p class="text-[11px] md:text-[12px] text-gray-400 font-outfit leading-relaxed text-center font-light max-w-2xl px-2 md:px-8"><span class="font-heading font-semibold text-jaipur-deep/60 text-sm md:text-base tracking-wide pr-1">Startup Jaipur</span> is an official incubation initiative committed to transforming the startup landscape in Rajasthan through expert mentorship, strategic funding, and world-class infrastructure.</p>
+            </div>
+        </div>
+        <div class="flex flex-col items-center mt-4">
+            <h4 class="font-outfit font-semibold text-jaipur-deep/60 text-[9px] md:text-[10px] uppercase tracking-[0.3em] mb-4">Legal & Policies</h4>
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+                <button onclick="openPolicyModal('termsModal')" class="px-5 py-2.5 bg-white/70 hover:bg-jaipur-deep text-jaipur-deep hover:text-white border border-jaipur-deep/20 hover:border-jaipur-deep rounded-full text-[9px] md:text-[10px] font-outfit font-bold uppercase tracking-widest transition-all shadow-sm focus:outline-none">Terms & Conditions</button>
+                <button onclick="openPolicyModal('privacyModal')" class="px-5 py-2.5 bg-white/70 hover:bg-jaipur-deep text-jaipur-deep hover:text-white border border-jaipur-deep/20 hover:border-jaipur-deep rounded-full text-[9px] md:text-[10px] font-outfit font-bold uppercase tracking-widest transition-all shadow-sm focus:outline-none">Privacy Policy</button>
+                <button onclick="openPolicyModal('refundModal')" class="px-5 py-2.5 bg-white/70 hover:bg-jaipur-deep text-jaipur-deep hover:text-white border border-jaipur-deep/20 hover:border-jaipur-deep rounded-full text-[9px] md:text-[10px] font-outfit font-bold uppercase tracking-widest transition-all shadow-sm focus:outline-none">Refund Policy</button>
+                <button onclick="openPolicyModal('grievanceModal')" class="px-5 py-2.5 bg-white/70 hover:bg-jaipur-deep text-jaipur-deep hover:text-white border border-jaipur-deep/20 hover:border-jaipur-deep rounded-full text-[9px] md:text-[10px] font-outfit font-bold uppercase tracking-widest transition-all shadow-sm focus:outline-none">Grievance Redressal</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 mt-2 border-t border-jaipur-deep/10 pt-8 text-center text-[8px] md:text-[10px] text-jaipur-deep/60 uppercase font-black font-outfit relative z-20 pb-[120px]">
+        <p>&copy; 2026 STARTUP JAIPUR | ALL RIGHTS RESERVED.</p><p class="mt-1">MADE WITH ❤️ IN JAIPUR</p>
+    </div>
+
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden h-32 md:h-40 pointer-events-none z-[15] desert-dunes">
+        <div class="w-full h-1.5 md:h-2 rail-track absolute bottom-[18px] md:bottom-5 left-0 z-10 opacity-80"></div>
+        <div class="w-max absolute bottom-[22px] md:bottom-[26px] left-0 flex items-end animate-[camelWalk_35s_linear_infinite] whitespace-nowrap z-20">
+            <div class="flex items-end text-jaipur-deep drop-shadow-sm">
+                <div class="w-12 md:w-16 h-5 md:h-7 border-[2px] border-jaipur-deep rounded-sm mr-1.5 flex items-center relative bg-[#FFF0F5]"><div class="absolute -bottom-[5px] left-2 w-2 h-2 rounded-full bg-jaipur-deep"></div><div class="absolute -bottom-[5px] right-2 w-2 h-2 rounded-full bg-jaipur-deep"></div></div>
+                <div class="w-12 md:w-16 h-5 md:h-7 border-[2px] border-jaipur-deep rounded-sm mr-1 flex items-center relative bg-[#FFF0F5]"><div class="absolute -bottom-[5px] left-2 w-2 h-2 rounded-full bg-jaipur-deep"></div><div class="absolute -bottom-[5px] right-2 w-2 h-2 rounded-full bg-jaipur-deep"></div></div>
+                <div class="relative flex items-end"><div class="w-6 md:w-8 h-7 md:h-9 border-[2px] border-r-0 border-jaipur-deep rounded-tl-sm bg-[#FFF0F5] relative z-10"><div class="absolute top-1 right-1 w-3 md:w-4 h-3 border-[1.5px] border-jaipur-deep bg-white"></div></div><div class="w-10 md:w-12 h-5 md:h-7 border-[2px] border-jaipur-deep rounded-r-full bg-[#FFF0F5] relative z-10"><div class="absolute -top-3 md:-top-4 right-2 w-2 md:w-3 h-3 md:h-4 border-[2px] border-b-0 border-jaipur-deep bg-[#FFF0F5]"></div><div class="absolute -bottom-1 -right-1 w-2 h-3 border-r-[2px] border-b-[2px] border-jaipur-deep transform rotate-45"></div></div><div class="absolute -bottom-[5px] left-1 w-3.5 h-3.5 rounded-full border-[1.5px] border-[#FFF0F5] bg-jaipur-deep z-20"></div><div class="absolute -bottom-[5px] left-6 w-3.5 h-3.5 rounded-full border-[1.5px] border-[#FFF0F5] bg-jaipur-deep z-20"></div><div class="absolute -bottom-[5px] right-2 w-2.5 h-2.5 rounded-full border-[1.5px] border-[#FFF0F5] bg-jaipur-deep z-20"></div></div>
+            </div>
+            <div class="w-32 md:w-56"></div>
+            <div class="flex items-end text-jaipur-deep drop-shadow-sm">
+                <div class="w-12 md:w-16 h-5 md:h-7 border-[2px] border-jaipur-deep rounded-sm mr-1.5 flex items-center relative bg-[#FFF0F5]"><div class="absolute -bottom-[5px] left-2 w-2 h-2 rounded-full bg-jaipur-deep"></div><div class="absolute -bottom-[5px] right-2 w-2 h-2 rounded-full bg-jaipur-deep"></div></div>
+                <div class="w-12 md:w-16 h-5 md:h-7 border-[2px] border-jaipur-deep rounded-sm mr-1 flex items-center relative bg-[#FFF0F5]"><div class="absolute -bottom-[5px] left-2 w-2 h-2 rounded-full bg-jaipur-deep"></div><div class="absolute -bottom-[5px] right-2 w-2 h-2 rounded-full bg-jaipur-deep"></div></div>
+                <div class="relative flex items-end"><div class="w-6 md:w-8 h-7 md:h-9 border-[2px] border-r-0 border-jaipur-deep rounded-tl-sm bg-[#FFF0F5] relative z-10"><div class="absolute top-1 right-1 w-3 md:w-4 h-3 border-[1.5px] border-jaipur-deep bg-white"></div></div><div class="w-10 md:w-12 h-5 md:h-7 border-[2px] border-jaipur-deep rounded-r-full bg-[#FFF0F5] relative z-10"><div class="absolute -top-3 md:-top-4 right-2 w-2 md:w-3 h-3 md:h-4 border-[2px] border-b-0 border-jaipur-deep bg-[#FFF0F5]"></div><div class="absolute -bottom-1 -right-1 w-2 h-3 border-r-[2px] border-b-[2px] border-jaipur-deep transform rotate-45"></div></div><div class="absolute -bottom-[5px] left-1 w-3.5 h-3.5 rounded-full border-[1.5px] border-[#FFF0F5] bg-jaipur-deep z-20"></div><div class="absolute -bottom-[5px] left-6 w-3.5 h-3.5 rounded-full border-[1.5px] border-[#FFF0F5] bg-jaipur-deep z-20"></div><div class="absolute -bottom-[5px] right-2 w-2.5 h-2.5 rounded-full border-[1.5px] border-[#FFF0F5] bg-jaipur-deep z-20"></div></div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- MODALS HTML -->
+<div id="termsModal" onclick="closePolicyModal('termsModal')" class="hidden fixed inset-0 z-[400] bg-gray-900/70 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6"><div onclick="event.stopPropagation()" class="relative w-full max-w-2xl bg-white rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(139,0,0,0.4)] border border-jaipur-gold/20 flex flex-col max-h-[85vh]"><button onclick="closePolicyModal('termsModal')" class="absolute -top-4 -right-4 md:-top-5 md:-right-5 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white border-2 border-jaipur-pink text-jaipur-pink hover:bg-jaipur-pink hover:text-white transition-all shadow-xl z-20 focus:outline-none group"><i class="fa-solid fa-xmark text-xl group-hover:rotate-90 transition-transform duration-300"></i></button><div class="shrink-0 px-4 md:px-8 py-5 md:py-6 border-b border-jaipur-pink/20 bg-gradient-to-b from-[#FFF0F5] to-white rounded-t-[2rem] text-center relative overflow-hidden"><i class="fa-solid fa-file-signature text-jaipur-gold/20 text-6xl absolute -right-2 -top-2 transform rotate-12"></i><div class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-jaipur-gold/10 text-jaipur-gold text-lg md:text-xl mb-2 md:mb-3 border border-jaipur-gold/30"><i class="fa-solid fa-file-contract"></i></div><h2 class="font-outfit text-xl md:text-2xl lg:text-3xl font-black text-jaipur-deep uppercase tracking-wider relative z-10 leading-snug px-2">Terms & Conditions</h2></div><div class="flex-1 p-5 md:p-8 overflow-y-auto space-y-4 text-sm md:text-base font-outfit text-gray-800 custom-scrollbar bg-white rounded-b-[2rem] leading-relaxed"><div class="bg-jaipur-bg/50 p-4 md:p-5 rounded-2xl border border-jaipur-pink/10 hover:border-jaipur-gold/40 transition-colors"><strong class="text-jaipur-deep font-outfit text-base block mb-1">1. Program Eligibility:</strong><p class="font-medium text-gray-600">To apply for the Startup Jaipur incubation program, the founder must be at least 14 years of age, and the startup idea must be legally valid and compliant with Indian laws.</p></div><div class="bg-jaipur-bg/50 p-4 md:p-5 rounded-2xl border border-jaipur-pink/10 hover:border-jaipur-gold/40 transition-colors"><strong class="text-jaipur-deep font-outfit text-base block mb-1">2. Code of Conduct:</strong><p class="font-medium text-gray-600">Maintaining discipline and professional behavior during all online/offline mentorship sessions and networking events is mandatory. Any form of misbehavior or harassment will not be tolerated.</p></div><div class="bg-jaipur-bg/50 p-4 md:p-5 rounded-2xl border border-jaipur-pink/10 hover:border-jaipur-gold/40 transition-colors"><strong class="text-jaipur-deep font-outfit text-base block mb-1">3. Non-Disclosure Agreement (NDA):</strong><p class="font-medium text-gray-600">We keep your startup ideas strictly confidential. However, any information shared by you during public pitch days or networking events will be considered open to the public.</p></div><div class="bg-jaipur-bg/50 p-4 md:p-5 rounded-2xl border border-jaipur-pink/10 hover:border-jaipur-gold/40 transition-colors"><strong class="text-jaipur-deep font-outfit text-base block mb-1">4. Selection & Rejection:</strong><p class="font-medium text-gray-600">The Startup Jaipur management team reserves the absolute right to accept or reject any startup application based on our internal evaluation criteria.</p></div><div class="bg-jaipur-bg/50 p-4 md:p-5 rounded-2xl border border-jaipur-pink/10 hover:border-jaipur-gold/40 transition-colors"><strong class="text-jaipur-deep font-outfit text-base block mb-1">5. Termination:</strong><p class="font-medium text-gray-600">If any startup is found engaging in fraudulent activities, illegal practices, or violating program rules, their incubation and all associated benefits will be terminated immediately.</p></div></div></div></div>
+
+<div id="privacyModal" onclick="closePolicyModal('privacyModal')" class="hidden fixed inset-0 z-[400] bg-gray-900/70 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6"><div onclick="event.stopPropagation()" class="relative w-full max-w-2xl bg-white rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(139,0,0,0.4)] border border-jaipur-gold/20 flex flex-col max-h-[85vh]"><button onclick="closePolicyModal('privacyModal')" class="absolute -top-4 -right-4 md:-top-5 md:-right-5 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white border-2 border-jaipur-pink text-jaipur-pink hover:bg-jaipur-pink hover:text-white transition-all shadow-xl z-20 focus:outline-none group"><i class="fa-solid fa-xmark text-xl group-hover:rotate-90 transition-transform duration-300"></i></button><div class="shrink-0 px-4 md:px-8 py-5 md:py-6 border-b border-jaipur-pink/20 bg-gradient-to-b from-[#FFF0F5] to-white rounded-t-[2rem] text-center relative overflow-hidden"><i class="fa-solid fa-user-shield text-jaipur-gold/20 text-6xl absolute -right-2 -top-2 transform rotate-12"></i><div class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-jaipur-gold/10 text-jaipur-gold text-lg md:text-xl mb-2 md:mb-3 border border-jaipur-gold/30"><i class="fa-solid fa-shield-halved"></i></div><h2 class="font-outfit text-xl md:text-2xl lg:text-3xl font-black text-jaipur-deep uppercase tracking-wider relative z-10 leading-snug px-2">Privacy Policy</h2></div><div class="flex-1 p-5 md:p-8 overflow-y-auto space-y-4 text-sm md:text-base font-outfit text-gray-800 custom-scrollbar bg-white rounded-b-[2rem] leading-relaxed"><p class="text-center font-semibold italic text-jaipur-deep/80 mb-4">Your privacy is our utmost priority. Startup Jaipur is fully committed to keeping your personal data and startup details secure.</p><div class="bg-jaipur-bg/50 p-4 md:p-5 rounded-2xl border border-jaipur-pink/10 hover:border-jaipur-gold/40 transition-colors"><strong class="text-jaipur-deep font-outfit text-base block mb-1">Data Collection:</strong><p class="font-medium text-gray-600">When you register, we collect essential information such as your name, email address, mobile number, and pitch deck to properly evaluate your startup idea.</p></div><div class="bg-jaipur-bg/50 p-4 md:p-5 rounded-2xl border border-jaipur-pink/10 hover:border-jaipur-gold/40 transition-colors"><strong class="text-jaipur-deep font-outfit text-base block mb-1">Data Usage:</strong><p class="font-medium text-gray-600">Your data is solely used to connect you with industry mentors, assist you in applying for Government grants (like iStart Rajasthan), and provide personalized incubation services.</p></div><div class="bg-jaipur-bg/50 p-4 md:p-5 rounded-2xl border border-jaipur-pink/10 hover:border-jaipur-gold/40 transition-colors"><strong class="text-jaipur-deep font-outfit text-base block mb-1">Data Sharing:</strong><p class="font-medium text-gray-600">We do not sell or rent your data to any third-party marketing agencies. Data is only shared with trusted investors, mentors, or Government officials directly involved in your funding and growth process.</p></div><div class="bg-jaipur-bg/50 p-4 md:p-5 rounded-2xl border border-jaipur-pink/10 hover:border-jaipur-gold/40 transition-colors"><strong class="text-jaipur-deep font-outfit text-base block mb-1">Security:</strong><p class="font-medium text-gray-600">All your sensitive documents and confidential startup details are stored in an encrypted format on our secure cloud servers.</p></div></div></div></div>
+
+<div id="refundModal" onclick="closePolicyModal('refundModal')" class="hidden fixed inset-0 z-[400] bg-gray-900/70 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6"><div onclick="event.stopPropagation()" class="relative w-full max-w-2xl bg-white rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(139,0,0,0.4)] border border-jaipur-gold/20 flex flex-col max-h-[85vh]"><button onclick="closePolicyModal('refundModal')" class="absolute -top-4 -right-4 md:-top-5 md:-right-5 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white border-2 border-jaipur-pink text-jaipur-pink hover:bg-jaipur-pink hover:text-white transition-all shadow-xl z-20 focus:outline-none group"><i class="fa-solid fa-xmark text-xl group-hover:rotate-90 transition-transform duration-300"></i></button><div class="shrink-0 px-4 md:px-8 py-5 md:py-6 border-b border-jaipur-pink/20 bg-gradient-to-b from-[#FFF0F5] to-white rounded-t-[2rem] text-center relative overflow-hidden"><i class="fa-solid fa-money-bill-transfer text-jaipur-gold/20 text-6xl absolute -right-2 -top-2 transform rotate-12"></i><div class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-jaipur-gold/10 text-jaipur-gold text-lg md:text-xl mb-2 md:mb-3 border border-jaipur-gold/30"><i class="fa-solid fa-wallet"></i></div><h2 class="font-outfit text-xl md:text-2xl lg:text-3xl font-black text-jaipur-deep uppercase tracking-wider relative z-10 leading-snug px-2">Refund Policy</h2></div><div class="flex-1 p-5 md:p-8 overflow-y-auto space-y-4 text-sm md:text-base font-outfit text-gray-800 custom-scrollbar bg-white rounded-b-[2rem] leading-relaxed"><div class="bg-jaipur-bg/50 p-4 md:p-5 rounded-2xl border border-jaipur-pink/10 hover:border-jaipur-gold/40 transition-colors"><strong class="text-jaipur-deep font-outfit text-base block mb-1">1. Free Incubation Services:</strong><p class="font-medium text-gray-600">Startup Jaipur's core incubation program, expert mentorship, and Government grant assistance are completely FREE and operate on a Zero-Equity model. Therefore, no payments or refunds are applicable for these core services.</p></div><div class="bg-jaipur-bg/50 p-4 md:p-5 rounded-2xl border border-jaipur-pink/10 hover:border-jaipur-gold/40 transition-colors"><strong class="text-jaipur-deep font-outfit text-base block mb-1">2. Premium/Paid IT Services:</strong><p class="font-medium text-gray-600">If you voluntarily opt for any paid premium services from the Startup Jaipur IT panel, such as Website Development, App Development, or customized CA Services, the upfront payment is strictly non-refundable as technical resources and manpower are allocated immediately upon confirmation.</p></div><div class="bg-jaipur-bg/50 p-4 md:p-5 rounded-2xl border border-jaipur-pink/10 hover:border-jaipur-gold/40 transition-colors"><strong class="text-jaipur-deep font-outfit text-base block mb-1">3. Payment Failures:</strong><p class="font-medium text-gray-600">In the rare event that a double payment is deducted from your account due to a technical glitch or server timeout, the excess amount will be automatically refunded to your original source account within 5-7 working days.</p></div><div class="bg-jaipur-bg/50 p-4 md:p-5 rounded-2xl border border-jaipur-pink/10 hover:border-jaipur-gold/40 transition-colors"><strong class="text-jaipur-deep font-outfit text-base block mb-1">4. Dispute:</strong><p class="font-medium text-gray-600">For any serious disputes regarding premium service deliverables, founders are encouraged to reach out to our official grievance redressal team for an amicable resolution.</p></div></div></div></div>
+
+<div id="grievanceModal" onclick="closePolicyModal('grievanceModal')" class="hidden fixed inset-0 z-[400] bg-gray-900/70 backdrop-blur-sm flex items-center justify-center p-4 sm:p-6"><div onclick="event.stopPropagation()" class="relative w-full max-w-2xl bg-white rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(139,0,0,0.4)] border border-jaipur-gold/20 flex flex-col max-h-[85vh]"><button onclick="closePolicyModal('grievanceModal')" class="absolute -top-4 -right-4 md:-top-5 md:-right-5 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white border-2 border-jaipur-pink text-jaipur-pink hover:bg-jaipur-pink hover:text-white transition-all shadow-xl z-20 focus:outline-none group"><i class="fa-solid fa-xmark text-xl group-hover:rotate-90 transition-transform duration-300"></i></button><div class="shrink-0 px-4 md:px-8 py-5 md:py-6 border-b border-jaipur-pink/20 bg-gradient-to-b from-[#FFF0F5] to-white rounded-t-[2rem] text-center relative overflow-hidden"><i class="fa-solid fa-headset text-jaipur-gold/20 text-6xl absolute -right-2 -top-2 transform rotate-12"></i><div class="inline-flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-jaipur-gold/10 text-jaipur-gold text-lg md:text-xl mb-2 md:mb-3 border border-jaipur-gold/30"><i class="fa-solid fa-handshake-angle"></i></div><h2 class="font-outfit text-xl md:text-2xl lg:text-3xl font-black text-jaipur-deep uppercase tracking-wider relative z-10 leading-snug px-2">Grievance Redressal</h2></div><div class="flex-1 p-5 md:p-8 overflow-y-auto space-y-4 text-sm md:text-base font-outfit text-gray-800 custom-scrollbar bg-white rounded-b-[2rem] leading-relaxed"><p class="text-center font-semibold italic text-jaipur-deep/80 mb-2">If you have any complaints or concerns regarding any of Startup Jaipur's programs, mentors, or associated premium services, we are fully committed to addressing and resolving them promptly.</p><div class="bg-gradient-to-br from-jaipur-bg to-white p-5 md:p-6 rounded-2xl border-[1.5px] border-jaipur-pink/30 mt-4 shadow-sm relative overflow-hidden"><div class="absolute top-0 right-0 w-16 h-16 bg-jaipur-gold/10 rounded-bl-full"></div><h3 class="font-outfit font-black text-jaipur-deep text-lg mb-4 flex items-center gap-2"><i class="fa-solid fa-address-book text-jaipur-pink"></i> Contact Details:</h3><ul class="space-y-3 font-medium text-gray-600"><li class="flex items-start gap-3"><i class="fa-solid fa-user-tie text-jaipur-gold mt-1"></i><div><span class="text-gray-400 text-[10px] md:text-xs block uppercase tracking-wider">Grievance Officer</span> <span class="text-gray-800 font-bold">Parav Das (Community Head)</span></div></li><li class="flex items-start gap-3"><i class="fa-solid fa-envelope text-jaipur-gold mt-1"></i><div><span class="text-gray-400 text-[10px] md:text-xs block uppercase tracking-wider">Email Address</span> <a href="mailto:info@startupjaipur.in" class="text-jaipur-pink hover:text-jaipur-deep transition-colors font-bold break-all">info@startupjaipur.in</a></div></li><li class="flex items-start gap-3"><i class="fa-brands fa-whatsapp text-jaipur-gold mt-1"></i><div><span class="text-gray-400 text-[10px] md:text-xs block uppercase tracking-wider">Phone / WhatsApp</span> <span class="text-gray-800 font-bold">+91 7340337074</span></div></li><li class="flex items-start gap-3"><i class="fa-solid fa-location-dot text-jaipur-gold mt-1"></i><div><span class="text-gray-400 text-[10px] md:text-xs block uppercase tracking-wider">Office Address</span> <span class="text-gray-800 font-bold">Mahal RD, Sitapura Industrial Area, Jaipur, Rajasthan</span></div></li></ul></div><div class="bg-jaipur-gold/10 p-4 rounded-xl border border-jaipur-gold/20 flex items-start gap-3 mt-4"><i class="fa-solid fa-clock-rotate-left text-jaipur-deep mt-1"></i><p class="text-xs md:text-sm font-medium text-gray-700"><strong class="text-jaipur-deep">Resolution Time:</strong> Our dedicated team will acknowledge and respond to your official complaint within 48 to 72 hours of receiving it, and will strive to provide a fair resolution as quickly as possible.</p></div></div></div></div>
+
+<!-- FOOTER SCRIPTS (JAVASCRIPT) -->
+<script>
+    // Popup (Modal) kholne aur band karne ka code
+    function openPolicyModal(modalId) { 
+        const modal = document.getElementById(modalId); 
+        if (modal) { modal.classList.remove('hidden'); document.body.style.overflow = 'hidden'; } 
+    }
+    function closePolicyModal(modalId) { 
+        const modal = document.getElementById(modalId); 
+        if (modal) { modal.classList.add('hidden'); document.body.style.overflow = 'auto'; } 
+    }
+    
+    // ESC button dabane par popup band karne ka code
+    document.addEventListener('keydown', function(event) { 
+        if (event.key === "Escape") { 
+            ['termsModal', 'privacyModal', 'refundModal', 'grievanceModal'].forEach(id => closePolicyModal(id)); 
+        } 
+    });
+
+    // Upar latakne wale Toran ko lambai mein badhane ka code
+    window.addEventListener('DOMContentLoaded', () => { 
+        const toran = document.getElementById('footer-toran'); 
+        if(toran) { toran.innerHTML = toran.innerHTML.repeat(15); } 
+    });
+
+    // Typewriter (Likhne-Mitne wali) Animation ka code
+    function startTypewriter(elementId, text) {
+        const el = document.getElementById(elementId);
+        if (!el) return;
+        const chars = Array.from(text);
+        let isDeleting = false, charIndex = 0;
+        function type() {
+            const currentText = chars.slice(0, charIndex).join('');
+            el.innerHTML = currentText + '<span class="inline-block w-[2px] h-[12px] bg-white ml-[2px] animate-pulse align-middle"></span>';
+            let speed = isDeleting ? 40 : 100;
+            if (!isDeleting && charIndex < chars.length) { charIndex++; setTimeout(type, speed); }
+            else if (isDeleting && charIndex > 0) { charIndex--; setTimeout(type, speed); }
+            else { isDeleting = !isDeleting; setTimeout(type, isDeleting ? 2000 : 500); }
+        }
+        type();
+    }
+    
+    // Typewriter chalu karna
+    startTypewriter('typewriter-insta', 'Follow on Insta ✨');
+    startTypewriter('typewriter-wa', 'Join Community 🚀');
+</script>
+
+</body>
+</html>
