@@ -4,6 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Startup Jaipur | 2026 Mein Apna Sapna Pura Karein</title>
+<style>
+    /* Ye code force karega ki sirf startup section me naye font aayein */
+    #startup-ideas, #startup-ideas p, #startup-ideas a, #startup-ideas span, #startup-ideas div {
+        font-family: 'Inter', sans-serif !important;
+    }
+    #startup-ideas h1, #startup-ideas h2, #startup-ideas h3, #startup-ideas h4, #startup-ideas h5, #startup-ideas h6, #startup-ideas .font-heading {
+        font-family: 'Outfit', sans-serif !important;
+    }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    heading: ['"Outfit"', 'sans-serif'],
+                    sans: ['"Inter"', 'sans-serif'],
+                }
+            }
+        }
+    }
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = { ... }
+</script>
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (Agar dusri site me tailwind nahi hai toh ye line zaroori hai) -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Font Awesome (Icons ke liye) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Tailwind Custom Config & 3D CSS -->
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                fontFamily: {
+                    heading: ['"Outfit"', 'sans-serif'],
+                    sans: ['"Inter"', 'sans-serif'],
+                }
+            }
+        }
+    }
+</script>
+<style>
+    /* 3D Beautiful Startup Idea Cards */
+    .card-3d {
+        background: linear-gradient(145deg, rgba(255,255,255,0.98), rgba(249,250,251,0.9));
+        box-shadow: 
+            inset 0 2px 4px 0 rgba(255, 255, 255, 1),
+            inset 0 -2px 5px 0 rgba(0, 0, 0, 0.02),
+            0 10px 25px -5px rgba(0, 0, 0, 0.08),
+            0 0 0 1px rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
+        position: relative;
+        overflow: hidden;
+        border-radius: 1.5rem;
+        z-index: 1;
+        border: 1px solid rgba(0,0,0,0.03);
+    }
+    .card-3d:hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 
+            inset 0 2px 4px 0 rgba(255, 255, 255, 1),
+            inset 0 -2px 5px 0 rgba(0, 0, 0, 0.02),
+            0 30px 50px -15px var(--card-shadow),
+            0 0 0 2px var(--card-color);
+        z-index: 10;
+    }
+    .card-3d::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle at center, var(--card-color) 0%, transparent 50%);
+        opacity: 0;
+        transition: opacity 0.6s ease;
+        z-index: -1;
+        pointer-events: none;
+    }
+    .card-3d:hover::before { opacity: 0.08; }
+    
+    .icon-3d {
+        background: linear-gradient(135deg, var(--card-color), var(--card-color-dark));
+        box-shadow: 
+            0 10px 20px -5px var(--card-shadow),
+            inset 0 2px 4px rgba(255,255,255,0.4),
+            inset 0 -2px 4px rgba(0,0,0,0.2);
+        transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .card-3d:hover .icon-3d { transform: scale(1.15) rotate(10deg); }
+</style>
     
     <!-- Meta Tags for WhatsApp & Social Media Preview -->
     <meta name="description" content="Startup Jaipur - Build Your Dream in Jaipur. Connect with investors, find co-founders, and grow your business in the heart of the Pink City.">
@@ -588,6 +698,636 @@
             </section>
         </div>
 
+    <!-- Huge List for Agency & Service Ideas (Top Section) -->
+                <div class="grid grid-cols-1 gap-8 max-w-3xl mx-auto">
+                    
+                    <!-- 1. Digital Marketing (Blue) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #3b82f6; --card-color-dark: #2563eb; --card-shadow: rgba(59, 130, 246, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#3b82f6] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-bullseye text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#2563eb]">Digital Marketing Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Har business ko marketing chahiye. Aaj hi shuru karein aur har client se mahine ka fix revenue banayein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea1')" id="btn-idea1" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors hover:text-[#2563eb]" onmouseover="this.style.color='#2563eb'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a Digital Marketing Agency" target="_blank" class="flex items-center text-[#2563eb] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#3b82f6]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea1" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#3b82f6]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#2563eb]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Aaj har choti dukan se lekar badi company ko online aana hai. Clients ki market mein koi kami nahi hai.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Agar aapke paas mahine ke 5-10 clients bhi hain, toh aap asani se <span class="font-black text-[#2563eb]">₹1 Lakh se ₹5 Lakh/month</span> tak fix recurring income generate kar sakte hain!</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Advertisement Agency (Orange) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #f97316; --card-color-dark: #ea580c; --card-shadow: rgba(249, 115, 22, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#f97316] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-rectangle-ad text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#ea580c]">Advertisement Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Brands ke ads chalayein aur profits kamayein. Hum sikhayenge A to Z ad strategy.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea2')" id="btn-idea2" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#ea580c'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start an Advertisement Agency" target="_blank" class="flex items-center text-[#ea580c] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#f97316]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea2" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#f97316]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#ea580c]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Har business ko sales chahiye, aur sales Ads se aati hai. Brands lakhon rupaye Ads par kharch kar rahe hain.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Aap total Ad spend par 15% se 20% commission charge kar sakte hain. Yani asani se <span class="font-black text-[#ea580c]">₹2 Lakh+/month</span> ka profit margin.</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Social Media Management (Pink) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #ec4899; --card-color-dark: #db2777; --card-shadow: rgba(236, 72, 153, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#ec4899] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-heart text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#db2777]">Social Media Management Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Phone scroll karne ke bajaye dusro ke page manage karein aur asani se paise kamayein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea3')" id="btn-idea3" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#db2777'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a Social Media Management Agency" target="_blank" class="flex items-center text-[#db2777] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#ec4899]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea3" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#ec4899]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#db2777]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Creators aur business owners ke paas daily post karne ka time nahi hai. Unhein aapki zaroorat hai.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Sirf 4-5 accounts manage karke aap aaram se <span class="font-black text-[#db2777]">₹50,000 se ₹2 Lakh/month</span> ghar baithe kama sakte hain.</span>
+                        </div>
+                    </div>
+
+                    <!-- 4. Meta Ads Agency (Indigo) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #6366f1; --card-color-dark: #4f46e5; --card-shadow: rgba(99, 102, 241, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#6366f1] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-brands fa-meta text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#4f46e5]">Meta Ads Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Facebook aur Instagram ads ka master banein. High demand aur high paying clients.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea4')" id="btn-idea4" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#4f46e5'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a Meta Ads Agency" target="_blank" class="flex items-center text-[#4f46e5] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#6366f1]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea4" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#6366f1]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#4f46e5]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Facebook aur Insta Ads ka conversion rate sabse high hota hai. Har naya startup aur e-commerce store iski demand karta hai.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> High paying international clients milne par aap <span class="font-black text-[#4f46e5]">₹1 Lakh se ₹3 Lakh+/month</span> generate kar sakte hain.</span>
+                        </div>
+                    </div>
+
+                    <!-- 5. Google Ads Agency (Red) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #ef4444; --card-color-dark: #dc2626; --card-shadow: rgba(239, 68, 68, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#ef4444] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-brands fa-google text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#dc2626]">Google Ads Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Businesses ko Google par top rank karwayein. Google partner bankar shandaar revenue generate karein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea5')" id="btn-idea5" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#dc2626'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a Google Ads Agency" target="_blank" class="flex items-center text-[#dc2626] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#ef4444]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea5" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#ef4444]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#dc2626]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Google par user intent strong hota hai (wo khud search karte hain). Real Estate aur Tech companies Google Ads par heavily depend karti hain.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> In clients ka budget bada hota hai. Ek client se hi aap mahine ka ₹50,000 nikal sakte hain. Total <span class="font-black text-[#dc2626]">₹2 Lakh+/month</span> ki earning.</span>
+                        </div>
+                    </div>
+
+                    <!-- 6. PR Agency (Purple) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #a855f7; --card-color-dark: #9333ea; --card-shadow: rgba(168, 85, 247, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#a855f7] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-microphone-lines text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#9333ea]">PR Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Public Relations aur news articles manage karein. Celebs aur brands ka image banayein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea6')" id="btn-idea6" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#9333ea'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a PR Agency" target="_blank" class="flex items-center text-[#9333ea] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#a855f7]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea6" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#a855f7]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#9333ea]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Aajkal har neta, influencer, aur CEO ko news portals par feature hona hai aur verification (blue tick) chahiye.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Ek successful PR campaign ke liye log lakho dene ko taiyar hote hain. Aaram se <span class="font-black text-[#9333ea]">₹1 Lakh se ₹5 Lakh per campaign</span> kamaya ja sakta hai.</span>
+                        </div>
+                    </div>
+
+                    <!-- 7. Rating Agency (Yellow) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #eab308; --card-color-dark: #ca8a04; --card-shadow: rgba(234, 179, 8, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#eab308] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-star-half-stroke text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#ca8a04]">Rating Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Businesses aur products ko rating and reviews provide karne ka platform shuru karein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea7')" id="btn-idea7" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#ca8a04'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a Rating Agency" target="_blank" class="flex items-center text-[#ca8a04] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#eab308]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea7" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#eab308]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#ca8a04]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Consumer aajkal bina rating check kiye kuch nahi kharidta. Brands ko trust build karne ke liye verified ratings chahiye.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> B2B subscription models aur premium certification badges sell karke aap mahine ka <span class="font-black text-[#ca8a04]">₹2 Lakh+</span> kama sakte hain.</span>
+                        </div>
+                    </div>
+
+                    <!-- 8. Blog Agency (Teal) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #14b8a6; --card-color-dark: #0d9488; --card-shadow: rgba(20, 184, 166, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#14b8a6] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-blog text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#0d9488]">Blog Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Content is king! Likhne ka shauk hai toh isey profession banayein. Affiliate aur adsense se revenue.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea8')" id="btn-idea8" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#0d9488'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a Blog Agency" target="_blank" class="flex items-center text-[#0d9488] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#14b8a6]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea8" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#14b8a6]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#0d9488]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Har din lakho log Google par information search karte hain. Niche blogging (Jaise finance, tech, travel) ki demand hamesha rahegi.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Ek baar traffic aane lage toh Affiliate links aur Ads se sote hue bhi <span class="font-black text-[#0d9488]">₹50,000 se ₹5 Lakh/month</span> passive income aayegi.</span>
+                        </div>
+                    </div>
+
+                    <!-- 9. Editing Services (Rose) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #f43f5e; --card-color-dark: #e11d48; --card-shadow: rgba(244, 63, 94, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#f43f5e] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-video text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#e11d48]">Editing Services Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Video aur Reels editing ka trend peak par hai. YouTubers aur Creators ko service dein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea9')" id="btn-idea9" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#e11d48'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start an Editing Services Agency" target="_blank" class="flex items-center text-[#e11d48] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#f43f5e]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea9" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#f43f5e]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#e11d48]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Ye 'Shorts aur Reels' ka jamana hai. Har chota-bada YouTuber aur influencer apne liye ek achha video editor dhoondh raha hai.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Kuch hi clients pakad kar aap aaram se <span class="font-black text-[#e11d48]">₹50,000 se ₹1.5 Lakh/month</span> ghar se kaam karke kama sakte hain.</span>
+                        </div>
+                    </div>
+
+                    <!-- 10. Graphic Design (Fuchsia) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #d946ef; --card-color-dark: #c026d3; --card-shadow: rgba(217, 70, 239, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#d946ef] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-pen-nib text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#c026d3]">Graphic Design Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Logos, banners, aur branding. Creatives banayein aur global clients hasil karein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea10')" id="btn-idea10" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#c026d3'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a Graphic Design Agency" target="_blank" class="flex items-center text-[#c026d3] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#d946ef]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea10" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#d946ef]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#c026d3]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Har naye business ko logo chahiye, aur har social media post ko design. Branding kabhi khatam na hone wali demand hai.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Freelancing sites ya direct clients se aap easily <span class="font-black text-[#c026d3]">₹40,000 se ₹1 Lakh+/month</span> generate kar sakte hain.</span>
+                        </div>
+                    </div>
+
+                    <!-- 11. College Admission (Crimson) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #b91c1c; --card-color-dark: #991b1b; --card-shadow: rgba(185, 28, 28, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#b91c1c] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-building-columns text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#991b1b]">College Admission Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Students ko sahi college choose karne mein help karein aur counseling platform banayein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea11')" id="btn-idea11" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#991b1b'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a College Admission Startup" target="_blank" class="flex items-center text-[#991b1b] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#b91c1c]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea11" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#b91c1c]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#991b1b]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Har saal lakho students confusion mein rehte hain ki konsa college chune. Unhe sahi guidance ki sakht zaroorat hoti hai.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Colleges se tie-up karke admission season (May-July) mein hi aap aaram se <span class="font-black text-[#991b1b]">₹10 Lakh se ₹20 Lakh</span> kama sakte hain.</span>
+                        </div>
+                    </div>
+
+                    <!-- 12. Web Development (Sky/Cerulean) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #0ea5e9; --card-color-dark: #0284c7; --card-shadow: rgba(14, 165, 233, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#0ea5e9] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-code text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#0284c7]">Web Development Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Businesses ke liye premium websites aur landing pages banayein. High-paying clients hasil karein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea12')" id="btn-idea12" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#0284c7'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a Web Development Agency" target="_blank" class="flex items-center text-[#0284c7] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#0ea5e9]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea12" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#0ea5e9]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#0284c7]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Har chote-bade business ko aajkal ek professional website chahiye apni online presence banane ke liye.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Ek achhi website ka charge ₹15,000 se ₹50,000 tak hota hai. Mahine me 4-5 clients se aap easily <span class="font-black text-[#0284c7]">₹1 Lakh se ₹2.5 Lakh</span> kama sakte hain.</span>
+                        </div>
+                    </div>
+
+                    <!-- 13. YouTube Content Creation (Radical Red) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #ff7b72; --card-color-dark: #ff5a5f; --card-shadow: rgba(255, 123, 114, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#ff7b72] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-brands fa-youtube text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#ff5a5f]">YouTube Content Creation Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Bina chehra dikhaye (Faceless) YouTube channels banayein. Script, Voiceover aur Editing se global audience target karein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea13')" id="btn-idea13" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#ff5a5f'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a YouTube Content Creation Agency" target="_blank" class="flex items-center text-[#ff5a5f] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#ff7b72]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea13" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#ff7b72]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#ff5a5f]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Aajkal US/UK audience ke liye English faceless videos ka craze sabse zyada hai. Log is par lakho dollar kama rahe hain.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> YouTube AdSense aur foreign sponsorships se aap aaram se <span class="font-black text-[#ff5a5f]">$1000 se $5000+ per month</span> kama sakte hain.</span>
+                        </div>
+                    </div>
+
+                    <!-- 14. Influencer Management (Blue Violet) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #9d4edd; --card-color-dark: #8a2be2; --card-shadow: rgba(157, 78, 221, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#9d4edd] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-users-viewfinder text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#8a2be2]">Influencer Management Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Brands ko sahi YouTubers aur Instagrammers se milwayein. Unki deals manage karein aur commission khayein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea14')" id="btn-idea14" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#8a2be2'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start an Influencer Management Agency" target="_blank" class="flex items-center text-[#8a2be2] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#9d4edd]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea14" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#9d4edd]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#8a2be2]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Creator Economy abhi boom par hai. Har brand apna promotion kisi influencer se karwana chahta hai par unhe approach nahi karna aata.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Aap har deal par 15% se 20% commission charge karte hain. Kuch badi deals se aap <span class="font-black text-[#8a2be2]">₹2 Lakh+/month</span> aaram se bana lenge.</span>
+                        </div>
+                    </div>
+
+                    <!-- 16. Copywriting (Amber) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #f59e0b; --card-color-dark: #d97706; --card-shadow: rgba(245, 158, 11, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#f59e0b] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-pen-nib text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#d97706]">Copywriting Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Brands ke liye sales badhane wale ad words, emails aur landing pages likhne ka high-paying business.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea16')" id="btn-idea16" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#d97706'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a Copywriting Agency" target="_blank" class="flex items-center text-[#d97706] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#f59e0b]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea16" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#f59e0b]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#d97706]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Ek aam likhawat aur ek sales laane wali copy mein zameen aasmaan ka farq hota hai. Global brands expert copywriters ko dhoondhte hain.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Sirf 3-4 US/UK clients se aap aaram se <span class="font-black text-[#d97706]">₹1 Lakh se ₹3 Lakh/month</span> ghar baithe kama sakte hain.</span>
+                        </div>
+                    </div>
+
+                    <!-- 17. B2B Lead Gen (Dark Teal) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #115e59; --card-color-dark: #0f766e; --card-shadow: rgba(17, 94, 89, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#115e59] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-magnifying-glass-chart text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#0f766e]">B2B Lead Gen Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">LinkedIn aur cold emails se dusri companies ke liye B2B clients dhoondh kar laane ka business.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea17')" id="btn-idea17" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#0f766e'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a B2B Lead Gen Agency" target="_blank" class="flex items-center text-[#0f766e] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#115e59]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea17" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#115e59]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#0f766e]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Har Software company ya agency ko bade clients (Business) chahiye hote hain aur unhe dhoondhna sabse bada challenge hai.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Ek client aapse B2B leads ke liye mahine ka asani se <span class="font-black text-[#0f766e]">₹40,000 se ₹80,000</span> tak retainer pay karta hai.</span>
+                        </div>
+                    </div>
+
+                    <!-- 18. SEO Agency (Green) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #16a34a; --card-color-dark: #15803d; --card-shadow: rgba(22, 163, 74, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#16a34a] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-magnifying-glass text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#15803d]">SEO Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Companies ki website ko Google par Rank 1 karwayein aur free organic traffic laakar dein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea18')" id="btn-idea18" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#15803d'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start an SEO Agency" target="_blank" class="flex items-center text-[#15803d] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#16a34a]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea18" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#16a34a]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#15803d]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Paid ads mehange hote ja rahe hain. Har business ko long-term growth ke liye free Google traffic (SEO) chahiye.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> SEO ek 6-12 mahine ka contract hota hai jisme client aapko <span class="font-black text-[#15803d]">₹20,000 se ₹50,000 per month</span> pay karta hai.</span>
+                        </div>
+                    </div>
+
+                    <!-- 19. VA Agency (Cyan) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #06b6d4; --card-color-dark: #0891b2; --card-shadow: rgba(6, 182, 212, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#06b6d4] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-headset text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#0891b2]">VA Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">CEOs aur Founders ke daily routine, emails aur data entry manage karein. Sabse asaan shuruaat.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea19')" id="btn-idea19" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#0891b2'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a Virtual Assistant Agency" target="_blank" class="flex items-center text-[#0891b2] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#06b6d4]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea19" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#06b6d4]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#0891b2]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Bahar ke deshon (US/UK) ke founders ke paas time nahi hota, aur waha log mehnge hain, isliye wo India se VAs dhoondhte hain.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Bina kisi high-end skill ke, emails aur schedules manage karke aap mahine ka <span class="font-black text-[#0891b2]">₹30,000 se ₹60,000</span> kama sakte hain.</span>
+                        </div>
+                    </div>
+
+                    <!-- 20. Podcast Production (Dark Rose) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #e11d48; --card-color-dark: #be123c; --card-shadow: rgba(225, 29, 72, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#e11d48] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-podcast text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#be123c]">Podcast Production Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Creators aur businesses ke liye Podcast launch karein, unhe edit karein aur publish karke manage karein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea20')" id="btn-idea20" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#be123c'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a Podcast Production Agency" target="_blank" class="flex items-center text-[#be123c] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#e11d48]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea20" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#e11d48]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#be123c]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Spotify aur YouTube Par Podcast ka bohot bada craze hai, par isey edit aur manage karna mushkil hota hai.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Ek podcast channel handle karne ka log <span class="font-black text-[#be123c]">₹15,000 se ₹30,000 per month</span> charge karte hain.</span>
+                        </div>
+                    </div>
+
+                    <!-- 21. Online Coaching (Deep Violet) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #7c3aed; --card-color-dark: #6d28d9; --card-shadow: rgba(124, 58, 237, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#7c3aed] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-chalkboard-user text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#6d28d9]">Online Coaching Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Fitness, Business ya Personality Development—kisi ek field ke expert bankar online logo ko train karein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea21')" id="btn-idea21" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#6d28d9'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start an Online Coaching Agency" target="_blank" class="flex items-center text-[#6d28d9] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#7c3aed]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea21" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#7c3aed]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#6d28d9]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Aaj log traditional padhai se zyada life aur practical skills par paise kharch karna pasand karte hain (Passion Economy).</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Agar aap 1 client se 1-on-1 coaching ka ₹10,000 bhi charge karein, toh 10 clients par <span class="font-black text-[#6d28d9]">₹1 Lakh/month</span> clear profit hai.</span>
+                        </div>
+                    </div>
+
+                    <!-- 22. Interior Design (Dark Pink) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #db2777; --card-color-dark: #be185d; --card-shadow: rgba(219, 39, 119, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#db2777] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-couch text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#be185d]">Interior Design Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Ghar baithe 3D tools ka use karke clients ko unke naye ghar aur office ka interior design karke dein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea22')" id="btn-idea22" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#be185d'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start an Interior Design Agency" target="_blank" class="flex items-center text-[#be185d] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#db2777]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea22" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#db2777]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#be185d]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Aajkal log apna ghar banwane se pehle 3D mein dekhna chahte hain ki wo kaisa lagega.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Bina site par gaye, laptop se design karke aap ek project ka <span class="font-black text-[#be185d]">₹10,000 se ₹50,000</span> tak charge kar sakte hain.</span>
+                        </div>
+                    </div>
+
+                    <!-- 23. HR Recruitment (Bronze) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #d97706; --card-color-dark: #b45309; --card-shadow: rgba(217, 119, 6, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#d97706] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-user-tie text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#b45309]">HR Recruitment Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Badi companies aur Startups ko unki zarurat ke hisaab se best employees hire karke dein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea23')" id="btn-idea23" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#b45309'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start an HR Recruitment Agency" target="_blank" class="flex items-center text-[#b45309] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#d97706]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea23" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#d97706]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#b45309]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Acchi tech aur sales talent ko dhoondhna companies ke liye sabse bada dard hai. HR agencies ki demand hamesha high rehti hai.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Aapko har candidate ki ek mahine ki salary commission milti hai. Do candidate bhi join karwaye toh <span class="font-black text-[#b45309]">₹50,000 se ₹1 Lakh/month</span> fixed hai.</span>
+                        </div>
+                    </div>
+
+                    <!-- 24. Cybersecurity (Deep Indigo) -->
+                    <div class="card-3d group p-7 flex flex-col" style="--card-color: #4f46e5; --card-color-dark: #4338ca; --card-shadow: rgba(79, 70, 229, 0.4);">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#4f46e5] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                        <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-shield-halved text-3xl"></i></div>
+                        <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#4338ca]">Cybersecurity Consulting Agency</span></h3>
+                        <p class="text-gray-600 text-sm font-semibold relative z-10">Businesses aur e-commerce sites ki security check karein aur unhe hack hone se bachayein.</p>
+                        
+                        <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                            <button onclick="toggleIdea('idea24')" id="btn-idea24" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#4338ca'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                            <a href="https://wa.me/917340337074?text=I want to Start a Cybersecurity Consulting Agency" target="_blank" class="flex items-center text-[#4338ca] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#4f46e5]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                        </div>
+                        <div id="desc-idea24" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#4f46e5]/30 relative z-20">
+                            <span class="block mb-2 text-gray-800"><strong class="text-[#4338ca]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Data leaks aur hacking badh rahi hai. Har badi company apne system ka security audit zarur karwati hai.</span>
+                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Security experts bahut mehange hote hain. Ek security audit report banane ka aap asani se <span class="font-black text-[#4338ca]">₹50,000+</span> charge kar sakte hain.</span>
+                        </div>
+                    </div>
+
+           <!-- FRAMED SECTION FOR PREMIUM STARTUPS -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="relative w-full max-w-4xl mx-auto pt-16 pb-16 px-4 sm:px-8 md:px-12 mt-[-2px]">
+                    <!-- Sui Jaisi Glowing Frame (Needle Frame) -->
+                    <div class="absolute top-0 left-0 right-0 bottom-0 rounded-b-[40px] bg-gradient-to-b from-blue-400 via-purple-500 to-pink-500 p-[2px] pt-0 z-0 shadow-[0_0_20px_rgba(236,72,153,0.3)] pointer-events-none">
+                        <!-- Inner mask to reveal only the 2px border -->
+                        <div class="w-full h-full bg-gray-50 rounded-b-[38px]"></div>
+                    </div>
+                    
+                    <!-- Needles Nodes / Dots at the top connecting point -->
+                    <div class="absolute top-0 left-[-5px] w-3 h-3 bg-blue-400 rounded-full shadow-[0_0_15px_rgba(59,130,246,1)] z-10 pointer-events-none"></div>
+                    <div class="absolute top-0 right-[-5px] w-3 h-3 bg-blue-400 rounded-full shadow-[0_0_15px_rgba(59,130,246,1)] z-10 pointer-events-none"></div>
+                    
+                    <!-- Bottom Connecting Jewel -->
+                    <div class="absolute bottom-[-6px] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white border-[3px] border-pink-500 rounded-full shadow-[0_0_20px_rgba(236,72,153,1)] z-10 animate-pulse pointer-events-none"></div>
+
+                    <!-- Inner Grid Starts here -->
+                    <div class="grid grid-cols-1 gap-8 max-w-3xl mx-auto relative z-20">
+                        
+                        <!-- 25. AI Startup (Deep Cyan) -->
+                        <div class="card-3d group p-7 flex flex-col" style="--card-color: #0891b2; --card-color-dark: #0e7490; --card-shadow: rgba(8, 145, 178, 0.4);">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-[#0891b2] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-microchip text-3xl"></i></div>
+                            <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#0e7490]">AI Startup</span></h3>
+                            <p class="text-gray-600 text-sm font-semibold relative z-10">Artificial Intelligence ka zamana hai. AI tool ya service banakar future tech entrepreneur banein.</p>
+                            
+                            <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                                <button onclick="toggleIdea('idea25')" id="btn-idea25" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#0e7490'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                <a href="https://wa.me/917340337074?text=I want to Start an AI Startup" target="_blank" class="flex items-center text-[#0e7490] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#0891b2]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+                            <div id="desc-idea25" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#0891b2]/30 relative z-20">
+                                <span class="block mb-2 text-gray-800"><strong class="text-[#0e7490]"><i class="fa-solid fa-fire"></i> High Demand:</strong> AI aaj ke samay ka sabse bada boom hai. Har company apna manual kaam bachane ke liye AI tools par shift ho rahi hai.</span>
+                                <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Ek acha SaaS/AI tool aapko global audience dega. Aap monthly subscription se asani se <span class="font-black text-[#0e7490]">₹5 Lakh se unlimited</span> kama sakte hain.</span>
+                            </div>
+                        </div>
+
+                        <!-- 26. EdTech (Burnt Orange) -->
+                        <div class="card-3d group p-7 flex flex-col" style="--card-color: #fb923c; --card-color-dark: #c2410c; --card-shadow: rgba(251, 146, 60, 0.4);">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-[#fb923c] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-graduation-cap text-3xl"></i></div>
+                            <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#c2410c]">EdTech Startup</span></h3>
+                            <p class="text-gray-600 text-sm font-semibold relative z-10">Online courses, tutoring, ya learning management system. Shiksha ko digital karein.</p>
+                            
+                            <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                                <button onclick="toggleIdea('idea26')" id="btn-idea26" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#c2410c'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                <a href="https://wa.me/917340337074?text=I want to Start an EdTech Startup" target="_blank" class="flex items-center text-[#c2410c] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#fb923c]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+                            <div id="desc-idea26" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#fb923c]/30 relative z-20">
+                                <span class="block mb-2 text-gray-800"><strong class="text-[#c2410c]"><i class="fa-solid fa-fire"></i> High Demand:</strong> India mein students aur professionals naye skills seekhne ke liye humesha ready rehte hain. E-learning ka scope kabhi kam nahi hoga.</span>
+                                <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Courses mein profit margin 90% tak hota hai. Agar course chal gaya toh <span class="font-black text-[#c2410c]">₹3 Lakh se ₹10 Lakh/month</span> bilkul possible hai.</span>
+                            </div>
+                        </div>
+
+                        <!-- 27. Media Startup (Violet) -->
+                        <div class="card-3d group p-7 flex flex-col" style="--card-color: #8b5cf6; --card-color-dark: #7c3aed; --card-shadow: rgba(139, 92, 246, 0.4);">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-[#8b5cf6] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-photo-film text-3xl"></i></div>
+                            <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#7c3aed]">Media Startup</span></h3>
+                            <p class="text-gray-600 text-sm font-semibold relative z-10">Apna news portal ya content platform shuru karein. Audience banayein, ads se kamayein.</p>
+                            
+                            <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                                <button onclick="toggleIdea('idea27')" id="btn-idea27" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#7c3aed'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                <a href="https://wa.me/917340337074?text=I want to Start a Media Startup" target="_blank" class="flex items-center text-[#7c3aed] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#8b5cf6]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+                            <div id="desc-idea27" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#8b5cf6]/30 relative z-20">
+                                <span class="block mb-2 text-gray-800"><strong class="text-[#7c3aed]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Har kisi ko hyper-local news aur niche content padhna/dekhna pasand hai. Digital news ka consumption all-time high par hai.</span>
+                                <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Adsense, Sponsorships aur Paid articles ke zariye aap easily <span class="font-black text-[#7c3aed]">₹1 Lakh se ₹10 Lakh/month</span> revenue bana sakte hain.</span>
+                            </div>
+                        </div>
+
+                        <!-- 28. Magazine (Magenta) -->
+                        <div class="card-3d group p-7 flex flex-col" style="--card-color: #e81cff; --card-color-dark: #d500f9; --card-shadow: rgba(232, 28, 255, 0.4);">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-[#e81cff] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-book-open text-3xl"></i></div>
+                            <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#d500f9]">Magazine Startup</span></h3>
+                            <p class="text-gray-600 text-sm font-semibold relative z-10">Digital ya print magazine shuru karein. Niche audience ko target karke premium content aur ads se revenue banayein.</p>
+                            
+                            <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                                <button onclick="toggleIdea('idea28')" id="btn-idea28" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#d500f9'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                <a href="https://wa.me/917340337074?text=I want to Start a Magazine Startup" target="_blank" class="flex items-center text-[#d500f9] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#e81cff]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+                            <div id="desc-idea28" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#e81cff]/30 relative z-20">
+                                <span class="block mb-2 text-gray-800"><strong class="text-[#d500f9]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Fashion, business, aur lifestyle jaise specific topics par log premium aur well-researched content padhna pasand karte hain.</span>
+                                <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Paid subscriptions aur brand sponsorships ke zariye aap aaram se <span class="font-black text-[#d500f9]">₹1 Lakh se ₹3 Lakh/month</span> kama sakte hain.</span>
+                            </div>
+                        </div>
+
+                        <!-- 29. Fintech Startup (Light Green) -->
+                        <div class="card-3d group p-7 flex flex-col" style="--card-color: #22c55e; --card-color-dark: #16a34a; --card-shadow: rgba(34, 197, 94, 0.4);">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-[#22c55e] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-coins text-3xl"></i></div>
+                            <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#16a34a]">Fintech Startup</span></h3>
+                            <p class="text-gray-600 text-sm font-semibold relative z-10">Finance aur tech ko milayein. App launch karein aur bada funding raise karne ka chance payein.</p>
+                            
+                            <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                                <button onclick="toggleIdea('idea29')" id="btn-idea29" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#16a34a'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                <a href="https://wa.me/917340337074?text=I want to Start a Fintech Startup" target="_blank" class="flex items-center text-[#16a34a] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#22c55e]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+                            <div id="desc-idea29" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#22c55e]/30 relative z-20">
+                                <span class="block mb-2 text-gray-800"><strong class="text-[#16a34a]"><i class="fa-solid fa-fire"></i> High Demand:</strong> India UPI aur digital payments me duniya ka leader hai. Naye loan, investment aur payment apps ki demand asmaan par hai.</span>
+                                <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Ye highly scalable model hai. Investors isme Millions (Crores) ki funding dete hain. Ye aapko <span class="font-black text-[#16a34a]">Billionaire</span> bana sakta hai.</span>
+                            </div>
+                        </div>
+
+                        <!-- 30. Healthtech Startup (Emerald) -->
+                        <div class="card-3d group p-7 flex flex-col" style="--card-color: #10b981; --card-color-dark: #059669; --card-shadow: rgba(16, 185, 129, 0.4);">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-[#10b981] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-notes-medical text-3xl"></i></div>
+                            <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#059669]">Healthtech Startup</span></h3>
+                            <p class="text-gray-600 text-sm font-semibold relative z-10">Healthcare ko digital banayein. Online consultation ya health tools banakar revolution layein.</p>
+                            
+                            <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                                <button onclick="toggleIdea('idea30')" id="btn-idea30" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#059669'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                <a href="https://wa.me/917340337074?text=I want to Start a Healthtech Startup" target="_blank" class="flex items-center text-[#059669] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#10b981]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+                            <div id="desc-idea30" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#10b981]/30 relative z-20">
+                                <span class="block mb-2 text-gray-800"><strong class="text-[#059669]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Post-Covid duniya mein health aur wellness sabse badi priority ban chuki hai. Online doctor booking aur fitness apps ki bhari demand hai.</span>
+                                <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Health startups investors ke favorite hote hain. Valuation jaldi badhti hai aur <span class="font-black text-[#059669]">Crores ki VC funding</span> milne ka sabse zyada chance hota hai.</span>
+                            </div>
+                        </div>
+
+                        <!-- 31. E-Commerce (Lime) -->
+                        <div class="card-3d group p-7 flex flex-col" style="--card-color: #84cc16; --card-color-dark: #65a30d; --card-shadow: rgba(132, 204, 22, 0.4);">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-[#84cc16] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-cart-shopping text-3xl"></i></div>
+                            <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#65a30d]">E-Commerce Startup</span></h3>
+                            <p class="text-gray-600 text-sm font-semibold relative z-10">Bina khud ki inventory rakhe online products sell karein aur global market capture karein.</p>
+                            
+                            <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                                <button onclick="toggleIdea('idea31')" id="btn-idea31" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#65a30d'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                <a href="https://wa.me/917340337074?text=I want to Start an E-Commerce Startup" target="_blank" class="flex items-center text-[#65a30d] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#84cc16]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+                            <div id="desc-idea31" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#84cc16]/30 relative z-20">
+                                <span class="block mb-2 text-gray-800"><strong class="text-[#65a30d]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Online shopping boom par hai. Log apne mobile se daily naye products aur gadgets kharid rahe hain.</span>
+                                <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Sahi product aur marketing strategy ke sath aap pehle mahine se hi <span class="font-black text-[#65a30d]">₹1 Lakh se ₹5 Lakh+</span> ka profit margin bana sakte hain.</span>
+                            </div>
+                        </div>
+
+                        <!-- 32. SaaS Startup (Slate) -->
+                        <div class="card-3d group p-7 flex flex-col" style="--card-color: #475569; --card-color-dark: #334155; --card-shadow: rgba(71, 85, 105, 0.4);">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-[#475569] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-cloud text-3xl"></i></div>
+                            <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#334155]">SaaS Startup</span></h3>
+                            <p class="text-gray-600 text-sm font-semibold relative z-10">Ek software banayein aur uski monthly subscription sell karke passive income generate karein.</p>
+                            
+                            <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                                <button onclick="toggleIdea('idea32')" id="btn-idea32" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#334155'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                <a href="https://wa.me/917340337074?text=I want to Start a SaaS Startup" target="_blank" class="flex items-center text-[#334155] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#475569]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+                            <div id="desc-idea32" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#475569]/30 relative z-20">
+                                <span class="block mb-2 text-gray-800"><strong class="text-[#334155]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Businesses ko apna kaam automate karne ke liye B2B software (CRM, Billing apps, etc.) lagatar chahiye.</span>
+                                <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Yeh sabse zyada scalable business hai. Monthly subscriptions se log Crores ki <span class="font-black text-[#334155]">recurring income aur Millions ki valuation</span> banate hain.</span>
+                            </div>
+                        </div>
+
+                        <!-- 33. PropTech (Dark Emerald) -->
+                        <div class="card-3d group p-7 flex flex-col" style="--card-color: #059669; --card-color-dark: #047857; --card-shadow: rgba(5, 150, 105, 0.4);">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-[#059669] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-building text-3xl"></i></div>
+                            <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#047857]">PropTech Startup</span></h3>
+                            <p class="text-gray-600 text-sm font-semibold relative z-10">Online platform banakar properties bikwayein aur builders se direct mota commission kamayein.</p>
+                            
+                            <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                                <button onclick="toggleIdea('idea33')" id="btn-idea33" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#047857'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                <a href="https://wa.me/917340337074?text=I want to Start a Real Estate PropTech Startup" target="_blank" class="flex items-center text-[#047857] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#059669]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+                            <div id="desc-idea33" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#059669]/30 relative z-20">
+                                <span class="block mb-2 text-gray-800"><strong class="text-[#047857]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Aajkal property lene wale 90% log apni search Google ya Instagram se shuru karte hain. Digital real estate highest peak par hai.</span>
+                                <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Is business mein ek hi sale par aapko 2% se 5% commission milta hai, jo easily <span class="font-black text-[#047857]">Lakho mein hota hai</span>.</span>
+                            </div>
+                        </div>
+
+                        <!-- 34. TravelTech (Dark Sky / Ocean) -->
+                        <div class="card-3d group p-7 flex flex-col" style="--card-color: #0284c7; --card-color-dark: #0369a1; --card-shadow: rgba(2, 132, 199, 0.4);">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-[#0284c7] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-plane text-3xl"></i></div>
+                            <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#0369a1]">TravelTech Startup</span></h3>
+                            <p class="text-gray-600 text-sm font-semibold relative z-10">Custom itineraries, honeymoon packages aur corporate tours online book karne ka platform banayein.</p>
+                            
+                            <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                                <button onclick="toggleIdea('idea34')" id="btn-idea34" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#0369a1'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                <a href="https://wa.me/917340337074?text=I want to Start a TravelTech Startup" target="_blank" class="flex items-center text-[#0369a1] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#0284c7]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+                            <div id="desc-idea34" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#0284c7]/30 relative z-20">
+                                <span class="block mb-2 text-gray-800"><strong class="text-[#0369a1]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Travel lifestyle ban chuka hai. Log boring tour packages ke bajaye custom aur adventure trips plan karwana chahte hain.</span>
+                                <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Hotel aur flights ki B2B rates lekar aaram se 10-20% margin bachta hai. Month mein 5 trips mein <span class="font-black text-[#0369a1]">₹1 Lakh+</span> profit ho sakta hai.</span>
+                            </div>
+                        </div>
+
+                        <!-- 35. Agritech (Mint) -->
+                        <div class="card-3d group p-7 flex flex-col" style="--card-color: #4ade80; --card-color-dark: #22c55e; --card-shadow: rgba(74, 222, 128, 0.4);">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-[#4ade80] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                            <div class="w-16 h-16 rounded-2xl flex items-center justify-center text-white mb-6 icon-3d relative z-10"><i class="fa-solid fa-wheat-awn text-3xl"></i></div>
+                            <h3 class="font-heading font-extrabold text-xl text-gray-900 mb-3 leading-tight relative z-10">Start Your<br><span class="text-[#22c55e]">Agritech Startup</span></h3>
+                            <p class="text-gray-600 text-sm font-semibold relative z-10">Kisano (farmers) ki madad ke liye tech tools, market access, ya beej/fasal ka online platform banayein.</p>
+                            
+                            <div class="mt-auto pt-5 flex items-center justify-between border-t border-gray-200/60 relative z-20">
+                                <button onclick="toggleIdea('idea35')" id="btn-idea35" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#22c55e'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                <a href="https://wa.me/917340337074?text=I want to Start an Agritech Startup" target="_blank" class="flex items-center text-[#22c55e] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#4ade80]/10 px-3 py-1.5 rounded-lg">Shuru Karein <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                            </div>
+                            <div id="desc-idea35" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#4ade80]/30 relative z-20">
+                                <span class="block mb-2 text-gray-800"><strong class="text-[#22c55e]"><i class="fa-solid fa-fire"></i> High Demand:</strong> India ki economy agriculture par base hai. Tech ki madad se kisan ki income badhana aaj ki sabse badi zarurat aur sabse bada market hai.</span>
+                                <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Agritech startups ko Government ki taraf se seed funding (₹10 Lakh+) easily mil jati hai. Market bada hone ki wajah se isme <span class="font-black text-[#22c55e]">Crores ka revenue</span> banana possible hai.</span>
+                            </div>
+                        </div>
+
+                        <!-- 36. Skill Development (Jaipur Deep) -->
+                        <div class="card-3d group p-7 flex flex-col" style="--card-color: #8B0000; --card-color-dark: #600000; --card-shadow: rgba(139, 0, 0, 0.4);">
+                            <div class="absolute top-0 right-0 w-48 h-48 bg-[#8B0000] opacity-5 rounded-bl-[150px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                            <div class="absolute bottom-0 left-0 w-32 h-32 bg-[#8B0000] opacity-5 rounded-tr-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                            
+                            <div class="flex flex-col md:flex-row items-center gap-6 relative z-10">
+                                <div class="w-20 h-20 shrink-0 rounded-2xl flex items-center justify-center text-white icon-3d"><i class="fa-solid fa-screwdriver-wrench text-4xl"></i></div>
+                                <div>
+                                    <h3 class="font-heading font-extrabold text-2xl text-gray-900 mb-2 leading-tight">Start Your <span class="text-[#8B0000]">Skill Development Startup</span></h3>
+                                    <p class="text-gray-600 text-base font-semibold">Yuvaon (Youth) ko job-ready skills sikhane ka platform banayein. Desh ke vikas mein yogdaan dein aur ek highly scalable business khada karein.</p>
+                                </div>
+                            </div>
+
+                            <div class="mt-auto pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between border-t border-gray-200/60 relative z-20 gap-4">
+                                <button onclick="toggleIdea('idea36')" id="btn-idea36" class="text-sm font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#600000'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
+                                <a href="https://wa.me/917340337074?text=I want to Start a Skill Development Startup" target="_blank" class="flex items-center text-white bg-[#8B0000] px-6 py-3 rounded-xl text-sm font-bold uppercase tracking-wider hover:bg-[#600000] transition-colors duration-300 shadow-lg hover:shadow-[#8B0000]/50">Shuru Karein <i class="fa-solid fa-arrow-right ml-2"></i></a>
+                            </div>
+                            <div id="desc-idea36" class="hidden mt-4 text-base font-medium leading-relaxed p-5 bg-white/90 rounded-xl shadow-inner border border-[#8B0000]/20 relative z-20">
+                                <span class="block mb-2 text-gray-800"><strong class="text-[#600000]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Degree ke bawajood jobs nahi mil rahi. Companies ko skill-based log chahiye aur youth ko practical training. Government bhi aise startups ko full support karti hai.</span>
+                                <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> B2B corporate tie-ups, bulk training, aur Govt grants se aapka revenue model bahut strong hota hai. Yahan easily <span class="font-black text-[#600000]">₹5 Lakh se ₹15 Lakh/month</span> ya usse bhi zyada ki earning potential hai!</span>
+                            </div>
+                        </div>
+
+                    </div> <!-- Closes Inner Grid -->
+                </div> <!-- Closes Framed Glowing Section -->
+            </div> <!-- Closes max-w-7xl relative z-10 Container -->
+        </section>
+
+    </div>
+
         <!-- UNIFIED MIDDLE SECTIONS WRAPPER 2: A-Z SERVICES & CAPABILITIES -->
         <div class="relative w-full bg-[#FFF0F5] z-20">
             <div class="absolute inset-0 opacity-[0.05] pointer-events-none bg-[linear-gradient(to_right,#d66d75_1px,transparent_1px),linear-gradient(to_bottom,#d66d75_1px,transparent_1px)] bg-[size:24px_24px] z-0"></div>
@@ -1065,11 +1805,31 @@
         <div class="max-w-5xl mx-auto px-6 flex flex-col items-center gap-10 relative z-20 pb-12 pt-10 text-center mt-4 w-full">
             <div class="flex flex-col items-center mt-4 w-full">
                 <h4 class="font-outfit font-semibold text-jaipur-deep/60 text-[10px] md:text-xs uppercase tracking-[0.3em] mb-6">Legal & Policies</h4>
-                <div class="flex flex-col items-center justify-center gap-3 w-full max-w-[280px]">
-                    <button onclick="openPolicyModal('termsModal')" class="w-full px-5 py-3.5 bg-white/70 hover:bg-jaipur-deep text-jaipur-deep hover:text-white border border-jaipur-deep/20 hover:border-jaipur-deep rounded-full text-[10px] md:text-[11px] font-outfit font-bold uppercase tracking-widest transition-all shadow-sm focus:outline-none">Terms & Conditions</button>
-                    <button onclick="openPolicyModal('privacyModal')" class="w-full px-5 py-3.5 bg-white/70 hover:bg-jaipur-deep text-jaipur-deep hover:text-white border border-jaipur-deep/20 hover:border-jaipur-deep rounded-full text-[10px] md:text-[11px] font-outfit font-bold uppercase tracking-widest transition-all shadow-sm focus:outline-none">Privacy Policy</button>
-                    <button onclick="openPolicyModal('refundModal')" class="w-full px-5 py-3.5 bg-white/70 hover:bg-jaipur-deep text-jaipur-deep hover:text-white border border-jaipur-deep/20 hover:border-jaipur-deep rounded-full text-[10px] md:text-[11px] font-outfit font-bold uppercase tracking-widest transition-all shadow-sm focus:outline-none">Refund Policy</button>
-                    <button onclick="openPolicyModal('grievanceModal')" class="w-full px-5 py-3.5 bg-white/70 hover:bg-jaipur-deep text-jaipur-deep hover:text-white border border-jaipur-deep/20 hover:border-jaipur-deep rounded-full text-[10px] md:text-[11px] font-outfit font-bold uppercase tracking-widest transition-all shadow-sm focus:outline-none">Grievance Redressal</button>
+                <div class="flex flex-col items-center justify-center gap-3 w-full max-w-[300px]">
+                    <button onclick="openPolicyModal('termsModal')" class="group relative w-full px-5 py-3.5 bg-white/60 backdrop-blur-sm border border-white/40 shadow-[0_4px_15px_-5px_rgba(139,0,0,0.1)] hover:shadow-[0_8px_20px_-5px_rgba(212,175,55,0.2)] rounded-xl flex items-center justify-center text-jaipur-deep transition-all duration-300 overflow-hidden focus:outline-none">
+                        <div class="absolute inset-0 w-0 bg-gradient-to-r from-jaipur-gold/20 to-transparent group-hover:w-full transition-all duration-500 ease-out z-0"></div>
+                        <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-jaipur-pink group-hover:bg-jaipur-gold transition-colors duration-300 z-10"></div>
+                        <div class="absolute right-0 top-0 bottom-0 w-1.5 bg-jaipur-pink group-hover:bg-jaipur-gold transition-colors duration-300 z-10"></div>
+                        <span class="relative z-10 font-outfit font-bold text-[10px] md:text-[11px] uppercase tracking-widest">Terms & Conditions</span>
+                    </button>
+                    <button onclick="openPolicyModal('privacyModal')" class="group relative w-full px-5 py-3.5 bg-white/60 backdrop-blur-sm border border-white/40 shadow-[0_4px_15px_-5px_rgba(139,0,0,0.1)] hover:shadow-[0_8px_20px_-5px_rgba(212,175,55,0.2)] rounded-xl flex items-center justify-center text-jaipur-deep transition-all duration-300 overflow-hidden focus:outline-none">
+                        <div class="absolute inset-0 w-0 bg-gradient-to-r from-jaipur-gold/20 to-transparent group-hover:w-full transition-all duration-500 ease-out z-0"></div>
+                        <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-jaipur-pink group-hover:bg-jaipur-gold transition-colors duration-300 z-10"></div>
+                        <div class="absolute right-0 top-0 bottom-0 w-1.5 bg-jaipur-pink group-hover:bg-jaipur-gold transition-colors duration-300 z-10"></div>
+                        <span class="relative z-10 font-outfit font-bold text-[10px] md:text-[11px] uppercase tracking-widest">Privacy Policy</span>
+                    </button>
+                    <button onclick="openPolicyModal('refundModal')" class="group relative w-full px-5 py-3.5 bg-white/60 backdrop-blur-sm border border-white/40 shadow-[0_4px_15px_-5px_rgba(139,0,0,0.1)] hover:shadow-[0_8px_20px_-5px_rgba(212,175,55,0.2)] rounded-xl flex items-center justify-center text-jaipur-deep transition-all duration-300 overflow-hidden focus:outline-none">
+                        <div class="absolute inset-0 w-0 bg-gradient-to-r from-jaipur-gold/20 to-transparent group-hover:w-full transition-all duration-500 ease-out z-0"></div>
+                        <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-jaipur-pink group-hover:bg-jaipur-gold transition-colors duration-300 z-10"></div>
+                        <div class="absolute right-0 top-0 bottom-0 w-1.5 bg-jaipur-pink group-hover:bg-jaipur-gold transition-colors duration-300 z-10"></div>
+                        <span class="relative z-10 font-outfit font-bold text-[10px] md:text-[11px] uppercase tracking-widest">Refund Policy</span>
+                    </button>
+                    <button onclick="openPolicyModal('grievanceModal')" class="group relative w-full px-5 py-3.5 bg-white/60 backdrop-blur-sm border border-white/40 shadow-[0_4px_15px_-5px_rgba(139,0,0,0.1)] hover:shadow-[0_8px_20px_-5px_rgba(212,175,55,0.2)] rounded-xl flex items-center justify-center text-jaipur-deep transition-all duration-300 overflow-hidden focus:outline-none">
+                        <div class="absolute inset-0 w-0 bg-gradient-to-r from-jaipur-gold/20 to-transparent group-hover:w-full transition-all duration-500 ease-out z-0"></div>
+                        <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-jaipur-pink group-hover:bg-jaipur-gold transition-colors duration-300 z-10"></div>
+                        <div class="absolute right-0 top-0 bottom-0 w-1.5 bg-jaipur-pink group-hover:bg-jaipur-gold transition-colors duration-300 z-10"></div>
+                        <span class="relative z-10 font-outfit font-bold text-[10px] md:text-[11px] uppercase tracking-widest">Grievance Redressal</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -1309,6 +2069,22 @@
         startTypewriter('typewriter-insta', 'Follow on Insta ✨');
         startTypewriter('typewriter-wa', 'Join Community 🚀');
     </script>
+
+<!-- Detail Toggle Script -->
+<script>
+    function toggleIdea(ideaId) {
+        const desc = document.getElementById('desc-' + ideaId);
+        const btn = document.getElementById('btn-' + ideaId);
+        
+        if (desc.classList.contains('hidden')) {
+            desc.classList.remove('hidden');
+            btn.innerHTML = 'See Less <i class="fa-solid fa-chevron-up"></i>';
+        } else {
+            desc.classList.add('hidden');
+            btn.innerHTML = 'See More <i class="fa-solid fa-chevron-down"></i>';
+        }
+    }
+</script>
 
 </body>
 </html>
