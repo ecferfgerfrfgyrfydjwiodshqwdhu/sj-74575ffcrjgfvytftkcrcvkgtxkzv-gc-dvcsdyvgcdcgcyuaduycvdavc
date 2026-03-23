@@ -171,37 +171,32 @@
         }
     </style>
 
-<!-- Font Awesome (Icons ke liye) -->
+<!-- Tailwind CSS & Icons & Fonts -->
+<script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<!-- Modern Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
-<!-- Tailwind CSS (Agar aapki dusri site me pehle se Tailwind nahi hai toh ye line dalein) -->
-<script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Tailwind Config for Custom Colors & Fonts -->
+<!-- Tailwind Config -->
 <script>
     tailwind.config = {
         theme: {
             extend: {
-                colors: {
-                    jaipur: { pink: '#d66d75', deep: '#8B0000', gold: '#d4af37' }
-                },
-                fontFamily: {
-                    heading: ['"Outfit"', 'sans-serif'],
-                    sans: ['"Inter"', 'sans-serif'],
-                },
-                animation: {
-                    'float': 'float 6s ease-in-out infinite',
-                    'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                colors: { jaipur: { bg: '#fdfbfb', pink: '#d66d75', light: '#e29587', deep: '#8B0000', sand: '#fff9f0', gold: '#d4af37', blue: '#1a2a3a' } },
+                fontFamily: { heading: ['"Outfit"', 'sans-serif'], sans: ['"Inter"', 'sans-serif'] },
+                animation: { 
+                    'text-slide': 'text-slide 10s cubic-bezier(0.83, 0, 0.17, 1) infinite',
+                    'camel-walk': 'camelWalk 35s linear infinite'
                 },
                 keyframes: {
-                    float: { 
-                        '0%, 100%': { transform: 'translateY(0)' }, 
-                        '50%': { transform: 'translateY(-20px)' } 
+                    'text-slide': {
+                        '0%, 15%': { transform: 'translateY(0%)' }, '20%, 35%': { transform: 'translateY(-20%)' }, '40%, 55%': { transform: 'translateY(-40%)' },
+                        '60%, 75%': { transform: 'translateY(-60%)' }, '80%, 95%': { transform: 'translateY(-80%)' }, '100%': { transform: 'translateY(0%)' }
+                    },
+                    camelWalk: {
+                        '0%': { transform: 'translateX(-100%)' },
+                        '100%': { transform: 'translateX(100vw)' }
                     }
                 }
             }
@@ -209,76 +204,42 @@
     }
 </script>
 
+<!-- Custom CSS (Plain Background Colors ONLY) -->
 <style>
-    /* Scoped Fonts sirf Startup Section ke liye */
-    #startup-ideas, #startup-ideas p, #startup-ideas a, #startup-ideas span, #startup-ideas div {
-        font-family: 'Inter', sans-serif !important;
-    }
-    #startup-ideas h1, #startup-ideas h2, #startup-ideas h3, #startup-ideas h4, #startup-ideas h5, #startup-ideas h6, #startup-ideas .font-heading {
-        font-family: 'Outfit', sans-serif !important;
-    }
+    /* Scoped Fonts */
+    #startup-ideas { font-family: 'Inter', sans-serif; }
+    #startup-ideas h1, #startup-ideas h2, #startup-ideas h3, #startup-ideas .font-heading { font-family: 'Outfit', sans-serif !important; }
 
-    /* 3D Startup Idea Cards */
+    /* 3D Cards Base - Clean & Plain Colors */
     .card-3d {
-        background: linear-gradient(145deg, rgba(255,255,255,0.98), rgba(249,250,251,0.9));
-        box-shadow: inset 0 2px 4px 0 rgba(255, 255, 255, 1), inset 0 -2px 5px 0 rgba(0, 0, 0, 0.02), 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(10px);
-        transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
-        position: relative;
-        overflow: hidden;
-        border-radius: 1.5rem;
-        z-index: 1;
-        border: 1px solid rgba(0,0,0,0.03);
+        background: linear-gradient(145deg, rgba(255,255,255,0.45), rgba(255,255,255,0.0)), var(--card-bg, #fdfbfb);
+        box-shadow: inset 0 2px 4px 0 rgba(255,255,255,1), inset 0 -2px 5px 0 rgba(0,0,0,0.02), 0 10px 25px -5px var(--card-shadow), 0 0 0 2px var(--card-color), 0 0 15px var(--card-shadow);
+        backdrop-filter: blur(10px); transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease;
+        position: relative; overflow: hidden; border-radius: 1.5rem; z-index: 1; border: 1px solid rgba(0,0,0,0.05);
     }
     .card-3d:hover {
-        transform: translateY(-10px) scale(1.03);
-        box-shadow: inset 0 2px 4px 0 rgba(255, 255, 255, 1), inset 0 -2px 5px 0 rgba(0, 0, 0, 0.02), 0 30px 50px -15px var(--card-shadow), 0 0 0 2px var(--card-color);
-        z-index: 10;
-    }
-    .card-3d::before {
-        content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-        background: radial-gradient(circle at center, var(--card-color) 0%, transparent 50%);
-        opacity: 0; transition: opacity 0.6s ease; z-index: -1; pointer-events: none;
-    }
-    .card-3d:hover::before { opacity: 0.08; }
-    
-    .icon-3d {
-        background: linear-gradient(135deg, var(--card-color), var(--card-color-dark));
-        box-shadow: 0 10px 20px -5px var(--card-shadow), inset 0 2px 4px rgba(255,255,255,0.4), inset 0 -2px 4px rgba(0,0,0,0.2);
-        transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    .card-3d:hover .icon-3d { transform: scale(1.15) rotate(10deg); }
-
-    /* Dynamic Card Frame Styles */
-    .card-glow-frame {
-        position: absolute; inset: 0; border-radius: 1.5rem; padding: 2px;
-        background: linear-gradient(to bottom, var(--card-color-dark), var(--card-color));
-        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-        -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
-        z-index: 20; opacity: 0.6; transition: opacity 0.5s ease;
-    }
-    .card-3d:hover .card-glow-frame { opacity: 1; box-shadow: 0 0 20px var(--card-shadow); }
-
-    /* Hand-painted Brush Stroke / Smudge Effect */
-    .painted-smudge { position: relative; z-index: 10; padding: 2px 8px; }
-    .painted-smudge::before {
-        content: ''; position: absolute; inset: 0; background-color: var(--card-color); opacity: 0.15;
-        border-radius: 70% 30% 80% 20% / 30% 80% 20% 70%; filter: blur(1.5px); transform: scale(1.05) rotate(-3deg); z-index: -1;
-    }
-    .painted-smudge::after {
-        content: ''; position: absolute; inset: 2px -4px; background-color: var(--card-color); opacity: 0.1;
-        border-radius: 20% 80% 30% 70% / 80% 20% 70% 30%; filter: blur(1px); transform: scale(1.1) rotate(2deg); z-index: -1;
+        transform: translateY(-10px) scale(1.03); z-index: 10;
+        box-shadow: inset 0 2px 4px 0 rgba(255,255,255,1), inset 0 -2px 5px 0 rgba(0,0,0,0.02), 0 30px 50px -15px var(--card-shadow), 0 0 0 2px var(--card-color), 0 0 25px var(--card-shadow);
     }
 
-    /* Moving Text Animation */
-    .animate-text-slide { animation: text-slide 10s cubic-bezier(0.83, 0, 0.17, 1) infinite; }
-    @keyframes text-slide {
-        0%, 15% { transform: translateY(0%); } 20%, 35% { transform: translateY(-20%); }
-        40%, 55% { transform: translateY(-40%); } 60%, 75% { transform: translateY(-60%); }
-        80%, 95% { transform: translateY(-80%); } 100% { transform: translateY(0%); }
-    }
+    /* Icons */
+    .icon-3d { background: linear-gradient(135deg, var(--card-color), var(--card-color-dark)); box-shadow: 0 10px 20px -5px var(--card-shadow), inset 0 2px 4px rgba(255,255,255,0.4), inset 0 -2px 4px rgba(0,0,0,0.2); transition: transform 0.5s ease; }
+    .card-3d:hover .icon-3d { transform: scale(1.05); }
+
+    /* Single Line Headings */
+    .card-3d h3 { flex: 1; min-width: 0; overflow: hidden; }
+    .card-3d h3 > span:last-child { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: clamp(14px, 3.5vw, 24px) !important; line-height: 1.3 !important; }
+
+    /* Buttons (See More & Chat Now) 3D Effect */
+    .card-3d .mt-auto button { background-color: rgba(0,0,0,0.05); padding: 0.375rem 0.75rem; border-radius: 0.5rem; box-shadow: 0 4px 0 rgba(0,0,0,0.1) !important; transform: translateY(-2px) !important; transition: all 0.15s ease !important; border: 1px solid rgba(0,0,0,0.05); }
+    .card-3d .mt-auto button:hover { background-color: rgba(0,0,0,0.08); box-shadow: 0 6px 0 rgba(0,0,0,0.12) !important; transform: translateY(-4px) !important; }
+    .card-3d .mt-auto button:active { box-shadow: 0 0 0 rgba(0,0,0,0.12) !important; transform: translateY(2px) !important; }
+
+    .card-3d .mt-auto a { box-shadow: 0 4px 0 var(--card-color) !important; transform: translateY(-2px) !important; transition: all 0.15s ease !important; border: 1px solid rgba(0,0,0,0.05); }
+    .card-3d .mt-auto a:hover { box-shadow: 0 6px 0 var(--card-color-dark) !important; transform: translateY(-4px) !important; }
+    .card-3d .mt-auto a:active { box-shadow: 0 0 0 var(--card-color-dark) !important; transform: translateY(2px) !important; }
 </style>
-
+    
 </head>
 <body class="font-body rajasthani-pattern text-jaipur-deep antialiased selection:bg-jaipur-pink selection:text-white relative w-full overflow-x-hidden max-w-full">
 
@@ -411,16 +372,16 @@
             <div class="max-w-7xl mx-auto px-4 md:px-8 relative">
                 <div class="flex justify-between items-center h-16 md:h-20 gap-1">
                     <div class="flex-shrink-0 flex items-center">
-                        <a href="https://wa.me/917340337074" target="_blank" class="relative inline-flex h-9 md:h-10 items-center justify-center rounded-full bg-gradient-to-r from-[#fb923c] to-jaipur-gold border-[0.5px] border-white/60 overflow-hidden px-4 md:px-5 py-1 group focus:outline-none hover:scale-105 transition-all duration-300 shadow-[0_0_20px_-5px_rgba(251,146,60,0.5)] backdrop-blur-sm text-white">
-                            <span class="absolute top-1.5 right-2 md:top-2 md:right-2.5 flex h-2 w-2">
+                        <a href="https://wa.me/917340337074" target="_blank" class="relative inline-flex h-8 md:h-10 items-center justify-center rounded-full bg-gradient-to-r from-[#fb923c] to-jaipur-gold border-[0.5px] border-white/60 overflow-hidden px-3 md:px-5 py-1 group focus:outline-none hover:scale-105 transition-all duration-300 shadow-[0_0_20px_-5px_rgba(251,146,60,0.5)] backdrop-blur-sm text-white">
+                            <span class="absolute top-1 md:top-2 right-1.5 md:right-2.5 flex h-1.5 w-1.5 md:h-2 md:w-2">
                               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                              <span class="relative inline-flex rounded-full h-2 w-2 bg-white shadow-[0_0_10px_#ffffff]"></span>
+                              <span class="relative inline-flex rounded-full h-1.5 w-1.5 md:h-2 md:w-2 bg-white shadow-[0_0_10px_#ffffff]"></span>
                             </span>
-                            <div class="flex items-center gap-1.5 mr-1">
-                                <i class="fa-brands fa-whatsapp text-base md:text-lg drop-shadow-md"></i>
+                            <div class="flex items-center gap-1 md:gap-1.5 mr-1">
+                                <i class="fa-brands fa-whatsapp text-[14px] md:text-lg drop-shadow-md"></i>
                                 <div class="flex flex-col items-start leading-none">
-                                    <span class="text-[6px] md:text-[7px] text-white/90 uppercase tracking-widest font-bold">Official Group</span>
-                                    <span class="text-[9px] md:text-[10px] font-bold uppercase tracking-wide font-luxury drop-shadow-sm">Join Now</span>
+                                    <span class="text-[5px] md:text-[7px] text-white/90 uppercase tracking-widest font-bold">Official Group</span>
+                                    <span class="text-[8px] md:text-[10px] font-bold uppercase tracking-wide font-luxury drop-shadow-sm">Join Now</span>
                                 </div>
                             </div>
                         </a>
@@ -428,9 +389,9 @@
                     
                     <div class="flex items-center gap-2 md:gap-3 z-[200] flex-shrink-0 relative">
                         <div class="relative">
-                            <button onclick="toggleLoginModal()" id="login-btn-trigger" class="relative inline-flex h-9 md:h-10 items-center justify-center rounded-full bg-gradient-to-r from-[#f97316] via-jaipur-pink to-jaipur-deep border-[0.5px] border-white/60 overflow-hidden px-4 md:px-5 py-1 focus:outline-none group hover:scale-105 transition-all duration-300 shadow-[0_8px_20px_-5px_rgba(139,0,0,0.4)] hover:shadow-[0_10px_25px_-5px_rgba(214,109,117,0.6)] backdrop-blur-md gap-2 text-white">
-                                <i id="login-icon" class="fa-solid fa-user-shield text-jaipur-gold text-[10px] md:text-xs group-hover:scale-110 transition-transform"></i>
-                                <span id="login-text" class="text-[9px] md:text-xs font-black uppercase tracking-widest drop-shadow-sm">Login</span>
+                            <button onclick="toggleLoginModal()" id="login-btn-trigger" class="relative inline-flex h-8 md:h-10 items-center justify-center rounded-full bg-gradient-to-r from-[#f97316] via-jaipur-pink to-jaipur-deep border-[0.5px] border-white/60 overflow-hidden px-3 md:px-5 py-1 focus:outline-none group hover:scale-105 transition-all duration-300 shadow-[0_8px_20px_-5px_rgba(139,0,0,0.4)] hover:shadow-[0_10px_25px_-5px_rgba(214,109,117,0.6)] backdrop-blur-md gap-1.5 md:gap-2 text-white">
+                                <i id="login-icon" class="fa-solid fa-user-shield text-[9px] md:text-xs group-hover:scale-110 transition-transform"></i>
+                                <span id="login-text" class="text-[8px] md:text-xs font-black uppercase tracking-widest drop-shadow-sm">Login</span>
                             </button>
                             <div id="authModalDrop" class="hidden absolute top-full right-0 md:-right-2 mt-4 w-[290px] md:w-[340px] bg-white rounded-[2rem] p-1.5 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] border border-gray-100 z-[210] animate-fade-up">
                                 <div class="bg-gradient-to-br from-gray-50 to-white rounded-[1.6rem] p-6 relative overflow-hidden">
@@ -728,17 +689,46 @@
                 </div>
             </section>
 
-             <div class="relative w-full max-w-full overflow-x-hidden flex flex-col min-h-screen">
-
-        <!-- MEGA STARTUP IDEAS SECTION -->
+            <!-- STARTUP IDEAS SECTION (Custom Fonts applied here) -->
+            <section id="startup-ideas" class="relative z-10 py-12">
+                
+  <!-- MEGA STARTUP IDEAS SECTION -->
         <section id="startup-ideas" class="pb-24 pt-12 bg-gray-50 relative overflow-hidden w-full border-b border-gray-200">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                
-                <!-- Huge List for Agency & Service Ideas (Top Section) -->
-                <div class="grid grid-cols-1 gap-5 sm:gap-6 max-w-3xl mx-auto mt-8">
+
+                <!-- TRANSPARENT DOUBLE-FRAMED BANNER SECTION (Moved to Top) -->
+                <div class="w-full max-w-6xl mx-auto py-10 md:py-12 px-6 text-center relative z-20 mb-8 mt-2 bg-transparent">
+                    <!-- Double Chokor Frame (Outer & Inner) -->
+                    <div class="absolute inset-0 border-[3px] border-blue-400/40 rounded-[30px] m-2 pointer-events-none"></div>
+                    <div class="absolute inset-0 border-[3px] border-jaipur-pink/40 rounded-[25px] m-5 pointer-events-none"></div>
                     
-                    <!-- 1. Digital Marketing (Blue) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #3b82f6; --card-color-dark: #2563eb; --card-shadow: rgba(59, 130, 246, 0.4);">
+                    <!-- Floating Abstract Shapes -->
+                    <div class="absolute top-10 left-[8%] md:left-[10%] text-jaipur-pink/30 animate-bounce text-3xl"><i class="fa-solid fa-star"></i></div>
+                    <div class="absolute bottom-10 right-[8%] md:right-[15%] text-blue-500/20 animate-pulse text-4xl"><i class="fa-solid fa-circle"></i></div>
+                    <div class="absolute top-1/2 left-[15%] text-jaipur-gold/30 animate-float text-6xl md:text-7xl"><i class="fa-solid fa-square transform rotate-45"></i></div>
+                    <div class="absolute top-10 right-[20%] text-purple-500/20 animate-float text-4xl md:text-5xl" style="animation-delay: 1.5s;"><i class="fa-solid fa-play transform -rotate-12"></i></div>
+
+                    <div class="relative z-10 px-4 pt-4">
+                    <!-- Animated Heading & Hand-drawn Underline -->
+                    <h3 class="font-heading font-black text-[22px] sm:text-4xl md:text-5xl lg:text-6xl mb-4 relative inline-block z-20 whitespace-nowrap">
+                        <span class="text-black">Start Your</span><span class="inline-block h-[1.2em] overflow-hidden align-bottom text-jaipur-pink relative mx-1.5 sm:mx-2"><span class="flex flex-col animate-text-slide text-center"><span class="h-[1.2em] flex items-center justify-center">Startup</span><span class="h-[1.2em] flex items-center justify-center">Agency</span><span class="h-[1.2em] flex items-center justify-center">Venture</span><span class="h-[1.2em] flex items-center justify-center">Empire</span><span class="h-[1.2em] flex items-center justify-center">Startup</span></span></span><span class="text-black">in 2026</span>
+                        <!-- Hand-drawn underline SVG -->
+                        <svg class="absolute w-[105%] h-3 sm:h-5 md:h-7 -bottom-1 sm:-bottom-3 md:-bottom-4 -left-[2.5%] text-jaipur-gold z-[-1]" viewBox="0 0 100 20" preserveAspectRatio="none">
+                            <path d="M3,12 Q45,2 97,10 M8,18 Q50,8 92,16" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </h3>
+                    
+                    <p class="text-gray-700 font-sans text-base md:text-lg lg:text-xl font-bold max-w-4xl mx-auto leading-relaxed md:leading-loose tracking-wide relative z-20 mt-4">
+                            You can start your tech startup with just a <strong class="text-jaipur-deep font-black tracking-wider border-b-2 border-jaipur-gold/50 pb-1">Smartphone or Laptop</strong> in 2026 and successfully operate your startup as a single <strong class="text-green-600 font-black tracking-wider border-b-2 border-green-300/50 pb-1">"One-Man Army"</strong> right from a single room of your home, hostel, or PG, and the Startup Jaipur team will provide you with complete end-to-end support!
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Huge List for Agency & Service Ideas (Combined Grid) -->
+                <div class="grid grid-cols-1 gap-5 sm:gap-6 max-w-5xl lg:max-w-6xl w-full mx-auto mt-8">
+                    
+                    <!-- 1. Digital Marketing (Blue text -> Yellow bg + Orange dots) -->
+                    <div class="card-3d pat-1 group p-5 flex flex-col" style="--card-color: #3b82f6; --card-color-dark: #2563eb; --card-shadow: rgba(59, 130, 246, 0.4); --card-bg: #fef9c3; --pattern-color: #f59e0b;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#3b82f6] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -758,8 +748,8 @@
                         </div>
                     </div>
 
-                    <!-- 2. Advertisement Agency (Orange) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #f97316; --card-color-dark: #ea580c; --card-shadow: rgba(249, 115, 22, 0.4);">
+                    <!-- 2. Advertisement Agency (Orange text -> Blue bg + Blue lines) -->
+                    <div class="card-3d pat-2 group p-5 flex flex-col" style="--card-color: #f97316; --card-color-dark: #ea580c; --card-shadow: rgba(249, 115, 22, 0.4); --card-bg: #dbeafe; --pattern-color: #3b82f6;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#f97316] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -779,8 +769,8 @@
                         </div>
                     </div>
 
-                    <!-- 3. Social Media Management (Pink) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #ec4899; --card-color-dark: #db2777; --card-shadow: rgba(236, 72, 153, 0.4);">
+                    <!-- 3. Social Media Management (Pink text -> Green bg + Green grid) -->
+                    <div class="card-3d pat-3 group p-5 flex flex-col" style="--card-color: #ec4899; --card-color-dark: #db2777; --card-shadow: rgba(236, 72, 153, 0.4); --card-bg: #dcfce3; --pattern-color: #22c55e;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#ec4899] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -800,8 +790,8 @@
                         </div>
                     </div>
 
-                    <!-- 4. Meta Ads Agency (Indigo) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #6366f1; --card-color-dark: #4f46e5; --card-shadow: rgba(99, 102, 241, 0.4);">
+                    <!-- 4. Meta Ads Agency (Indigo text -> Rose bg + Red rings) -->
+                    <div class="card-3d pat-4 group p-5 flex flex-col" style="--card-color: #6366f1; --card-color-dark: #4f46e5; --card-shadow: rgba(99, 102, 241, 0.4); --card-bg: #ffe4e6; --pattern-color: #e11d48;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#6366f1] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -821,8 +811,8 @@
                         </div>
                     </div>
 
-                    <!-- 5. Google Ads Agency (Red) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #ef4444; --card-color-dark: #dc2626; --card-shadow: rgba(239, 68, 68, 0.4);">
+                    <!-- 5. Google Ads Agency (Red text -> Cyan bg + Teal dash) -->
+                    <div class="card-3d pat-5 group p-5 flex flex-col" style="--card-color: #ef4444; --card-color-dark: #dc2626; --card-shadow: rgba(239, 68, 68, 0.4); --card-bg: #cffafe; --pattern-color: #0d9488;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#ef4444] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -842,8 +832,8 @@
                         </div>
                     </div>
 
-                    <!-- 6. PR Agency (Purple) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #a855f7; --card-color-dark: #9333ea; --card-shadow: rgba(168, 85, 247, 0.4);">
+                    <!-- 6. PR Agency (Purple text -> Amber bg + Yellow hex) -->
+                    <div class="card-3d pat-6 group p-5 flex flex-col" style="--card-color: #a855f7; --card-color-dark: #9333ea; --card-shadow: rgba(168, 85, 247, 0.4); --card-bg: #fef3c7; --pattern-color: #d97706;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#a855f7] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -863,8 +853,8 @@
                         </div>
                     </div>
 
-                    <!-- 7. Rating Agency (Yellow) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #eab308; --card-color-dark: #ca8a04; --card-shadow: rgba(234, 179, 8, 0.4);">
+                    <!-- 7. Rating Agency (Yellow text -> Purple bg + Purple dots) -->
+                    <div class="card-3d pat-1 group p-5 flex flex-col" style="--card-color: #eab308; --card-color-dark: #ca8a04; --card-shadow: rgba(234, 179, 8, 0.4); --card-bg: #f3e8ff; --pattern-color: #9333ea;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#eab308] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -884,8 +874,8 @@
                         </div>
                     </div>
 
-                    <!-- 8. Blog Agency (Teal) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #14b8a6; --card-color-dark: #0d9488; --card-shadow: rgba(20, 184, 166, 0.4);">
+                    <!-- 8. Blog Agency (Teal text -> Rose bg + Pink lines) -->
+                    <div class="card-3d pat-2 group p-5 flex flex-col" style="--card-color: #14b8a6; --card-color-dark: #0d9488; --card-shadow: rgba(20, 184, 166, 0.4); --card-bg: #ffe4e6; --pattern-color: #db2777;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#14b8a6] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -905,8 +895,8 @@
                         </div>
                     </div>
 
-                    <!-- 9. Editing Services (Rose) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #f43f5e; --card-color-dark: #e11d48; --card-shadow: rgba(244, 63, 94, 0.4);">
+                    <!-- 9. Editing Services (Rose text -> Teal bg + Cyan grid) -->
+                    <div class="card-3d pat-3 group p-5 flex flex-col" style="--card-color: #f43f5e; --card-color-dark: #e11d48; --card-shadow: rgba(244, 63, 94, 0.4); --card-bg: #ccfbf1; --pattern-color: #0891b2;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#f43f5e] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -926,8 +916,8 @@
                         </div>
                     </div>
 
-                    <!-- 10. Graphic Design (Fuchsia) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #d946ef; --card-color-dark: #c026d3; --card-shadow: rgba(217, 70, 239, 0.4);">
+                    <!-- 10. Graphic Design (Fuchsia text -> Lime bg + Green rings) -->
+                    <div class="card-3d pat-4 group p-5 flex flex-col" style="--card-color: #d946ef; --card-color-dark: #c026d3; --card-shadow: rgba(217, 70, 239, 0.4); --card-bg: #ecfccb; --pattern-color: #65a30d;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#d946ef] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -947,8 +937,8 @@
                         </div>
                     </div>
 
-                    <!-- 11. College Admission (Crimson) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #b91c1c; --card-color-dark: #991b1b; --card-shadow: rgba(185, 28, 28, 0.4);">
+                    <!-- 11. College Admission (Crimson text -> Sky bg + Blue dash) -->
+                    <div class="card-3d pat-5 group p-5 flex flex-col" style="--card-color: #b91c1c; --card-color-dark: #991b1b; --card-shadow: rgba(185, 28, 28, 0.4); --card-bg: #e0f2fe; --pattern-color: #0284c7;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#b91c1c] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -968,29 +958,8 @@
                         </div>
                     </div>
 
-                    <!-- 12. Web Development (Sky/Cerulean) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #0ea5e9; --card-color-dark: #0284c7; --card-shadow: rgba(14, 165, 233, 0.4);">
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#0ea5e9] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
-                        
-                        <div class="flex items-center gap-4 mb-4 relative z-10">
-                            <div class="w-14 h-14 shrink-0 rounded-xl flex items-center justify-center text-white icon-3d"><i class="fa-solid fa-code text-2xl"></i></div>
-                            <h3 class="font-heading font-extrabold text-lg sm:text-xl text-gray-900 leading-tight"><span class="painted-smudge block w-fit text-[10px] sm:text-xs text-gray-500 font-bold uppercase tracking-[0.15em] mb-1 ml-1 sm:ml-2">Start Your</span><span class="text-[#0284c7]">Web Development Agency</span></h3>
-                        </div>
-                        
-                        <p class="text-gray-600 text-sm font-semibold relative z-10 mb-2">Businesses ke liye premium websites aur landing pages banayein. High-paying clients hasil karein.</p>
-                        
-                        <div class="mt-auto pt-4 flex items-center justify-between border-t border-gray-200/60 relative z-20">
-                            <button onclick="toggleIdea('idea12')" id="btn-idea12" class="text-xs font-bold uppercase tracking-wider text-gray-500 transition-colors" onmouseover="this.style.color='#0284c7'" onmouseout="this.style.color=''">See More <i class="fa-solid fa-chevron-down"></i></button>
-                            <a href="https://wa.me/917340337074?text=I want to Start a Web Development Agency" target="_blank" class="flex items-center text-[#0284c7] text-xs font-bold uppercase tracking-wider hover:translate-x-1 transition-transform duration-300 bg-[#0ea5e9]/10 px-3 py-1.5 rounded-lg"><i class="fa-brands fa-whatsapp text-[15px] mr-1.5"></i> Chat Now</a>
-                        </div>
-                        <div id="desc-idea12" class="hidden mt-4 text-sm font-medium leading-relaxed p-4 bg-white/80 rounded-xl shadow-inner border border-[#0ea5e9]/30 relative z-20">
-                            <span class="block mb-2 text-gray-800"><strong class="text-[#0284c7]"><i class="fa-solid fa-fire"></i> High Demand:</strong> Har chote-bade business ko aajkal ek professional website chahiye apni online presence banane ke liye.</span>
-                            <span class="block text-gray-800"><strong class="text-green-600"><i class="fa-solid fa-money-bill-trend-up"></i> Potential Earning:</strong> Ek achhi website ka charge ₹15,000 se ₹50,000 tak hota hai. Mahine me 4-5 clients se aap easily <span class="font-black text-[#0284c7]">₹1 Lakh se ₹2.5 Lakh</span> kama sakte hain.</span>
-                        </div>
-                    </div>
-
-                    <!-- 13. YouTube Content Creation (Radical Red) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #ff7b72; --card-color-dark: #ff5a5f; --card-shadow: rgba(255, 123, 114, 0.4);">
+                    <!-- 13. YouTube Content Creation (Radical Red text -> Indigo bg + Indigo dots) -->
+                    <div class="card-3d pat-1 group p-5 flex flex-col" style="--card-color: #ff7b72; --card-color-dark: #ff5a5f; --card-shadow: rgba(255, 123, 114, 0.4); --card-bg: #e0e7ff; --pattern-color: #4f46e5;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#ff7b72] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1010,8 +979,8 @@
                         </div>
                     </div>
 
-                    <!-- 14. Influencer Management (Blue Violet) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #9d4edd; --card-color-dark: #8a2be2; --card-shadow: rgba(157, 78, 221, 0.4);">
+                    <!-- 14. Influencer Management (Blue Violet text -> Yellow bg + Amber lines) -->
+                    <div class="card-3d pat-2 group p-5 flex flex-col" style="--card-color: #9d4edd; --card-color-dark: #8a2be2; --card-shadow: rgba(157, 78, 221, 0.4); --card-bg: #fef08a; --pattern-color: #b45309;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#9d4edd] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1031,8 +1000,8 @@
                         </div>
                     </div>
 
-                    <!-- 16. Copywriting (Amber) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #f59e0b; --card-color-dark: #d97706; --card-shadow: rgba(245, 158, 11, 0.4);">
+                    <!-- 16. Copywriting (Amber text -> Blue bg + Blue grid) -->
+                    <div class="card-3d pat-3 group p-5 flex flex-col" style="--card-color: #f59e0b; --card-color-dark: #d97706; --card-shadow: rgba(245, 158, 11, 0.4); --card-bg: #dbeafe; --pattern-color: #2563eb;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#f59e0b] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1052,8 +1021,8 @@
                         </div>
                     </div>
 
-                    <!-- 17. B2B Lead Gen (Dark Teal) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #115e59; --card-color-dark: #0f766e; --card-shadow: rgba(17, 94, 89, 0.4);">
+                    <!-- 17. B2B Lead Gen (Dark Teal text -> Pink bg + Pink rings) -->
+                    <div class="card-3d pat-4 group p-5 flex flex-col" style="--card-color: #115e59; --card-color-dark: #0f766e; --card-shadow: rgba(17, 94, 89, 0.4); --card-bg: #fce7f3; --pattern-color: #db2777;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#115e59] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1073,8 +1042,8 @@
                         </div>
                     </div>
 
-                    <!-- 18. SEO Agency (Green) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #16a34a; --card-color-dark: #15803d; --card-shadow: rgba(22, 163, 74, 0.4);">
+                    <!-- 18. SEO Agency (Green text -> Purple bg + Purple dash) -->
+                    <div class="card-3d pat-5 group p-5 flex flex-col" style="--card-color: #16a34a; --card-color-dark: #15803d; --card-shadow: rgba(22, 163, 74, 0.4); --card-bg: #f3e8ff; --pattern-color: #a855f7;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#16a34a] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1094,8 +1063,8 @@
                         </div>
                     </div>
 
-                    <!-- 19. VA Agency (Cyan) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #06b6d4; --card-color-dark: #0891b2; --card-shadow: rgba(6, 182, 212, 0.4);">
+                    <!-- 19. VA Agency (Cyan text -> Red bg + Red hex) -->
+                    <div class="card-3d pat-6 group p-5 flex flex-col" style="--card-color: #06b6d4; --card-color-dark: #0891b2; --card-shadow: rgba(6, 182, 212, 0.4); --card-bg: #fee2e2; --pattern-color: #dc2626;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#06b6d4] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1115,8 +1084,8 @@
                         </div>
                     </div>
 
-                    <!-- 20. Podcast Production (Dark Rose) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #e11d48; --card-color-dark: #be123c; --card-shadow: rgba(225, 29, 72, 0.4);">
+                    <!-- 20. Podcast Production (Dark Rose text -> Emerald bg + Emerald dots) -->
+                    <div class="card-3d pat-1 group p-5 flex flex-col" style="--card-color: #e11d48; --card-color-dark: #be123c; --card-shadow: rgba(225, 29, 72, 0.4); --card-bg: #d1fae5; --pattern-color: #059669;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#e11d48] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1136,8 +1105,8 @@
                         </div>
                     </div>
 
-                    <!-- 21. Online Coaching (Deep Violet) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #7c3aed; --card-color-dark: #6d28d9; --card-shadow: rgba(124, 58, 237, 0.4);">
+                    <!-- 21. Online Coaching (Deep Violet text -> Lime bg + Lime lines) -->
+                    <div class="card-3d pat-2 group p-5 flex flex-col" style="--card-color: #7c3aed; --card-color-dark: #6d28d9; --card-shadow: rgba(124, 58, 237, 0.4); --card-bg: #ecfccb; --pattern-color: #4d7c0f;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#7c3aed] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1157,8 +1126,8 @@
                         </div>
                     </div>
 
-                    <!-- 22. Interior Design (Dark Pink) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #db2777; --card-color-dark: #be185d; --card-shadow: rgba(219, 39, 119, 0.4);">
+                    <!-- 22. Interior Design (Dark Pink text -> Sky bg + Sky grid) -->
+                    <div class="card-3d pat-3 group p-5 flex flex-col" style="--card-color: #db2777; --card-color-dark: #be185d; --card-shadow: rgba(219, 39, 119, 0.4); --card-bg: #e0f2fe; --pattern-color: #0369a1;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#db2777] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1178,8 +1147,8 @@
                         </div>
                     </div>
 
-                    <!-- 23. HR Recruitment (Bronze) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #d97706; --card-color-dark: #b45309; --card-shadow: rgba(217, 119, 6, 0.4);">
+                    <!-- 23. HR Recruitment (Bronze text -> Cyan bg + Cyan rings) -->
+                    <div class="card-3d pat-4 group p-5 flex flex-col" style="--card-color: #d97706; --card-color-dark: #b45309; --card-shadow: rgba(217, 119, 6, 0.4); --card-bg: #cffafe; --pattern-color: #0891b2;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#d97706] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1199,8 +1168,8 @@
                         </div>
                     </div>
 
-                    <!-- 24. Cybersecurity (Deep Indigo) -->
-                    <div class="card-3d group p-5 flex flex-col" style="--card-color: #4f46e5; --card-color-dark: #4338ca; --card-shadow: rgba(79, 70, 229, 0.4);">
+                    <!-- 24. Cybersecurity (Deep Indigo text -> Orange bg + Orange dash) -->
+                    <div class="card-3d pat-5 group p-5 flex flex-col" style="--card-color: #4f46e5; --card-color-dark: #4338ca; --card-shadow: rgba(79, 70, 229, 0.4); --card-bg: #ffedd5; --pattern-color: #c2410c;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#4f46e5] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                         
                         <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1220,44 +1189,9 @@
                         </div>
                     </div>
 
-                </div> <!-- Top grid (Agencies) ends here -->
-            </div> <!-- Main container ends here temporarily -->
-
-          <!-- TRANSPARENT DOUBLE-FRAMED BANNER SECTION (Tech & Platforms) -->
-                <div class="w-full max-w-6xl mx-auto py-12 md:py-16 px-6 text-center relative z-20 mt-8 mb-8 bg-transparent">
-                    <!-- Double Chokor Frame (Outer & Inner) -->
-                    <div class="absolute inset-0 border-[3px] border-blue-400/40 rounded-[30px] m-2 pointer-events-none"></div>
-                    <div class="absolute inset-0 border-[3px] border-jaipur-pink/40 rounded-[25px] m-5 pointer-events-none"></div>
-                    
-                    <!-- Floating Abstract Shapes (Light Theme Colors) -->
-                    <div class="absolute top-10 left-[8%] md:left-[10%] text-jaipur-pink/30 animate-bounce text-3xl"><i class="fa-solid fa-star"></i></div>
-                    <div class="absolute bottom-10 right-[8%] md:right-[15%] text-blue-500/20 animate-pulse text-4xl"><i class="fa-solid fa-circle"></i></div>
-                    <div class="absolute top-1/2 left-[15%] text-jaipur-gold/30 animate-float text-6xl md:text-7xl"><i class="fa-solid fa-square transform rotate-45"></i></div>
-                    <div class="absolute top-10 right-[20%] text-purple-500/20 animate-float text-4xl md:text-5xl" style="animation-delay: 1.5s;"><i class="fa-solid fa-play transform -rotate-12"></i></div>
-
-                    <div class="relative z-10 px-4 pt-4">
-                        <!-- Animated Heading & Hand-drawn Underline -->
-                        <h3 class="font-heading font-black text-4xl md:text-5xl lg:text-6xl mb-4 text-gray-900 relative inline-block z-20">
-                            Start Your <span class="inline-block h-[1.2em] overflow-hidden align-bottom text-jaipur-pink relative"><span class="flex flex-col animate-text-slide text-left"><span class="h-[1.2em] flex items-center">Startup</span><span class="h-[1.2em] flex items-center">Agency</span><span class="h-[1.2em] flex items-center">Venture</span><span class="h-[1.2em] flex items-center">Empire</span><span class="h-[1.2em] flex items-center">Startup</span></span></span> <span class="text-gray-400 font-semibold">in</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-jaipur-gold to-[#ff8c00]">2026</span>
-                            <!-- Hand-drawn underline SVG -->
-                            <svg class="absolute w-[110%] h-5 md:h-7 -bottom-3 md:-bottom-4 -left-[5%] text-jaipur-gold z-[-1]" viewBox="0 0 100 20" preserveAspectRatio="none">
-                                <path d="M3,12 Q45,2 97,10 M8,18 Q50,8 92,16" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
-                            </svg>
-                        </h3>
-                        
-                        <p class="text-gray-700 font-sans text-base md:text-lg lg:text-xl font-bold max-w-4xl mx-auto leading-relaxed md:leading-loose tracking-wide relative z-20 mt-4">
-                            You can start your tech startup with just a <strong class="text-jaipur-deep font-black tracking-wider border-b-2 border-jaipur-gold/50 pb-1">Smartphone and Laptop</strong> in 2026 and successfully operate your startup as a single <strong class="text-green-600 font-black tracking-wider border-b-2 border-green-300/50 pb-1">"One-Man Army"</strong> right from a single room of your home, hostel, or PG, and the Startup Jaipur team will provide you with complete end-to-end support!
-                        </p>
-                    </div>
-                </div>
-
-            <!-- PREMIUM STARTUPS GRID -->
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-8">
-                <div class="grid grid-cols-1 gap-5 sm:gap-6 max-w-3xl mx-auto relative z-20">
-                        
-                        <!-- 25. AI Startup (Deep Cyan) -->
-                        <div class="card-3d group p-5 flex flex-col" style="--card-color: #0891b2; --card-color-dark: #0e7490; --card-shadow: rgba(8, 145, 178, 0.4);">
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-[#0891b2] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
+                    <!-- 25. AI Startup (Deep Cyan text -> Pink bg + Fuchsia hex) -->
+                    <div class="card-3d pat-6 group p-5 flex flex-col" style="--card-color: #0891b2; --card-color-dark: #0e7490; --card-shadow: rgba(8, 145, 178, 0.4); --card-bg: #fce7f3; --pattern-color: #c026d3;">
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-[#0891b2] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                             
                             <div class="flex items-center gap-4 mb-4 relative z-10">
                                 <div class="w-14 h-14 shrink-0 rounded-xl flex items-center justify-center text-white icon-3d"><i class="fa-solid fa-microchip text-2xl"></i></div>
@@ -1276,8 +1210,8 @@
                             </div>
                         </div>
 
-                        <!-- 26. EdTech (Burnt Orange) -->
-                        <div class="card-3d group p-5 flex flex-col" style="--card-color: #fb923c; --card-color-dark: #c2410c; --card-shadow: rgba(251, 146, 60, 0.4);">
+                        <!-- 26. EdTech (Burnt Orange text -> Teal bg + Teal dots) -->
+                        <div class="card-3d pat-1 group p-5 flex flex-col" style="--card-color: #fb923c; --card-color-dark: #c2410c; --card-shadow: rgba(251, 146, 60, 0.4); --card-bg: #ccfbf1; --pattern-color: #0f766e;">
                             <div class="absolute top-0 right-0 w-32 h-32 bg-[#fb923c] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                             
                             <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1297,8 +1231,8 @@
                             </div>
                         </div>
 
-                        <!-- 27. Media Startup (Violet) -->
-                        <div class="card-3d group p-5 flex flex-col" style="--card-color: #8b5cf6; --card-color-dark: #7c3aed; --card-shadow: rgba(139, 92, 246, 0.4);">
+                        <!-- 27. Media Startup (Violet text -> Amber bg + Amber lines) -->
+                        <div class="card-3d pat-2 group p-5 flex flex-col" style="--card-color: #8b5cf6; --card-color-dark: #7c3aed; --card-shadow: rgba(139, 92, 246, 0.4); --card-bg: #fef3c7; --pattern-color: #d97706;">
                             <div class="absolute top-0 right-0 w-32 h-32 bg-[#8b5cf6] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                             
                             <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1318,8 +1252,8 @@
                             </div>
                         </div>
 
-                        <!-- 28. Magazine (Magenta) -->
-                        <div class="card-3d group p-5 flex flex-col" style="--card-color: #e81cff; --card-color-dark: #d500f9; --card-shadow: rgba(232, 28, 255, 0.4);">
+                        <!-- 28. Magazine (Magenta text -> Green bg + Green grid) -->
+                        <div class="card-3d pat-3 group p-5 flex flex-col" style="--card-color: #e81cff; --card-color-dark: #d500f9; --card-shadow: rgba(232, 28, 255, 0.4); --card-bg: #dcfce3; --pattern-color: #16a34a;">
                             <div class="absolute top-0 right-0 w-32 h-32 bg-[#e81cff] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                             
                             <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1339,8 +1273,8 @@
                             </div>
                         </div>
 
-                        <!-- 29. Fintech Startup (Light Green) -->
-                        <div class="card-3d group p-5 flex flex-col" style="--card-color: #22c55e; --card-color-dark: #16a34a; --card-shadow: rgba(34, 197, 94, 0.4);">
+                        <!-- 29. Fintech Startup (Light Green text -> Purple bg + Purple rings) -->
+                        <div class="card-3d pat-4 group p-5 flex flex-col" style="--card-color: #22c55e; --card-color-dark: #16a34a; --card-shadow: rgba(34, 197, 94, 0.4); --card-bg: #f3e8ff; --pattern-color: #7c3aed;">
                             <div class="absolute top-0 right-0 w-32 h-32 bg-[#22c55e] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                             
                             <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1360,8 +1294,8 @@
                             </div>
                         </div>
 
-                        <!-- 30. Healthtech Startup (Emerald) -->
-                        <div class="card-3d group p-5 flex flex-col" style="--card-color: #10b981; --card-color-dark: #059669; --card-shadow: rgba(16, 185, 129, 0.4);">
+                        <!-- 30. Healthtech Startup (Emerald text -> Rose bg + Red dash) -->
+                        <div class="card-3d pat-5 group p-5 flex flex-col" style="--card-color: #10b981; --card-color-dark: #059669; --card-shadow: rgba(16, 185, 129, 0.4); --card-bg: #ffe4e6; --pattern-color: #e11d48;">
                             <div class="absolute top-0 right-0 w-32 h-32 bg-[#10b981] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                             
                             <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1381,8 +1315,8 @@
                             </div>
                         </div>
 
-                        <!-- 31. E-Commerce (Lime) -->
-                        <div class="card-3d group p-5 flex flex-col" style="--card-color: #84cc16; --card-color-dark: #65a30d; --card-shadow: rgba(132, 204, 22, 0.4);">
+                        <!-- 31. E-Commerce (Lime text -> Indigo bg + Indigo hex) -->
+                        <div class="card-3d pat-6 group p-5 flex flex-col" style="--card-color: #84cc16; --card-color-dark: #65a30d; --card-shadow: rgba(132, 204, 22, 0.4); --card-bg: #e0e7ff; --pattern-color: #4338ca;">
                             <div class="absolute top-0 right-0 w-32 h-32 bg-[#84cc16] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                             
                             <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1402,8 +1336,8 @@
                             </div>
                         </div>
 
-                        <!-- 32. SaaS Startup (Slate) -->
-                        <div class="card-3d group p-5 flex flex-col" style="--card-color: #475569; --card-color-dark: #334155; --card-shadow: rgba(71, 85, 105, 0.4);">
+                        <!-- 32. SaaS Startup (Slate text -> Orange bg + Orange dots) -->
+                        <div class="card-3d pat-1 group p-5 flex flex-col" style="--card-color: #475569; --card-color-dark: #334155; --card-shadow: rgba(71, 85, 105, 0.4); --card-bg: #ffedd5; --pattern-color: #ea580c;">
                             <div class="absolute top-0 right-0 w-32 h-32 bg-[#475569] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                             
                             <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1423,8 +1357,8 @@
                             </div>
                         </div>
 
-                        <!-- 33. PropTech (Dark Emerald) -->
-                        <div class="card-3d group p-5 flex flex-col" style="--card-color: #059669; --card-color-dark: #047857; --card-shadow: rgba(5, 150, 105, 0.4);">
+                        <!-- 33. PropTech (Dark Emerald text -> Pink bg + Pink lines) -->
+                        <div class="card-3d pat-2 group p-5 flex flex-col" style="--card-color: #059669; --card-color-dark: #047857; --card-shadow: rgba(5, 150, 105, 0.4); --card-bg: #fce7f3; --pattern-color: #be185d;">
                             <div class="absolute top-0 right-0 w-32 h-32 bg-[#059669] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                             
                             <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1444,8 +1378,8 @@
                             </div>
                         </div>
 
-                        <!-- 34. TravelTech (Dark Sky / Ocean) -->
-                        <div class="card-3d group p-5 flex flex-col" style="--card-color: #0284c7; --card-color-dark: #0369a1; --card-shadow: rgba(2, 132, 199, 0.4);">
+                        <!-- 34. TravelTech (Dark Sky text -> Yellow bg + Yellow grid) -->
+                        <div class="card-3d pat-3 group p-5 flex flex-col" style="--card-color: #0284c7; --card-color-dark: #0369a1; --card-shadow: rgba(2, 132, 199, 0.4); --card-bg: #fef08a; --pattern-color: #ca8a04;">
                             <div class="absolute top-0 right-0 w-32 h-32 bg-[#0284c7] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                             
                             <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1465,8 +1399,8 @@
                             </div>
                         </div>
 
-                        <!-- 35. Agritech (Mint) -->
-                        <div class="card-3d group p-5 flex flex-col" style="--card-color: #4ade80; --card-color-dark: #22c55e; --card-shadow: rgba(74, 222, 128, 0.4);">
+                        <!-- 35. Agritech (Mint text -> Purple bg + Purple rings) -->
+                        <div class="card-3d pat-4 group p-5 flex flex-col" style="--card-color: #4ade80; --card-color-dark: #22c55e; --card-shadow: rgba(74, 222, 128, 0.4); --card-bg: #f3e8ff; --pattern-color: #9333ea;">
                             <div class="absolute top-0 right-0 w-32 h-32 bg-[#4ade80] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                             
                             <div class="flex items-center gap-4 mb-4 relative z-10">
@@ -1486,8 +1420,8 @@
                             </div>
                         </div>
 
-                        <!-- 36. Skill Development (Jaipur Deep) -->
-                        <div class="card-3d group p-5 flex flex-col" style="--card-color: #8B0000; --card-color-dark: #600000; --card-shadow: rgba(139, 0, 0, 0.4);">
+                        <!-- 36. Skill Development (Jaipur Deep text -> Sky bg + Blue dash) -->
+                        <div class="card-3d pat-5 group p-5 flex flex-col" style="--card-color: #8B0000; --card-color-dark: #600000; --card-shadow: rgba(139, 0, 0, 0.4); --card-bg: #e0f2fe; --pattern-color: #2563eb;">
                             <div class="absolute top-0 right-0 w-48 h-48 bg-[#8B0000] opacity-5 rounded-bl-[150px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                             <div class="absolute bottom-0 left-0 w-32 h-32 bg-[#8B0000] opacity-5 rounded-tr-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
                             
@@ -1511,6 +1445,7 @@
                 </div> <!-- Closes Inner Grid -->
             </div> <!-- Closes max-w-7xl relative z-10 Container -->
         </section>
+
 
         <!-- UNIFIED MIDDLE SECTIONS WRAPPER 2: A-Z SERVICES & CAPABILITIES -->
         <div class="relative w-full bg-[#FFF0F5] z-20">
@@ -1929,7 +1864,7 @@
         <div class="flex flex-col items-center text-center gap-10 relative z-20 w-full px-0 overflow-hidden pt-12">
             <div class="w-full flex flex-col items-center">
                 <div class="mb-2 px-4 relative">
-                    <h1 class="font-heading font-bold text-5xl md:text-7xl text-jaipur-deep tracking-wide leading-none drop-shadow-sm">Startup<span class="text-jaipur-pink">Jaipur</span></h1>
+                    <h1 class="font-heading font-bold text-5xl md:text-7xl text-jaipur-deep tracking-wide leading-none drop-shadow-sm" style="font-family: 'Playfair Display', serif;">Startup<span class="text-jaipur-pink">Jaipur</span></h1>
                 </div>
                 <div class="flex items-center justify-center gap-3 mt-4 mb-6 w-full max-w-md px-4">
                     <div class="flex-1 h-[1.5px] bg-gradient-to-r from-transparent to-jaipur-gold/70"></div>
@@ -2318,9 +2253,8 @@
         }
     </script>
 
-<!-- Detail Toggle & Frame Script -->
 <script>
-    // See More / See Less Toggle
+    // Startup Ideas toggle functionality
     function toggleIdea(ideaId) {
         const desc = document.getElementById('desc-' + ideaId);
         const btn = document.getElementById('btn-' + ideaId);
@@ -2333,17 +2267,6 @@
             btn.innerHTML = 'See More <i class="fa-solid fa-chevron-down"></i>';
         }
     }
-
-    // Dynamically add glowing frame to all cards
-    document.addEventListener('DOMContentLoaded', () => {
-        const cards = document.querySelectorAll('.card-3d');
-        cards.forEach(card => {
-            const frame = document.createElement('div');
-            frame.className = 'card-glow-frame';
-            card.appendChild(frame);
-        });
-    });
 </script>
-
 </body>
 </html>
