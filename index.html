@@ -102,10 +102,29 @@
         .btn-tech { transition: all 0.3s ease; }
         .btn-tech:hover { transform: translateY(-3px); box-shadow: 0 15px 30px -5px rgba(214, 109, 117, 0.5); }
 
-        /* Marquee */
-        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .animate-marquee { display: flex; width: max-content; animation: marquee 30s linear infinite; will-change: transform; }
-        .animate-marquee-strip { display: flex; width: max-content; animation: marquee 45s linear infinite; will-change: transform; }
+        /* Marquee - Smooth & Slow (Hardware Accelerated) */
+        @keyframes marquee { 
+            0% { transform: translate3d(0, 0, 0); } 
+            100% { transform: translate3d(-50%, 0, 0); } 
+        }
+        .animate-marquee { 
+            display: flex; 
+            width: max-content; 
+            animation: marquee 60s linear infinite; 
+            will-change: transform; 
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        .animate-marquee-strip { 
+            display: flex; 
+            width: max-content; 
+            animation: marquee 80s linear infinite; 
+            will-change: transform; 
+            transform: translateZ(0);
+            backface-visibility: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
 
         /* Patterns */
         .tech-grid {
@@ -226,9 +245,56 @@
     .icon-3d { background: linear-gradient(135deg, var(--card-color), var(--card-color-dark)); box-shadow: 0 10px 20px -5px var(--card-shadow), inset 0 2px 4px rgba(255,255,255,0.4), inset 0 -2px 4px rgba(0,0,0,0.2); transition: transform 0.5s ease; }
     .card-3d:hover .icon-3d { transform: scale(1.05); }
 
-    /* Single Line Headings */
-    .card-3d h3 { flex: 1; min-width: 0; overflow: hidden; }
-    .card-3d h3 > span:last-child { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: clamp(14px, 3.5vw, 24px) !important; line-height: 1.3 !important; }
+    /* Single Line Headings & Smudge Effect */
+    .card-3d h3 { flex: 1; min-width: 0; overflow: hidden; display: flex; flex-direction: column; justify-content: center; }
+    
+    .painted-smudge {
+        position: relative;
+        z-index: 1;
+        color: #9ca3af; /* Faded lighter grey color */
+        opacity: 0.45; /* Text ko aur jyada dhundhla kar diya */
+        margin-bottom: 4px !important;
+        padding: 2px 8px;
+        display: inline-block;
+        font-weight: 700; /* Thoda kam bold kiya taaki highlight na ho */
+    }
+    
+    /* Pehli Paint Layer (Brush Stroke 1) */
+    .painted-smudge::before {
+        content: '';
+        position: absolute;
+        top: 0%; bottom: 0%; left: -8%; right: -5%;
+        background-color: var(--card-color); /* Automatically matches card theme */
+        opacity: 0.15; /* Background color ko bahut light kar diya */
+        z-index: -1;
+        border-radius: 3px 15px 5px 12px / 12px 4px 15px 5px; /* Aada-tedha irregular shape */
+        transform: skewX(-10deg) rotate(-1.5deg); /* Haath se kheenchi stroke */
+        filter: blur(0.8px); /* Smudge / blur effect */
+    }
+
+    /* Dusri Paint Layer (Brush Stroke 2) */
+    .painted-smudge::after {
+        content: '';
+        position: absolute;
+        top: 10%; bottom: -10%; left: -3%; right: -10%;
+        background-color: var(--card-color); /* Matches card theme */
+        opacity: 0.08; /* Dusri layer ko bhi almost invisible kar diya */
+        z-index: -2;
+        border-radius: 15px 5px 10px 4px / 5px 12px 4px 15px; /* Alag aada-tedha shape */
+        transform: skewX(15deg) rotate(2deg); /* Ulta skew aur rotate */
+        filter: blur(1.5px); /* Extra smudge/blur effect */
+    }
+
+    .card-3d h3 > span:last-child { 
+        display: block; 
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        font-size: clamp(17px, 4vw, 28px) !important; /* Larger responsive size */
+        font-weight: 900 !important; /* Extrabold / Black */
+        line-height: 1.2 !important;
+        letter-spacing: -0.02em; /* Tighter premium look */
+    }
 
     /* Buttons (See More & Chat Now) 3D Effect */
     .card-3d .mt-auto button { background-color: rgba(0,0,0,0.05); padding: 0.375rem 0.75rem; border-radius: 0.5rem; box-shadow: 0 4px 0 rgba(0,0,0,0.1) !important; transform: translateY(-2px) !important; transition: all 0.15s ease !important; border: 1px solid rgba(0,0,0,0.05); }
@@ -389,8 +455,8 @@
                     
                     <div class="flex items-center gap-2 md:gap-3 z-[200] flex-shrink-0 relative">
                         <div class="relative">
-                            <button onclick="toggleLoginModal()" id="login-btn-trigger" class="relative inline-flex h-8 md:h-10 items-center justify-center rounded-full bg-gradient-to-r from-[#f97316] via-jaipur-pink to-jaipur-deep border-[0.5px] border-white/60 overflow-hidden px-3 md:px-5 py-1 focus:outline-none group hover:scale-105 transition-all duration-300 shadow-[0_8px_20px_-5px_rgba(139,0,0,0.4)] hover:shadow-[0_10px_25px_-5px_rgba(214,109,117,0.6)] backdrop-blur-md gap-1.5 md:gap-2 text-white">
-                                <i id="login-icon" class="fa-solid fa-user-shield text-[9px] md:text-xs group-hover:scale-110 transition-transform"></i>
+                            <button onclick="toggleLoginModal()" id="login-btn-trigger" class="relative inline-flex h-8 md:h-10 items-center justify-center rounded-full bg-gradient-to-r from-[#f97316] via-jaipur-pink to-jaipur-deep border-[0.5px] border-white/60 overflow-hidden px-3 md:px-5 py-1 focus:outline-none transition-all duration-300 backdrop-blur-md gap-1.5 md:gap-2 text-white">
+                                <i id="login-icon" class="fa-solid fa-user-shield text-[9px] md:text-xs transition-transform"></i>
                                 <span id="login-text" class="text-[8px] md:text-xs font-black uppercase tracking-widest drop-shadow-sm">Login</span>
                             </button>
                             <div id="authModalDrop" class="hidden absolute top-full right-0 md:-right-2 mt-4 w-[290px] md:w-[340px] bg-white rounded-[2rem] p-1.5 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3)] border border-gray-100 z-[210] animate-fade-up">
@@ -571,7 +637,7 @@
                         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-jaipur-pink/10 text-jaipur-deep border border-jaipur-pink/20 text-[10px] md:text-xs font-outfit font-bold uppercase tracking-widest mb-4">
                             <i class="fa-solid fa-users text-jaipur-gold"></i> About Us
                         </div>
-                        <h2 class="font-outfit text-4xl md:text-5xl font-black text-jaipur-deep tracking-tight">
+                        <h2 class="font-outfit text-3xl md:text-4xl font-black text-jaipur-deep tracking-tight">
                             About <span class="text-transparent bg-clip-text bg-gradient-to-r from-jaipur-deep to-jaipur-pink">Startup Jaipur</span>
                         </h2>
                         <p class="mt-4 text-sm md:text-base font-sans text-gray-600 max-w-2xl mx-auto font-medium">A comprehensive incubation program designed to transform the startup dreams of youth into solid reality.</p>
@@ -690,14 +756,14 @@
             </section>
 
             <!-- STARTUP IDEAS SECTION (Custom Fonts applied here) -->
-            <section id="startup-ideas" class="relative z-10 py-12">
+            <section id="startup-ideas-wrapper" class="relative z-10 pt-0 pb-12">
                 
   <!-- MEGA STARTUP IDEAS SECTION -->
-        <section id="startup-ideas" class="pb-24 pt-12 bg-gray-50 relative overflow-hidden w-full border-b border-gray-200">
+        <section id="startup-ideas" class="pb-8 md:pb-12 pt-2 md:pt-4 bg-[#FFF0F5] relative overflow-hidden w-full">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                 <!-- TRANSPARENT DOUBLE-FRAMED BANNER SECTION (Moved to Top) -->
-                <div class="w-full max-w-6xl mx-auto py-10 md:py-12 px-6 text-center relative z-20 mb-8 mt-2 bg-transparent">
+                <div class="w-full max-w-6xl mx-auto py-6 md:py-8 px-6 text-center relative z-20 mb-8 mt-0 bg-transparent">
                     <!-- Double Chokor Frame (Outer & Inner) -->
                     <div class="absolute inset-0 border-[3px] border-blue-400/40 rounded-[30px] m-2 pointer-events-none"></div>
                     <div class="absolute inset-0 border-[3px] border-jaipur-pink/40 rounded-[25px] m-5 pointer-events-none"></div>
