@@ -13,6 +13,10 @@
     <meta property="og:image" content="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=800&auto=format&fit=crop">
     <meta property="og:site_name" content="Startup Jaipur">
 
+    <!-- Fast Image Loading Connections -->
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+
     <!-- Google Fonts (Consolidated & Cleaned) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -613,10 +617,10 @@
 
                 <div class="mt-16 flex flex-col items-center justify-center pb-12 relative z-10 w-full overflow-hidden">
                     <div class="flex -space-x-3 rtl:space-x-reverse mb-3">
-                        <img class="w-10 h-10 border-2 border-white rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=64&h=64" alt="Founder">
-                        <img class="w-10 h-10 border-2 border-white rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=64&h=64" alt="Founder">
-                        <img class="w-10 h-10 border-2 border-white rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=64&h=64" alt="Founder">
-                        <img class="w-10 h-10 border-2 border-white rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=64&h=64" alt="Founder">
+                        <img class="w-10 h-10 border-2 border-white rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=60&fm=webp" alt="Founder" loading="eager" decoding="async">
+                        <img class="w-10 h-10 border-2 border-white rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&h=120&q=60&fm=webp" alt="Founder" loading="eager" decoding="async">
+                        <img class="w-10 h-10 border-2 border-white rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=60&fm=webp" alt="Founder" loading="eager" decoding="async">
+                        <img class="w-10 h-10 border-2 border-white rounded-full object-cover shadow-sm" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&h=120&q=60&fm=webp" alt="Founder" loading="eager" decoding="async">
                         <div class="flex items-center justify-center w-10 h-10 text-[10px] font-bold text-jaipur-deep bg-jaipur-gold border-2 border-white rounded-full shadow-md">+2k</div>
                     </div>
                     <p class="text-white/90 text-xs md:text-sm font-medium tracking-wide">Join <span class="text-jaipur-gold font-bold">2,000+</span> Founders in Jaipur</p>
@@ -647,7 +651,7 @@
                         <div class="w-full lg:w-1/2 relative group">
                             <div class="absolute inset-0 border-[3px] border-jaipur-gold rounded-t-[3rem] md:rounded-t-[10rem] rounded-b-3xl transform translate-x-3 translate-y-3 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
                             <div class="relative rounded-t-[3rem] md:rounded-t-[10rem] rounded-b-3xl overflow-hidden shadow-2xl border-4 border-white h-[350px] md:h-[600px] bg-white">
-                                <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?q=80&w=800&auto=format&fit=crop" alt="Architecture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=600&q=60&fm=webp" alt="Architecture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" decoding="async">
                                 <div class="absolute inset-0 bg-gradient-to-t from-jaipur-deep/60 via-transparent to-transparent opacity-60"></div>
                                 <div class="absolute bottom-4 md:bottom-8 left-0 right-0 text-center">
                                     <div class="inline-block bg-white/90 backdrop-blur-md px-6 py-2 md:px-10 md:py-3 rounded-full shadow-lg border border-jaipur-pink/20">
@@ -793,6 +797,8 @@
                 <!-- Huge List for Agency & Service Ideas (Combined Grid) -->
                 <div class="grid grid-cols-1 gap-5 sm:gap-6 max-w-5xl lg:max-w-6xl w-full mx-auto mt-8">
                     
+                        
+                
                     <!-- 1. Digital Marketing (Blue text -> Yellow bg + Orange dots) -->
                     <div class="card-3d pat-1 group p-5 flex flex-col" style="--card-color: #3b82f6; --card-color-dark: #2563eb; --card-shadow: rgba(59, 130, 246, 0.4); --card-bg: #fef9c3; --pattern-color: #f59e0b;">
                         <div class="absolute top-0 right-0 w-32 h-32 bg-[#3b82f6] opacity-5 rounded-bl-[100px] -z-10 group-hover:scale-125 transition-transform duration-700"></div>
